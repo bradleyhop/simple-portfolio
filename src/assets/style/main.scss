@@ -1,0 +1,61 @@
+@import "color.scss";
+
+// reset browser defaults
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Device size breakpoints
+ * NOTE: no mobile breakpoint because that is the default
+ */
+@mixin tablet-breakpoint {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-breakpoint {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin large-desktop-breakpoint {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+// set max-widths for content
+.device-widths {
+  @include tablet-breakpoint {
+    width: 90vw;
+  }
+
+  @include desktop-breakpoint {
+    width: 80vw;
+  }
+
+  @include large-desktop-breakpoint {
+    width: 60vw;
+  }
+
+  margin: auto;
+  width: 95vw;
+}
+
+// REM
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+}
+
+.clear-link-dec {
+  color: $not-black;
+  text-decoration: none;
+}
