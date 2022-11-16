@@ -1,14 +1,16 @@
 <script>
 import { RouterView } from "vue-router";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   components: {
     RouterView,
+    SiteFooter,
   },
 
   data() {
     return {
-      home: true, // 0 for home, 1 for portfolio
+      home: null,
     };
   },
 
@@ -17,12 +19,19 @@ export default {
       this.home = !this.home;
     },
   },
+
+  beforeCreate() {
+    // set menu based if user goes directly to portfolio or home router view
+    // DOESN'T ACTUALLY SOLVE MY ISSUE
+    this.home = this.$router.currentRoute === "/portfolio" ? false : true;
+  },
 };
 </script>
 
 <template>
   <nav>
     <ul class="menu-list">
+      <!-- only two pages, change menu based on view page -->
       <li>
         <RouterLink
           v-if="home"
@@ -64,8 +73,12 @@ export default {
     </ul>
   </nav>
   <main>
-    <RouterView />
+    <div class="main-container">
+      <RouterView />
+    </div>
   </main>
+
+  <SiteFooter />
 </template>
 
 <style lang="scss">
@@ -83,11 +96,12 @@ nav {
     align-self: center;
 
     li {
-      margin-right: 2rem;
+      color: $not-black;
+      margin-right: 4rem;
       border-top: 3px solid rgba(0, 0, 0, 0);
 
       &:last-child {
-        margin-right: 4rem;
+        margin-right: 20vw;
       }
 
       &:hover {
@@ -97,7 +111,7 @@ nav {
   }
 }
 
-main {
+.main-container {
   background-color: $lightest-blue;
   margin-left: 20vw;
   min-height: 110vh;
