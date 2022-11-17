@@ -1,19 +1,52 @@
+<script>
+import MenuList from "@/components/MenuList.vue";
+
+export default {
+  components: {
+    MenuList,
+  },
+};
+</script>
+
 <template>
-  <article class="main-info-container">
-    <h1>Bradley Smith</h1>
-    <figure class="img-container">
-      <img
-        src="@/assets/img/meLong.jpg"
-        alt="image of Bradley with forest and ocean behind him"
-        class="me-img"
-      />
-      <figcaption class="caption-me">Web Developer</figcaption>
-    </figure>
-    <p class="tagline">I am a web and software developer from Maine.</p>
-  </article>
+  <header class="device-widths">
+    <nav class="home-nav">
+      <MenuList />
+    </nav>
+  </header>
+
+  <main>
+    <div class="main-container">
+      <article class="main-info-container">
+        <h1>Bradley Smith</h1>
+        <figure class="img-container">
+          <img
+            src="@/assets/img/meLong.jpg"
+            alt="image of Bradley with forest and ocean behind him"
+            class="me-img"
+          />
+          <figcaption class="caption-me">Web Developer</figcaption>
+        </figure>
+        <p class="tagline">I am a web and software developer from Maine.</p>
+      </article>
+    </div>
+  </main>
 </template>
 
 <style lang="scss">
+.home-nav {
+  min-height: 15vh;
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.main-container {
+  background-color: $lightest-blue;
+  margin-left: 20vw;
+  min-height: 110vh;
+}
+
 .main-info-container {
   h1 {
     color: $not-black;
