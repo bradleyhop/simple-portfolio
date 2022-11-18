@@ -50,14 +50,18 @@ export default {
           rel="noopener noreferrer"
           title="live demo"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            alt="image indicating an outside link"
-            viewBox="0 0 24 24"
-          >
-            <path :d="mdiOpenInNew"></path>
-          </svg>
+          <button class="link-button">
+            <span class="button-text">Live Site</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              alt="image indicating an outside link"
+              viewBox="0 0 24 24"
+              class="svg-icon"
+            >
+              <path :d="mdiOpenInNew"></path>
+            </svg>
+          </button>
         </a>
 
         <a
@@ -67,14 +71,18 @@ export default {
           rel="noopener noreferrer"
           title="source code"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-hidden="true"
-            viewBox="0 0 24 24"
-          >
-            <path :d="mdiGithub"></path>
-          </svg>
+          <button class="link-button">
+            <span class="button-text">GitHub Repo</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="svg-icon"
+            >
+              <path :d="mdiGithub"></path>
+            </svg>
+          </button>
         </a>
       </p>
     </div>
@@ -89,39 +97,59 @@ export default {
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
     0 1px 5px 0 rgb(0 0 0 / 12%);
 
-  .card-title {
-    padding: 1rem;
-    font-weight: normal;
-  }
-
   .card-img {
-    width: inherit;
-    object-fit: contain;
+    height: 11rem;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    margin-bottom: -5px;
+    object-fit: cover;
+    width: inherit;
   }
 
   .bottom-card-container {
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
 
+    .card-title {
+      color: $not-black;
+      font-weight: normal;
+      margin: 0.5rem 0 0 1rem;
+      text-align: center;
+    }
+
     .card-body {
-      min-height: 4rem;
       display: flex;
+      justify-content: space-around;
+      align-items: center;
+      min-height: 3rem;
+      margin-bottom: 0.5rem;
 
       .card-link {
-        margin: 1rem 2rem 1rem 1rem;
+        text-decoration: none;
 
-        & > svg {
-          fill: $greenish;
-          height: 2.5rem;
-          width: 2.5rem;
+        .link-button {
+          display: flex;
+          border: none;
+          background-color: $lightest-blue;
+          border-radius: 100px;
+          cursor: pointer;
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
 
           &:hover {
-            height: 3rem;
-            width: 3rem;
-            transition-duration: 500ms;
+            transform: scale(1.1);
+            transition-duration: 200ms;
+          }
+
+          .button-text {
+            align-self: center;
+            color: $not-black;
+            padding-right: 4px;
+          }
+
+          .svg-icon {
+            fill: $not-black;
+            height: 1.5em;
+            width: 1.5em;
           }
         }
       }

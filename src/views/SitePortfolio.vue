@@ -51,13 +51,35 @@ export default {
 
   <main>
     <div class="portcard-container device-widths">
-      <PortCard
-        :cardTitle="freecodecampData[0].projects[2].title"
-        :liveLink="freecodecampData[0].projects[2].link"
-        :gitLink="freecodecampData[0].projects[2].github"
-        :imgSrc="`./screenshots/${freecodecampData[0].projects[2].img.src}`"
-        :imgAlt="freecodecampData[0].projects[2].img.alt"
-      />
+      <h2 class="featured-text">featured</h2>
+
+      <section class="portcard-container">
+        <!-- chloropleth map  -->
+        <PortCard
+          :cardTitle="freecodecampData[0].projects[2].title"
+          :liveLink="freecodecampData[0].projects[2].link"
+          :gitLink="freecodecampData[0].projects[2].github"
+          :imgSrc="`./screenshots/${freecodecampData[0].projects[2].img.src}`"
+          :imgAlt="freecodecampData[0].projects[2].img.alt"
+        />
+        <!-- AIC Color Match -->
+        <PortCard
+          :cardTitle="extraData[0].projects[0].title"
+          :liveLink="extraData[0].projects[0].link"
+          :gitLink="extraData[0].projects[0].github"
+          :imgSrc="`./screenshots/${extraData[0].projects[0].img.src}`"
+          :imgAlt="extraData[0].projects[0].img.alt"
+        />
+
+        <!-- Pomodoro Timer -->
+        <PortCard
+          :cardTitle="freecodecampData[1].projects[1].title"
+          :liveLink="freecodecampData[1].projects[1].link"
+          :gitLink="freecodecampData[1].projects[1].github"
+          :imgSrc="`./screenshots/${freecodecampData[1].projects[1].img.src}`"
+          :imgAlt="freecodecampData[1].projects[1].img.alt"
+        />
+      </section>
     </div>
   </main>
 </template>
@@ -108,5 +130,19 @@ $border-line: 3px solid #fff;
       margin-bottom: 1rem;
     }
   }
+}
+
+.featured-text {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  writing-mode: vertical-lr;
+  text-align: center;
+  transform: rotate(-180deg);
+}
+
+.portcard-container {
+  display: flex;
+  justify-content: space-evenly;
+
 }
 </style>
