@@ -18,7 +18,7 @@ export default {
   <main>
     <div class="main-container">
       <article class="main-info-container">
-        <h1>Bradley Smith</h1>
+        <h1 class="my-name">Bradley Smith</h1>
         <figure class="img-container">
           <img
             src="@/assets/img/meLong.jpg"
@@ -48,10 +48,11 @@ export default {
 }
 
 .main-info-container {
-  h1 {
+  .my-name {
     color: $not-black;
     font-size: 6rem;
     font-weight: 300;
+    letter-spacing: 2px;
     margin-left: -8rem;
     padding-top: 8rem;
   }
