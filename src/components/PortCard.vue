@@ -97,6 +97,12 @@ export default {
   box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
     0 1px 5px 0 rgb(0 0 0 / 12%);
 
+  &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transform: scale(1.07);
+    transition-duration: 200ms;
+  }
+
   .card-img {
     height: 11rem;
     border-top-left-radius: inherit;
@@ -112,8 +118,9 @@ export default {
     .card-title {
       color: $not-black;
       font-weight: normal;
-      margin: 0.5rem 0 0 1rem;
-      text-align: center;
+      letter-spacing: -1px;
+      margin: 1rem 0 1rem 1rem;
+      text-align: left;
     }
 
     .card-body {
