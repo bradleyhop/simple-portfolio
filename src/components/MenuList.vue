@@ -40,7 +40,7 @@ export default {
   </ul>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .menu-list {
   align-content: center;
   align-self: center;

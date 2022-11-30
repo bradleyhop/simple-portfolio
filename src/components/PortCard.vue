@@ -89,18 +89,16 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .port-card-container {
   border-radius: 4px;
   margin: 1rem;
   width: 20rem;
-  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
-    0 1px 5px 0 rgb(0 0 0 / 12%);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transform: scale(1.07);
-    transition-duration: 200ms;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.22);
   }
 
   .card-img {
@@ -143,7 +141,7 @@ export default {
           padding: 0.5rem 1rem;
 
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             transition-duration: 200ms;
           }
 

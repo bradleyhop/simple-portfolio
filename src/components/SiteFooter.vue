@@ -10,7 +10,7 @@ export default {
   </footer>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 footer {
   min-height: 15vh;
   align-items: center;
