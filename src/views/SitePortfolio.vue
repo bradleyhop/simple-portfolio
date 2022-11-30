@@ -192,7 +192,10 @@ export default {
             </svg>
           </p>
 
-          <PortfolioCollapse :dataList="freecodecampData" />
+          <h4 class="cert-title">Certificates Earned</h4>
+          <div class="port-collapse-container">
+            <PortfolioCollapse :dataList="freecodecampData" />
+          </div>
         </article>
       </section>
       <!-- .complete-portfolio -->
@@ -406,5 +409,17 @@ $figma-purple: rgb(62, 84, 163);
       margin-bottom: 1rem;
     }
   }
+}
+
+
+.cert-title {
+  color: $fcc-green;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 0.25rem;
+}
+
+.port-collapse-container {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 </style>

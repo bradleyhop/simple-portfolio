@@ -4,18 +4,9 @@
 
 const fCC = [
   {
-    title: "Data Visualization with D3",
+    title: "Data Visualization with D3.js",
     copy: "This courses teaches data visualization utilizing the D3.js library to draw various presentations of data while working with JSON and APIs to fetch the data. I completed the projects using the Vue CLI to develop and build the projects in Vue.js. I took heavy inspiration from Material Design to guide my design choices.",
     projects: [
-      {
-        title: "Data Visualization Certification",
-        link: "https://www.freecodecamp.org/certification/bradleyhop/data-visualization",
-        img: {
-          src: "d3Cert.png",
-          alt: "screenshot of Bradley's freeCodeCamp Data Visualization Certification",
-        },
-        github: "",
-      },
       {
         title: "Treemap Diagram",
         link: "https://bradleyhop.github.io/d3-treemap-build/",
@@ -67,15 +58,6 @@ const fCC = [
     title: "Front End Libraries Certification",
     copy: "The third certification of the freeCodeCamp curriculum. This section teaches the use of various libraries for html, css, and javascript. On each project, there is a green hamburger icon in the top left corner that opens the testing suite for that particular project. The user stories are listed therein (be sure that the correct project is selected in the drop-down menu).",
     projects: [
-      {
-        title: "Front End Libraries Certification",
-        link: "https://www.freecodecamp.org/certification/bradleyhop/front-end-libraries",
-        img: {
-          src: "frontEndLibraries.jpg",
-          alt: "screenshot of front end libraries certificate",
-        },
-        github: "",
-      },
       {
         title: "Pomodoro Timer",
         copy: "Timer to help focus and productivity. Zen enso draws as timer counts down. Project is now titled '25 + 5 timer'.",
@@ -147,15 +129,6 @@ const fCC = [
     title: "Responsive Web Design",
     copy: "The first certification of the freeCodeCamp curriculum. This section teaches html and css to complete five projects each with their own use story requirements.  On each project, there is a green hamburger icon in the top left corner that opens the testing suite for that particular project. The user stories are listed therein (be sure that the correct project is selected in the drop-down menu).",
     projects: [
-      {
-        title: "Responsive Web Design Certification",
-        link: "https://www.freecodecamp.org/certification/bradleyhop/responsive-web-design",
-        img: {
-          src: "responsiveCert.jpg",
-          alt: "certificate for responsive web design",
-        },
-        github: "",
-      },
       {
         title: "Personal Profile",
         link: "https://bradleyhop.github.io/",
