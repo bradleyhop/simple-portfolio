@@ -1,7 +1,6 @@
 <script>
 // load icons
-import { mdiOpenInNew } from "@mdi/js";
-import { mdiGithub } from "@mdi/js";
+import { mdiOpenInNew, mdiGithub } from "@mdi/js";
 
 export default {
   name: "PortCard",
