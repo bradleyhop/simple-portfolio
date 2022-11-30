@@ -4,6 +4,7 @@ import { RouterLink } from "vue-router";
 // custom Vue components
 import MenuList from "@/components/MenuList.vue";
 import PortCard from "@/components/PortCard.vue";
+import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
 
 // arrays holding project info
 import fCC from "@/assets/data/fcc-data.js";
@@ -20,6 +21,7 @@ export default {
     RouterLink,
     MenuList,
     PortCard,
+    PortfolioCollapse,
   },
 
   data() {
@@ -120,6 +122,7 @@ export default {
               href="https://frontendmentor.io/profile/bradleyhop"
               target="_blank"
               rel="noreferrer noopener"
+              class="fm-profile-link"
               >Find my Frontend Mentor portofolio here
             </a>
             <svg
@@ -188,56 +191,8 @@ export default {
               <path :d="mdiOpenInNew"></path>
             </svg>
           </p>
-          <div class="list-container">
-            <h4 class="list-heading">Certificates Earned</h4>
-            <ul class="fcc-list">
-              <li>
-                <h5>Data Visualization with D3.js</h5>
-                <p class="list-para">
-                  This courses teaches data visualization utilizing the D3.js
-                  library to draw various presentations of data while working
-                  with JSON and APIs to fetch the data. I completed the projects
-                  using the Vue CLI to develop and build the projects in Vue.js.
-                  I took heavy inspiration from Material Design to guide my
-                  design choices.
-                </p>
-              </li>
-              <li>
-                <h5>Front End Libraries</h5>
-                <p>
-                  The third certification of the freeCodeCamp curriculum. This
-                  section teaches the use of various libraries for html, css,
-                  and javascript. On each project, there is a green hamburger
-                  icon in the top left corner that opens the testing suite for
-                  that particular project. The user stories are listed therein
-                  (be sure that the correct project is selected in the drop-down
-                  menu).
-                </p>
-              </li>
-              <li>
-                <h5>Javascript Algorithms and Data Structures</h5>
-                <p>
-                  The second certification of the freeCodeCamp curriculum. This
-                  sections teaches javascript syntax and data structures. I have
-                  solved all of the three levels of algorithm challenges. This
-                  section deals with solely with learning basic programming
-                  skills through javascript.
-                </p>
-              </li>
-              <li>
-                <h5>Responsive Wed Design</h5>
-                <p>
-                  The first certification of the freeCodeCamp curriculum. This
-                  section teaches html and css to complete five projects each
-                  with their own use story requirements. On each project, there
-                  is a green hamburger icon in the top left corner that opens
-                  the testing suite for that particular project. The user
-                  stories are listed therein (be sure that the correct project
-                  is selected in the drop-down menu)
-                </p>
-              </li>
-            </ul>
-          </div>
+
+          <PortfolioCollapse :dataList="freecodecampData" />
         </article>
       </section>
       <!-- .complete-portfolio -->
@@ -248,6 +203,7 @@ export default {
 <style lang="scss">
 $nav-border-line: 3px solid #fff;
 $fcc-green: #00641f;
+$figma-purple: rgb(62, 84, 163);
 
 @mixin border-b-section {
   border-bottom: 1px solid #e0e0e0e0;
@@ -324,7 +280,7 @@ $fcc-green: #00641f;
 .complete-portfolio {
   .frontend-mentor {
     @include border-b-section;
-    padding: 2rem 0;
+    padding: 2rem 0 1rem 0;
 
     .fm-heading-container {
       margin-bottom: 1rem;
@@ -337,7 +293,7 @@ $fcc-green: #00641f;
 
       .fm-text {
         font-size: 1.5rem;
-        color: rgb(62, 84, 163);
+        color: $figma-purple;
         font-weight: lighter;
 
         &:hover {
@@ -353,14 +309,15 @@ $fcc-green: #00641f;
         text-decoration: underline;
       }
     }
-  }
-}
 
-.port-link-copy {
-  display: flex;
+    .fm-profile-link {
+      color: $figma-purple;
+      border-bottom: 1px solid rgba(0, 0, 0, 0);
 
-  &:hover {
-    text-decoration: underline;
+      &:hover {
+        border-bottom: 1px solid $figma-purple;
+      }
+    }
   }
 }
 
@@ -372,7 +329,11 @@ $fcc-green: #00641f;
 
 .fcc-port-link {
   color: $fcc-green;
-  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+  &:hover {
+    border-bottom: 1px solid $fcc-green;
+  }
 }
 
 .fcc-section {
@@ -419,11 +380,20 @@ $fcc-green: #00641f;
   }
 }
 
+.port-link-copy {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
 .list-container {
-  .list-heading {
-    font-weight: nomrmal;
-    text-decoration: underline;
-    color: $fcc-green;
+  margin: auto;
+  max-width: 80%;
+  padding-bottom: 1rem;
+
+  .cert-heading {
+    font-weight: normal;
+    font-style: italic;
     margin-bottom: 0.3rem;
   }
 
