@@ -154,7 +154,7 @@ export default {
               >
                 <path :d="mdiFire"></path>
               </svg>
-              &rpar; freeCodeCamp
+              &rpar;&nbsp;freeCodeCamp
               <!-- home-made freeCodeCamp icon using material icon fire and some css trickery -->
             </a>
           </h3>
@@ -205,8 +205,6 @@ export default {
 
 <style lang="scss">
 $nav-border-line: 3px solid #fff;
-$fcc-green: #00641f;
-$figma-purple: rgb(62, 84, 163);
 
 @mixin border-b-section {
   border-bottom: 1px solid #e0e0e0e0;
@@ -227,7 +225,7 @@ $figma-purple: rgb(62, 84, 163);
 
       .home-link {
         font-size: 1.5rem;
-        border: 3px solid rgba(0, 0, 0, 0);
+        border: 3px solid transparent;
         letter-spacing: 1px;
 
         &:hover {

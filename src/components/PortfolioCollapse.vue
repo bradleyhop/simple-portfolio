@@ -2,7 +2,7 @@
 import { Collapse } from "vue-collapsed";
 import { reactive } from "vue";
 // load icons
-import { mdiOpenInNew, mdiGithub } from "@mdi/js";
+import { mdiOpenInNew, mdiGithub, mdiChevronDown } from "@mdi/js";
 
 export default {
   name: "PortfolioCollapse",
@@ -15,6 +15,7 @@ export default {
     // mdi icons
     mdiOpenInNew,
     mdiGithub,
+    mdiChevronDown,
   }),
 
   props: {
@@ -26,6 +27,7 @@ export default {
   },
 
   methods: {
+    // expand new panel, closing the non-active panel
     handleAccordion: function (selectedIndex) {
       this.portList.forEach((_, index) => {
         this.portList[index].isExpanded =
@@ -51,9 +53,20 @@ export default {
     :key="topic.title"
     class="collapse-container"
   >
-    <h5 @click="() => handleAccordion(index)" class="topic-collapse">
+    <button @click="() => handleAccordion(index)" class="topic-collapse">
       {{ topic.title }}
-    </h5>
+      <span class="chevron-icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          role="img"
+          alt="image indicating an outside link"
+          viewBox="0 0 24 24"
+          class="svg-icon chevron"
+        >
+          <path :d="mdiChevronDown"></path>
+        </svg>
+      </span>
+    </button>
     <Collapse :when="portList[index].isExpanded" class="collapse">
       <p class="topic-copy">
         {{ topic.copy }}
@@ -132,19 +145,27 @@ export default {
 }
 // component styling
 .topic-collapse {
+  color: $not-black;
   cursor: pointer;
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
-  padding-bottom: 0.7rem;
+  min-width: 100%;
+  text-align: left;
 
-  &:hover {
-    text-decoration: underline;
+  .chevron {
+    fill: $not-black;
+    float: right;
+
+    // placeholder
+    &:hover {
+      transform: rotate(180deg);
+      transition: 200ms ease-in;
+    }
   }
 }
 
 .project-img {
-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   height: 3.5rem;
   margin-right: 1rem;
   object-fit: cover;
@@ -155,7 +176,7 @@ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 .topic-copy {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .topic-list {

@@ -49,7 +49,7 @@ export default {
   list-style: none;
 
   li {
-    border: 3px solid rgba(0, 0, 0, 0);
+    border: 3px solid transparent;
     color: $not-black;
     margin-right: 4rem;
 
