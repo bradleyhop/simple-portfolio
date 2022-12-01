@@ -5,13 +5,36 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
+  // don't rely on browser defaults; must set explicitly
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light; // sets dark as default
+}
+
+body {
+  min-height: 100vh;
+}
+
+// remain responsive
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
 }
 
 a {
   text-decoration: none;
 }
+// end CSS reset
 
 /*
  * Device size breakpoints
@@ -37,6 +60,9 @@ a {
 
 // set max-widths for content
 .device-widths {
+  margin: auto;
+  width: 95vw;
+
   @include tablet-breakpoint {
     width: 90vw;
   }
@@ -48,15 +74,13 @@ a {
   @include large-desktop-breakpoint {
     width: 60vw;
   }
-
-  margin: auto;
-  width: 95vw;
 }
 
 html {
   // background-color: #fff;
   background-color: #fafafa;
-  font-family: 'Raleway', sans-serif;
+  color: $not-black;
+  font-family: "Raleway", sans-serif;
   font-size: 16px; // REM
 }
 
