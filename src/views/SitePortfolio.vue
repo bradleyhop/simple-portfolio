@@ -1,7 +1,7 @@
 <script>
 import { RouterLink } from "vue-router";
 
-// custom Vue components
+// project custom Vue components
 import MenuList from "@/components/MenuList.vue";
 import PortCard from "@/components/PortCard.vue";
 import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
@@ -11,8 +11,7 @@ import fCC from "@/assets/data/fcc-data.js";
 import extra from "@/assets/data/extra-data.js";
 
 // load only the icons we need!
-import { mdiFire } from "@mdi/js";
-import { mdiOpenInNew } from "@mdi/js";
+import { mdiFire, mdiOpenInNew } from "@mdi/js";
 
 export default {
   name: "SitePortfolio",
@@ -31,6 +30,12 @@ export default {
       // mdi icons
       mdiFire,
       mdiOpenInNew,
+      // blarg
+      featuredProjects: [
+        fCC[0].projects[2], // heat map
+        extra[0].projects[0], // color match
+        fCC[1].projects[0], // pomo timer
+      ],
     };
   },
 };
@@ -56,33 +61,16 @@ export default {
       <h2 class="featured-text">featured</h2>
 
       <section class="portcard-section">
-        <!-- chloropleth map  -->
-        <PortCard
-          :cardTitle="freecodecampData[0].projects[2].title"
-          :liveLink="freecodecampData[0].projects[2].link"
-          :gitLink="freecodecampData[0].projects[2].github"
-          :imgSrc="`./screenshots/${freecodecampData[0].projects[2].img.src}`"
-          :imgAlt="freecodecampData[0].projects[2].img.alt"
-        />
-        <!-- AIC Color Match -->
-        <PortCard
-          :cardTitle="extraData[0].projects[0].title"
-          :liveLink="extraData[0].projects[0].link"
-          :gitLink="extraData[0].projects[0].github"
-          :imgSrc="`./screenshots/${extraData[0].projects[0].img.src}`"
-          :imgAlt="extraData[0].projects[0].img.alt"
-        />
-
-        <!-- Pomodoro Timer -->
-        <PortCard
-          :cardTitle="freecodecampData[1].projects[1].title"
-          :liveLink="freecodecampData[1].projects[1].link"
-          :gitLink="freecodecampData[1].projects[1].github"
-          :imgSrc="`./screenshots/${freecodecampData[1].projects[1].img.src}`"
-          :imgAlt="freecodecampData[1].projects[1].img.alt"
-        />
+        <div v-for="project in featuredProjects" :key="project.title">
+          <PortCard
+            :cardTitle="`${project.title}`"
+            :liveLink="`${project.link}`"
+            :gitLink="`${project.github}`"
+            :imgSrc="`./screenshots/${project.img.src}`"
+            :imgAlt="`${project.img.alt}`"
+          />
+        </div>
       </section>
-      <!-- .device-widths -->
     </div>
 
     <div class="portfolio-container device-widths">
@@ -93,6 +81,7 @@ export default {
               href="https://frontendmentor.io"
               target="_blank"
               rel="noreferrer noopener"
+              class="fm-heading-link"
             >
               <img
                 src="/img/frontend-mentor-seeklogocom.svg"
@@ -124,16 +113,16 @@ export default {
               rel="noreferrer noopener"
               class="fm-profile-link"
               >Find my Frontend Mentor portofolio here
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                alt="image indicating an outside link"
+                viewBox="0 0 24 24"
+                class="svg-icon"
+              >
+                <path :d="mdiOpenInNew"></path>
+              </svg>
             </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              alt="image indicating an outside link"
-              viewBox="0 0 24 24"
-              class="svg-icon"
-            >
-              <path :d="mdiOpenInNew"></path>
-            </svg>
           </p>
         </article>
 
@@ -180,16 +169,16 @@ export default {
               rel="noreferrer noopener"
               class="fcc-port-link"
               >Find my freeCodeCamp portofolio here
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                alt="image indicating an outside link"
+                viewBox="0 0 24 24"
+                class="svg-icon"
+              >
+                <path :d="mdiOpenInNew"></path>
+              </svg>
             </a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              alt="image indicating an outside link"
-              viewBox="0 0 24 24"
-              class="svg-icon"
-            >
-              <path :d="mdiOpenInNew"></path>
-            </svg>
           </p>
 
           <h4 class="cert-title">Certificates Earned</h4>
@@ -274,6 +263,7 @@ $nav-border-line: 3px solid #fff;
 
   .portcard-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
 }
@@ -285,6 +275,11 @@ $nav-border-line: 3px solid #fff;
 
     .fm-heading-container {
       margin-bottom: 1rem;
+
+      .fm-heading-link {
+        display: flex;
+        align-items: center;
+      }
 
       .fmIcon {
         height: 1.5rem;
@@ -304,7 +299,7 @@ $nav-border-line: 3px solid #fff;
     }
 
     .figma-link {
-      color: #a259ff;
+      color: $figma-purple;
 
       &:hover {
         text-decoration: underline;
@@ -313,10 +308,11 @@ $nav-border-line: 3px solid #fff;
 
     .fm-profile-link {
       color: $figma-purple;
+      display: flex;
       border-bottom: 1px solid rgba(0, 0, 0, 0);
 
       &:hover {
-        border-bottom: 1px solid $figma-purple;
+        transform: scale(1.02);
       }
     }
   }
@@ -330,10 +326,11 @@ $nav-border-line: 3px solid #fff;
 
 .fcc-port-link {
   color: $fcc-green;
+  display: flex;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
 
   &:hover {
-    border-bottom: 1px solid $fcc-green;
+    transform: scale(1.02);
   }
 }
 
@@ -409,7 +406,6 @@ $nav-border-line: 3px solid #fff;
   }
 }
 
-
 .cert-title {
   color: $fcc-green;
   font-size: 1.1rem;
@@ -418,6 +414,6 @@ $nav-border-line: 3px solid #fff;
 }
 
 .port-collapse-container {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 </style>

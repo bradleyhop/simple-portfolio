@@ -92,12 +92,13 @@ export default {
 .port-card-container {
   border-radius: 4px;
   margin: 1rem;
-  width: 20rem;
+  width: 18rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover {
     box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.22);
+    transform: scale(1.02);
   }
 
   .card-img {
@@ -136,11 +137,11 @@ export default {
           background-color: $lightest-blue;
           border-radius: 100px;
           cursor: pointer;
-          font-size: 1rem;
+         font-size: 0.8rem;
           padding: 0.5rem 1rem;
 
           &:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             transition-duration: 200ms;
           }
 
@@ -152,8 +153,8 @@ export default {
 
           .svg-icon {
             fill: $not-black;
-            height: 1.5em;
-            width: 1.5em;
+            height: 1.4em;
+            width: 1.4em;
           }
         }
       }
