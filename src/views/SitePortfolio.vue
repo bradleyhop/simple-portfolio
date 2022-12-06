@@ -76,7 +76,7 @@ export default {
     <div class="portfolio-container device-widths">
       <section class="complete-portfolio">
         <article class="frontend-mentor">
-          <h3 class="fm-heading-container">
+          <h3 class="port-heading fm-heading-container">
             <a
               href="https://frontendmentor.io"
               target="_blank"
@@ -127,7 +127,7 @@ export default {
         </article>
 
         <article class="fcc-section">
-          <h3 class="fcc-heading">
+          <h3 class="port-heading fcc-heading">
             <a
               href="https://freecodecamp.org"
               target="_blank"
@@ -186,6 +186,19 @@ export default {
             <PortfolioCollapse :dataList="freecodecampData" />
           </div>
         </article>
+
+        <article class="extras-section">
+          <h3 class="port-heading extras-heading">Extraciricular</h3>
+          <p class="heading-copy">
+            In addition to freeCodeCamp, I use other resources to increase my
+            knowledge and practice my skills. Here are various algorithm
+            exercises, classes, and projects not part of the freeCodeCamp
+            curriculum.
+          </p>
+          <div class="port-collapse-container">
+            <PortfolioCollapse :dataList="extraData" />
+          </div>
+        </article>
       </section>
       <!-- .complete-portfolio -->
     </div>
@@ -195,8 +208,9 @@ export default {
 <style lang="scss">
 $nav-border-line: 3px solid #fff;
 
-@mixin border-b-section {
+.border-b-section {
   border-bottom: 1px solid #e0e0e0e0;
+  padding-bottom: 1rem;
 }
 
 .port-header {
@@ -257,9 +271,8 @@ $nav-border-line: 3px solid #fff;
 }
 
 .portcard-container {
-  @include border-b-section;
+  @extend .border-b-section;
   display: flex;
-  padding-bottom: 2rem;
 
   .portcard-section {
     display: flex;
@@ -268,52 +281,50 @@ $nav-border-line: 3px solid #fff;
   }
 }
 
-.complete-portfolio {
-  .frontend-mentor {
-    @include border-b-section;
-    padding: 2rem 0 1rem 0;
+.port-heading {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
 
-    .fm-heading-container {
-      margin-bottom: 1rem;
+.frontend-mentor {
+  @extend .border-b-section;
 
-      .fm-heading-link {
-        display: flex;
-        align-items: center;
-      }
-
-      .fmIcon {
-        height: 1.5rem;
-        margin-right: 0.5rem;
-        width: 1.5rem;
-      }
-
-      .fm-text {
-        font-size: 1.5rem;
-        color: $figma-purple;
-        font-weight: lighter;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+  .fm-heading-container {
+    .fm-heading-link {
+      display: flex;
+      align-items: center;
     }
 
-    .figma-link {
+    .fmIcon {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+      width: 1.5rem;
+    }
+
+    .fm-text {
       color: $figma-purple;
 
       &:hover {
         text-decoration: underline;
       }
     }
+  }
 
-    .fm-profile-link {
-      color: $figma-purple;
-      display: flex;
-      border-bottom: 1px solid rgba(0, 0, 0, 0);
+  .figma-link {
+    color: $figma-purple;
 
-      &:hover {
-        transform: scale(1.02);
-      }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .fm-profile-link {
+    color: $figma-purple;
+    display: flex;
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
 }
@@ -327,39 +338,34 @@ $nav-border-line: 3px solid #fff;
 .fcc-port-link {
   color: $fcc-green;
   display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, 0);
 
   &:hover {
     transform: scale(1.02);
   }
 }
 
+.heading-copy {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 2rem;
+  }
+}
+
 .fcc-section {
-  @include border-b-section;
-  margin: 2rem 0;
+  @extend .border-b-section;
 
   .fcc-heading {
-    margin-bottom: 1rem;
     display: flex;
 
     a {
       color: $fcc-green;
-      font-size: 1.5rem;
-      font-weight: lighter;
       display: flex;
       align-items: center;
 
       &:hover {
         text-decoration: underline;
       }
-    }
-  }
-
-  .heading-copy {
-    margin-bottom: 1rem;
-
-    &:last-child {
-      margin-bottom: 2rem;
     }
   }
 
@@ -387,7 +393,6 @@ $nav-border-line: 3px solid #fff;
 .list-container {
   margin: auto;
   max-width: 80%;
-  padding-bottom: 1rem;
 
   .cert-heading {
     font-weight: normal;
@@ -415,5 +420,9 @@ $nav-border-line: 3px solid #fff;
 
 .port-collapse-container {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.extras-section {
+  @extend .border-b-section;
 }
 </style>
