@@ -166,7 +166,7 @@ export default {
 
 .project-img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  height: 3.5rem;
+  max-width: 5.5rem;
   margin-right: 1rem;
   object-fit: cover;
 }
