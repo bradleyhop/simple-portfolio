@@ -100,7 +100,12 @@ export default {
                     alt="image indicating an outside link"
                     viewBox="0 0 24 24"
                     class="svg-icon"
-                  >
+                    :class="
+                      portList[index].estClassessttisExpanded === true
+                        ? testClass
+                        : nopeClass
+                    "
+                  est>
                     <path :d="mdiOpenInNew"></path>
                   </svg>
                 </button>
@@ -159,7 +164,7 @@ export default {
     // placeholder
     &:hover {
       transform: rotate(180deg);
-      transition: 200ms ease-in;
+      transition: 200ms ease;
     }
   }
 }

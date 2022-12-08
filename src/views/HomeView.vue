@@ -80,7 +80,7 @@ export default {
   .tagline {
     color: $not-black;
     font-size: 1.5rem;
-    padding: 1rem 0 0 27vw;
+    padding: 1rem 0 5rem 5vw;
     width: 50rem;
   }
 }

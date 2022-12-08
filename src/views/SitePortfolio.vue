@@ -304,10 +304,6 @@ $nav-border-line: 3px solid #fff;
 
     .fm-text {
       color: $figma-purple;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -356,21 +352,14 @@ $nav-border-line: 3px solid #fff;
   @extend .border-b-section;
 
   .fcc-heading {
+    color: $fcc-green;
     display: flex;
 
     a {
       color: $fcc-green;
       display: flex;
       align-items: center;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
-  }
-
-  .fcc-heading {
-    color: $fcc-green;
   }
 
   .fcc-icon {
@@ -385,36 +374,17 @@ $nav-border-line: 3px solid #fff;
 }
 
 .port-link-copy {
-  margin: 1rem 0;
-  display: flex;
   align-items: center;
-}
-
-.list-container {
-  margin: auto;
-  max-width: 80%;
-
-  .cert-heading {
-    font-weight: normal;
-    font-style: italic;
-    margin-bottom: 0.3rem;
-  }
-
-  .fcc-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      margin-bottom: 1rem;
-    }
-  }
+  display: flex;
+  letter-spacing: 0.4px;
+  margin: 1rem 0;
 }
 
 .cert-title {
   color: $fcc-green;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   font-weight: normal;
+  letter-spacing: 0.5px;
   margin-bottom: 0.25rem;
 }
 
