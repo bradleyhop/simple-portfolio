@@ -1,37 +1,43 @@
 <script>
-import { RouterLink } from "vue-router";
-
 // project custom Vue components
-import MenuList from "@/components/MenuList.vue";
+import PageHeader from "@/components/PageHeader.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   name: "ContactMe",
 
   components: {
-    RouterLink,
-    MenuList,
+    PageHeader,
     SiteFooter,
+  },
+
+  props: {
+    pageTitle: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
 
-
 <template>
-  <header class="port-header">
-    <nav class="port-nav device-widths">
-      <div class="port-nav-container">
-        <RouterLink to="/" class="home-link clear-link-dec" title="to home">
-          Bradley Smith
-        </RouterLink>
-        <MenuList class="port-nav-list" />
-      </div>
-      <div class="title-container">
-        <h1 class="port-title">Contact</h1>
-      </div>
-    </nav>
-  </header>
+  <PageHeader pageTitle="Contact" />
 
-  <SiteFooter class="device-width" />
+  <main class="device-widths">
+    <form class="contact-form" method="post" accept-charset="UTF-8">
+      <label for="from-email">Your Email</label>
+      <input id="from-email" type="email" name="fromEmail" />
+      <label for="message">Message</label>
+      <textarea rows="6" id="message" name="message" />
+    </form>
+  </main>
 
+  <SiteFooter class="device-widths" />
 </template>
+
+<style lang="scss">
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+</style>

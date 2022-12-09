@@ -29,7 +29,9 @@ export default {
           />
           <figcaption class="caption-me">Web Developer</figcaption>
         </figure>
-        <p class="tagline">I am a web and software developer from Maine.</p>
+        <p class="tagline">
+          I am a web and software developer living in Maine.
+        </p>
       </article>
     </div>
   </main>
@@ -51,7 +53,6 @@ $shift-left: 20vw;
   background-color: $lightest-blue;
   margin-left: $shift-left;
   min-height: 110vh;
-  overflow: hidden;
 }
 
 .main-info-container {
@@ -88,7 +89,6 @@ $shift-left: 20vw;
     color: $not-black;
     font-size: 1.5rem;
     padding: 1rem 0 5rem 5vw;
-    width: 50rem;
   }
 }
 

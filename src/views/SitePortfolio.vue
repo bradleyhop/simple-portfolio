@@ -1,8 +1,6 @@
 <script>
-import { RouterLink } from "vue-router";
-
 // project custom Vue components
-import MenuList from "@/components/MenuList.vue";
+import PageHeader from "../components/PageHeader.vue";
 import PortCard from "@/components/PortCard.vue";
 import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
@@ -18,8 +16,7 @@ export default {
   name: "SitePortfolio",
 
   components: {
-    RouterLink,
-    MenuList,
+    PageHeader,
     PortCard,
     PortfolioCollapse,
     SiteFooter,
@@ -44,19 +41,7 @@ export default {
 </script>
 
 <template>
-  <header class="port-header">
-    <nav class="port-nav device-widths">
-      <div class="port-nav-container">
-        <RouterLink to="/" class="home-link clear-link-dec" title="to home">
-          Bradley Smith
-        </RouterLink>
-        <MenuList class="port-nav-list" />
-      </div>
-      <div class="title-container">
-        <h1 class="port-title">Portfolio</h1>
-      </div>
-    </nav>
-  </header>
+  <PageHeader pageTitle="Portfolio" />
 
   <main>
     <div class="portcard-container device-widths">
