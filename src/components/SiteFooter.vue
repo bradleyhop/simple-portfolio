@@ -5,11 +5,13 @@ export default {
 </script>
 
 <template>
-  <footer class="device-widths">
+  <footer>
     <nav class="footer-list-container">
       <ul class="footer-column nav-list">
         <li>
-          <RouterLink to="/" class="clear-link-dec footer-router"> home </RouterLink>
+          <RouterLink to="/" class="clear-link-dec footer-router">
+            home
+          </RouterLink>
         </li>
         <li>
           <RouterLink to="/portfolio" class="clear-link-dec footer-router">
@@ -22,44 +24,55 @@ export default {
         <li>
           <a
             href="https://github.com/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my GitHub profile"
           >
             Github
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/bradleyhop"
+            href="https://frontendmentor.io/profile/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my Frontend Mentor profile"
           >
             Frontend Mentor
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/bradleyhop"
+            href="https://freecodecamp.org/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my freeCodeCamp profile"
           >
             freeCodeCamp
           </a>
         </li>
         <li>
+          <!-- fix link -->
           <a
             href="https://github.com/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my Codewars profile"
           >
             Codewars
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/bradleyhop"
+            href="https://www.linkedin.com/in/bradley-smith-328235112/"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my LinkedIn profile"
           >
             LinkedIn
           </a>
@@ -103,9 +116,8 @@ footer {
 }
 
 .footer-copyright {
-  margin-top: 2rem;
+  margin: 2.5rem 0 2rem 0;
   letter-spacing: 0.75px;
-  width: 100%;
 }
 
 .footer-link {

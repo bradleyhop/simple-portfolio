@@ -18,24 +18,9 @@ export default {
       </RouterLink>
     </li>
     <li>
-      <a
-        href="mailto:bradleywjsmith@gmail.com"
-        class="clear-link-dec"
-        title="email me!"
-      >
+      <RouterLink to="/contact" class="clear-link-dec" title="to contact">
         contact
-      </a>
-    </li>
-    <li>
-      <a
-        href="https://github.com/bradleyhop"
-        target="_blank"
-        rel="noreffer noopener"
-        class="clear-link-dec"
-        title="my github repo homepage"
-      >
-        @bradleyhop
-      </a>
+      </RouterLink>
     </li>
   </ul>
 </template>

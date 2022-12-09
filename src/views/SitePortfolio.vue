@@ -5,6 +5,7 @@ import { RouterLink } from "vue-router";
 import MenuList from "@/components/MenuList.vue";
 import PortCard from "@/components/PortCard.vue";
 import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 // arrays holding project info
 import fCC from "@/assets/data/fcc-data.js";
@@ -21,6 +22,7 @@ export default {
     MenuList,
     PortCard,
     PortfolioCollapse,
+    SiteFooter,
   },
 
   data() {
@@ -203,6 +205,9 @@ export default {
       <!-- .complete-portfolio -->
     </div>
   </main>
+
+  <SiteFooter class="device-widths" />
+
 </template>
 
 <style lang="scss">

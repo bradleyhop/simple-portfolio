@@ -1,9 +1,11 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   components: {
     MenuList,
+    SiteFooter,
   },
 };
 </script>
@@ -31,9 +33,13 @@ export default {
       </article>
     </div>
   </main>
+
+  <SiteFooter class="home-footer" />
 </template>
 
 <style lang="scss">
+$shift-left: 20vw;
+
 .home-nav {
   min-height: 15vh;
   display: flex;
@@ -43,8 +49,9 @@ export default {
 
 .main-container {
   background-color: $lightest-blue;
-  margin-left: 20vw;
+  margin-left: $shift-left;
   min-height: 110vh;
+  overflow: hidden;
 }
 
 .main-info-container {
@@ -83,5 +90,9 @@ export default {
     padding: 1rem 0 5rem 5vw;
     width: 50rem;
   }
+}
+
+.home-footer {
+  padding-left: $shift-left !important; // override .device-widths
 }
 </style>
