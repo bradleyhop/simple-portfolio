@@ -5,68 +5,88 @@ export default {
 </script>
 
 <template>
-  <footer class="device-widths">
+  <footer>
     <nav class="footer-list-container">
       <ul class="footer-column nav-list">
         <li>
-          <RouterLink to="/" class="clear-link-dec footer-router"> home </RouterLink>
+          <RouterLink to="/" class="clear-link-dec footer-router">
+            home
+          </RouterLink>
         </li>
         <li>
           <RouterLink to="/portfolio" class="clear-link-dec footer-router">
             portfolio
           </RouterLink>
         </li>
-        <li>contact</li>
+        <li>
+          <RouterLink to="/contact" class="clear-link-dec footer-router">
+            contact
+          </RouterLink>
+        </li>
       </ul>
       <ul class="footer-column contact-list">
         <li>
           <a
             href="https://github.com/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my GitHub profile"
           >
             Github
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/bradleyhop"
+            href="https://www.linkedin.com/in/bradley-smith-328235112/"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my LinkedIn profile"
+          >
+            LinkedIn
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://frontendmentor.io/profile/bradleyhop"
+            target="_blank"
+            class="footer-link"
+            rel="noopener noreferrer"
+            title="my Frontend Mentor profile"
           >
             Frontend Mentor
           </a>
         </li>
         <li>
           <a
-            href="https://github.com/bradleyhop"
+            href="https://freecodecamp.org/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my freeCodeCamp profile"
           >
             freeCodeCamp
           </a>
         </li>
         <li>
+          <!-- fix link -->
           <a
             href="https://github.com/bradleyhop"
+            target="_blank"
             class="footer-link"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
+            title="my Codewars profile"
           >
             Codewars
           </a>
         </li>
-        <li>
-          <a
-            href="https://github.com/bradleyhop"
-            class="footer-link"
-            rel="noopener noreferer"
-          >
-            LinkedIn
-          </a>
-        </li>
       </ul>
     </nav>
-    <p class="footer-copyright">Copyright &copy; 2022 Bradley Smith</p>
+    <p class="footer-copyright">
+      Copyright &copy; 2022 &mdash; crafted from scratch by
+      <span class="my-name">Bradley Smith</span>
+    </p>
   </footer>
 </template>
 
@@ -75,7 +95,7 @@ footer {
   min-height: 15vh;
   align-items: center;
   justify-content: center;
-  padding: 4rem 0 1.5rem 0;
+  padding: 5rem 0 1.5rem 0;
   font-size: 0.9rem;
 }
 
@@ -97,15 +117,16 @@ footer {
   opacity: 0.8;
 
   > li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.6rem;
     letter-spacing: -0.5px;
   }
 }
 
 .footer-copyright {
-  margin-top: 2rem;
+  margin: 3rem 0 1rem 0;
+  font-size: 0.9rem;
   letter-spacing: 0.75px;
-  width: 100%;
+  opacity: 0.6;
 }
 
 .footer-link {

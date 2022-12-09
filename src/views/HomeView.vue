@@ -1,9 +1,11 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   components: {
     MenuList,
+    SiteFooter,
   },
 };
 </script>
@@ -27,13 +29,19 @@ export default {
           />
           <figcaption class="caption-me">Web Developer</figcaption>
         </figure>
-        <p class="tagline">I am a web and software developer from Maine.</p>
+        <p class="tagline">
+          I am a web and software developer living in Maine.
+        </p>
       </article>
     </div>
   </main>
+
+  <SiteFooter class="home-footer" />
 </template>
 
 <style lang="scss">
+$shift-left: 20vw;
+
 .home-nav {
   min-height: 15vh;
   display: flex;
@@ -43,7 +51,7 @@ export default {
 
 .main-container {
   background-color: $lightest-blue;
-  margin-left: 20vw;
+  margin-left: $shift-left;
   min-height: 110vh;
 }
 
@@ -81,7 +89,10 @@ export default {
     color: $not-black;
     font-size: 1.5rem;
     padding: 1rem 0 5rem 5vw;
-    width: 50rem;
   }
+}
+
+.home-footer {
+  padding-left: $shift-left !important; // override .device-widths
 }
 </style>
