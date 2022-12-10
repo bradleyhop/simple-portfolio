@@ -17,6 +17,19 @@
     />
   </head>
   <body>
+    <!-- dummy form so netlify knows what's coming -->
+    <form
+      name="contact-me"
+      netlify
+      data-netflify="true"
+      netlify-honeypot="bot-field"
+      method="post"
+      hidden
+    >
+      <input type="text" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
