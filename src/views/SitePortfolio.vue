@@ -274,6 +274,7 @@ $nav-border-line: 3px solid #fff;
 .port-heading {
   font-weight: lighter;
   font-size: 1.5rem;
+  letter-spacing: 0.5px;
   margin: 1rem 0;
 }
 
