@@ -9,7 +9,7 @@ const extra = [
     projects: [
       {
         title: "Photo Matching App",
-        copy: "Returns a work of art from a curated list with the same dominant color (in its top three dominant colors) given an uploaded image. A development tool for a data science grad student.",
+        desc: "Returns a work of art from a curated list with the same dominant color (in its top three dominant colors) given an uploaded image. A development tool for a data science grad student. Built using AWS S3 and SQS services, Vue.js, and Sass. Python scripting for image processing completed by partner; front end interface written by myself.",
         link: "https://bradleyhop.github.io/scratch-aic/",
         img: {
           src: "aic.png",

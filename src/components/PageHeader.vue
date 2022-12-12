@@ -81,6 +81,7 @@ $nav-border-line: 3px solid #fff;
       font-size: 2.5rem;
       font-weight: lighter;
       letter-spacing: -1px;
+      padding-bottom: 1rem;
     }
   }
 }
