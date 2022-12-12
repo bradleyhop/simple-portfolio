@@ -92,10 +92,9 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  min-height: 15vh;
   align-items: center;
   justify-content: center;
-  padding: 5rem 0 1.5rem 0;
+  padding: 5rem 0 1rem 0;
   font-size: 0.9rem;
 }
 

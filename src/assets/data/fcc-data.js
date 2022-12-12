@@ -27,6 +27,7 @@ const fCC = [
       },
       {
         title: "Heat Map",
+        desc: "A freeCodeCamp pronject, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass. Fullfils 17 user stories; passes testing",
         link: "https://bradleyhop.github.io/d3-heatmap-build/",
         img: {
           src: "heatmap.png",
@@ -60,7 +61,7 @@ const fCC = [
     projects: [
       {
         title: "Pomodoro Timer",
-        copy: "Timer to help focus and productivity. Zen enso draws as timer counts down. Project is now titled '25 + 5 timer'.",
+        desc: "A freeCodeCamp project, this app is a timer to help focus and productivity. Using my own design, a Zen enso draws as timer counts down. The project is now titled '25 + 5 timer' in the testing software.",
         link: "https://bradleyhop.github.io/pomodoroTimer/",
         img: {
           src: "pomodoroTimer.jpg",

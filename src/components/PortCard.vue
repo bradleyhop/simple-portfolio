@@ -12,7 +12,19 @@ export default {
   }),
 
   props: {
+    imgSrc: {
+      type: String,
+      default: "",
+    },
+    imgAlt: {
+      type: String,
+      default: "",
+    },
     cardTitle: {
+      type: String,
+      default: "",
+    },
+    cardDesc: {
       type: String,
       default: "",
     },
@@ -21,14 +33,6 @@ export default {
       default: "",
     },
     gitLink: {
-      type: String,
-      default: "",
-    },
-    imgSrc: {
-      type: String,
-      default: "",
-    },
-    imgAlt: {
       type: String,
       default: "",
     },
@@ -41,14 +45,15 @@ export default {
     <img class="card-img" :src="imgSrc" :alt="imgAlt" />
     <div class="bottom-card-container">
       <h2 class="card-title">{{ cardTitle }}</h2>
-      <p class="card-body">
+      <p class="card-desc">{{ cardDesc }}</p>
+      <div class="link-container">
         <a
           :href="liveLink"
           class="card-link"
           target="_blank"
           rel="noopener noreferrer"
           title="live demo"
-        >
+          >
           <button class="link-button">
             <span class="button-text">Live Site</span>
             <svg
@@ -57,7 +62,7 @@ export default {
               alt="image indicating an outside link"
               viewBox="0 0 24 24"
               class="svg-icon"
-            >
+              >
               <path :d="mdiOpenInNew"></path>
             </svg>
           </button>
@@ -69,7 +74,7 @@ export default {
           target="_blank"
           rel="noopener noreferrer"
           title="source code"
-        >
+          >
           <button class="link-button">
             <span class="button-text">GitHub Repo</span>
             <svg
@@ -78,12 +83,12 @@ export default {
               aria-hidden="true"
               viewBox="0 0 24 24"
               class="svg-icon"
-            >
+              >
               <path :d="mdiGithub"></path>
             </svg>
           </button>
         </a>
-      </p>
+      </div>
     </div>
   </div>
 </template>
@@ -91,15 +96,9 @@ export default {
 <style lang="scss" scoped>
 .port-card-container {
   border-radius: 4px;
-  margin: 1rem;
-  width: 18rem;
+  width: 15rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-  &:hover {
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2), 0 5px 5px rgba(0, 0, 0, 0.22);
-    transform: scale(1.02);
-  }
 
   .card-img {
     height: 11rem;
@@ -117,16 +116,23 @@ export default {
       color: $not-black;
       font-weight: normal;
       letter-spacing: -1px;
-      margin: 1rem 0 1rem 1rem;
+      margin: 1rem;
       text-align: left;
     }
 
-    .card-body {
+    .card-desc {
+      font-size: 0.8rem;
+      padding: 0 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .link-container {
       display: flex;
       justify-content: space-around;
       align-items: center;
       min-height: 3rem;
-      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
 
       .card-link {
         text-decoration: none;
@@ -137,12 +143,12 @@ export default {
           background-color: $lightest-blue;
           border-radius: 100px;
           cursor: pointer;
-         font-size: 0.8rem;
-          padding: 0.5rem 1rem;
+          font-size: 0.75rem;
+          padding: 0.5rem 0.75rem;
 
           &:hover {
-            transform: scale(1.03);
-            transition-duration: 200ms;
+            transition: box-shadow 200ms;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
           }
 
           .button-text {

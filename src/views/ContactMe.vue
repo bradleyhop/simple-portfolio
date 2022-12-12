@@ -28,6 +28,7 @@ export default {
       form: Object.assign({}, defaultForm),
       textBodyDefault: "message",
       defaultForm, // form object
+      errorMessage: "", // show user error after form submit, v-if
     };
   },
 
@@ -43,7 +44,7 @@ export default {
           ...this.form,
         }),
       })
-      // TODO: replace these dummy vue-data messages with a div?
+        // TODO: replace these dummy vue-data messages with a div?
         .then((response) => {
           if (!response.ok) {
             throw new Error(response.statusText);
@@ -52,8 +53,8 @@ export default {
           }
         })
         .catch((error) => {
-          this.textSnackbar = "Error! Form not submitted: ";
-          this.textSnackbar += error;
+          this.errorMessage = "Error! Form not submitted: ";
+          this.errorMessage += error;
         });
     },
   },
@@ -64,6 +65,8 @@ export default {
   <PageHeader pageTitle="Contact" />
 
   <main class="device-widths">
+    <h2 class="contact-tagline">Let's connect</h2>
+
     <form
       class="contact-form"
       name="contact-me"
@@ -80,6 +83,8 @@ export default {
       />
       <label class="contact-label message-label" for="message">Message</label>
       <textarea class="textbox" rows="6" id="message" name="message" required />
+      <!-- test when site is live! -->
+      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
       <input type="submit" class="submit-form-input" value="Send Message" />
     </form>
   </main>
@@ -88,13 +93,20 @@ export default {
 </template>
 
 <style lang="scss">
+.contact-tagline {
+  font-size: 2rem;
+  font-weight: lighter;
+  letter-spacing: 0.3px;
+  margin-bottom: 2rem;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
 .contact-label {
-  font-size: 1.25rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
 }
@@ -104,23 +116,37 @@ export default {
 }
 
 .textbox {
-  background: #fff;
+  background: $gray-300;
+  border: none;
   color: $not-black;
-  font-size: 1.25rem;
-  max-width: 40%;
+  font-size: 1rem;
+  max-width: 30rem;
+  outline: none;
+  opacity: 0.5;
   padding: 0.5rem;
+
+  &:focus {
+    opacity: 1;
+    background-color: $gray-400;
+  }
 }
 
 .submit-form-input {
-  background-color: $lightest-blue;
+  background-color: $not-black;
   border: none;
-  border-radius: 5px;
-  color: $not-black;
+  color: #fff;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
+  font-size: 0.75rem;
   letter-spacing: 0.5px;
   margin-top: 1.5rem;
-  padding: 1rem;
-  max-width: 10rem;
+  padding: 0.75rem;
+  width: 8rem;
+
+  &:hover {
+    background-color: $lightest-blue;
+    color: $not-black;
+    transition: 200ms ease;
+  }
 }
 </style>

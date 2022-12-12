@@ -29,8 +29,19 @@ export default {
       // mdi icons
       mdiFire,
       mdiOpenInNew,
-      // blarg
       featuredProjects: [
+        {
+          // GitHub User Search app object
+          title: "GitHub User Search App",
+          link: "https://bradleyhop.github.io/frontend-mentor-github-user-search-app/",
+          github:
+            "https://github.com/bradleyhop/frontend-mentor-github-user-search-app",
+          img: {
+            src: "ghApp.png",
+            alt: "screenshot of GitHub user search app",
+          },
+          desc: "A Frontend Mentor project, this app pulls GitHub user profile information and dispays it based on a professional-designed Figma file. Built using Vue.js 3, Vite, GitHub Ocktokit API, and Sass. Light or Dark theme displays based on user preferance on load; can be manually changed. ",
+        },
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match
         fCC[1].projects[0], // pomo timer
@@ -50,11 +61,12 @@ export default {
       <section class="portcard-section">
         <div v-for="project in featuredProjects" :key="project.title">
           <PortCard
-            :cardTitle="`${project.title}`"
-            :liveLink="`${project.link}`"
-            :gitLink="`${project.github}`"
             :imgSrc="`./screenshots/${project.img.src}`"
-            :imgAlt="`${project.img.alt}`"
+            :imgAlt="project.img.alt"
+            :cardTitle="project.title"
+            :cardDesc="project.desc"
+            :liveLink="project.link"
+            :gitLink="project.github"
           />
         </div>
       </section>
@@ -192,7 +204,6 @@ export default {
   </main>
 
   <SiteFooter class="device-widths" />
-
 </template>
 
 <style lang="scss">
@@ -267,7 +278,9 @@ $nav-border-line: 3px solid #fff;
   .portcard-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
   }
 }
 

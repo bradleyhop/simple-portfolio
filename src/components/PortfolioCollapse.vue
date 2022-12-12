@@ -176,10 +176,6 @@ export default {
   object-fit: cover;
 }
 
-.topic-container {
-  margin: 0.75rem 0;
-}
-
 .topic-copy {
   margin: 1rem 0;
 }
@@ -189,7 +185,7 @@ export default {
 }
 
 .project-item {
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
