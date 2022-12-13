@@ -34,7 +34,7 @@ export default {
   list-style: none;
 
   li {
-    border: 3px solid transparent;
+    border-top: 3px solid transparent;
     color: $not-black;
     margin-right: 4rem;
 

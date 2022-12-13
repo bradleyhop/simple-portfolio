@@ -87,7 +87,8 @@ $shift-left: 20vw;
 
   .tagline {
     color: $not-black;
-    font-size: 1.5rem;
+    font-size: 1.15rem;
+    letter-spacing: -0.5px;
     padding: 1rem 0 5rem 5vw;
   }
 }

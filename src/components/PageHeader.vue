@@ -53,7 +53,7 @@ $nav-border-line: 3px solid #fff;
 
       .home-link {
         font-size: 1.5rem;
-        border: 3px solid transparent;
+        border-top: 3px solid transparent;
         letter-spacing: 1px;
 
         &:hover {
