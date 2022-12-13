@@ -1,6 +1,6 @@
 <script>
 // project custom Vue components
-import PageHeader from "../components/PageHeader.vue";
+import PageHeader from "@/components/PageHeader.vue";
 import PortCard from "@/components/PortCard.vue";
 import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
@@ -262,7 +262,7 @@ $nav-border-line: 3px solid #fff;
 }
 
 .featured-text {
-  color: #bdbdbd;
+  color: $gray-600;
   font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: -1px;
@@ -346,10 +346,6 @@ $nav-border-line: 3px solid #fff;
 
 .heading-copy {
   margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: 2rem;
-  }
 }
 
 .fcc-section {
