@@ -1,20 +1,23 @@
 <script>
 import { Collapse } from "vue-collapsed";
 import { reactive } from "vue";
+
+//load link buttons
+import LiveLinkButton from "@/components/buttons/LiveSite.vue";
+import GithubLinkButton from "@/components/buttons/GitHubRepo.vue";
 // load icons
-import { mdiOpenInNew, mdiGithub, mdiChevronDown } from "@mdi/js";
+import { mdiChevronDown } from "@mdi/js";
 
 export default {
   name: "PortfolioCollapse",
 
   components: {
     Collapse,
+    LiveLinkButton,
+    GithubLinkButton,
   },
 
   data: () => ({
-    // mdi icons
-    mdiOpenInNew,
-    mdiGithub,
     mdiChevronDown,
   }),
 
@@ -85,51 +88,8 @@ export default {
           <div class="links-container">
             <p>{{ project.title }}</p>
             <div class="button-container">
-              <a
-                :href="project.link"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="live demo"
-              >
-                <button class="link-button">
-                  <span class="button-text">Live Site</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    alt="image indicating an outside link"
-                    viewBox="0 0 24 24"
-                    class="svg-icon"
-                    :class="
-                      portList[index].estClassessttisExpanded === true
-                        ? testClass
-                        : nopeClass
-                    "
-                  est>
-                    <path :d="mdiOpenInNew"></path>
-                  </svg>
-                </button>
-              </a>
-              <a
-                :href="project.github"
-                class="project-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="source code"
-              >
-                <button class="link-button">
-                  <span class="button-text">GitHub Repo</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    role="img"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    class="svg-icon"
-                  >
-                    <path :d="mdiGithub"></path>
-                  </svg>
-                </button>
-              </a>
+              <LiveLinkButton :externalLink="project.link" />
+              <GithubLinkButton :gitLink="project.github" />
             </div>
           </div>
         </li>
@@ -146,7 +106,7 @@ export default {
 
 .collapse-container {
   padding: 0.5rem;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid $gray-300;
 }
 // component styling
 .topic-collapse {
@@ -171,7 +131,7 @@ export default {
 
 .project-img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  max-width: 5.5rem;
+  width: 8rem;
   margin-right: 1rem;
   object-fit: cover;
 }
@@ -187,47 +147,41 @@ export default {
 .project-item {
   margin-bottom: 2rem;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
 .button-container {
+  padding: 0.4rem 0;
   display: flex;
-  align-items: center;
 }
 
-.project-link {
-  padding: 0.5rem 1rem 0.5rem 0;
+.link-button {
+  border: none;
+  background-color: $lightest-blue;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin-right: 1rem;
 
-  .links-container {
-    display: block;
+  &:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition-duration: 200ms;
   }
 
-  .link-button {
-    display: inline-flex;
-    border: none;
-    background-color: $lightest-blue;
-    border-radius: 100px;
-    cursor: pointer;
-    font-size: 0.7rem;
-    padding: 0.4rem 0.75rem;
+  .project-link {
+    display: flex;
+    padding: 0.5rem 0.5rem;
+  }
 
-    &:hover {
-      transform: scale(1.1);
-      transition-duration: 200ms;
-    }
+  .button-text {
+    align-self: center;
+    color: $not-black;
+  }
 
-    .button-text {
-      align-self: center;
-      color: $not-black;
-      padding-right: 4px;
-    }
-
-    .svg-icon {
-      fill: $not-black;
-      height: 1.5em;
-      width: 1.5em;
-    }
+  .svg-icon {
+    fill: $not-black;
+    height: 1.5em;
+    width: 1.5em;
   }
 }
 </style>

@@ -112,7 +112,7 @@ footer {
 
 .footer-column {
   list-style-type: none;
-  width: 30%;
+  width: 15rem;
   opacity: 0.8;
 
   > li {
@@ -122,10 +122,10 @@ footer {
 }
 
 .footer-copyright {
+  color: $not-black;
   margin: 3rem 0 1rem 0;
   font-size: 0.9rem;
   letter-spacing: 0.75px;
-  opacity: 0.6;
 }
 
 .footer-link {

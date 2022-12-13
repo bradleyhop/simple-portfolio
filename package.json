@@ -1,6 +1,9 @@
 {
   "name": "simple-portfolio",
-  "version": "0.0.0",
+  "description": "Personal portfolio site",
+  "homepage": "https://bradleysmith.tech",
+  "version": "1.0.0",
+  "author": "Bradley Smith",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
