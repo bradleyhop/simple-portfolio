@@ -72,7 +72,7 @@ export default {
         <li>
           <!-- fix link -->
           <a
-            href="https://github.com/bradleyhop"
+            href="https://www.codewars.com/users/bradleyhop"
             target="_blank"
             class="footer-link"
             rel="noopener noreferrer"
