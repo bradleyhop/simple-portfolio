@@ -57,16 +57,23 @@ export default {
 <style lang="scss" scoped>
 .port-card-container {
   border-radius: 4px;
-  width: 15rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
+  @include tablet-breakpoint {
+    width: 15rem;
+  }
+
   .card-img {
-    height: 11rem;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
     object-fit: cover;
-    width: inherit;
+    width: auto;
+
+    @include tablet-breakpoint {
+      height: 11rem;
+      width: inherit;
+    }
   }
 
   .bottom-card-container {

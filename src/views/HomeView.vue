@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss">
 $shift-left: 20vw;
+$shift-left-mobile: 10vw;
 
 .home-nav {
   min-height: 15vh;
@@ -51,28 +52,46 @@ $shift-left: 20vw;
 
 .main-container {
   background-color: $lightest-blue;
-  margin-left: $shift-left;
-  min-height: 110vh;
+  margin-left: $shift-left-mobile;
+
+  @include tablet-breakpoint {
+    margin-left: $shift-left;
+    min-height: 100vh;
+  }
 }
 
 .main-info-container {
   .my-name {
     color: $not-black;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-left: -8rem;
-    padding-top: 8rem;
+    margin-left: -1.75rem;
+    padding-top: 4rem;
+
+    @include tablet-breakpoint {
+      font-size: 6rem;
+      margin-left: -8rem;
+      padding-top: 8rem;
+    }
   }
 
   .img-container {
     display: flex;
     margin-left: 5vw;
-    margin-top: 10vh;
+    margin-top: 4rem;
+
+    @include tablet-breakpoint {
+      margin-top: 5rem;
+    }
 
     .me-img {
       height: auto;
-      width: 25rem;
+      width: 17rem;
+
+      @include tablet-breakpoint {
+        width: 25rem;
+      }
     }
 
     .caption-me {
@@ -94,6 +113,10 @@ $shift-left: 20vw;
 }
 
 .home-footer {
-  padding-left: $shift-left !important; // override .device-widths
+  padding-left: $shift-left-mobile !important; // override .device-widths
+
+  @include tablet-breakpoint {
+    padding-left: $shift-left !important; // override .device-widths
+  }
 }
 </style>

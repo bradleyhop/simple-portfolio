@@ -35,13 +35,17 @@ export default {
   </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $nav-border-line: 3px solid #fff;
 
 .port-header {
-  min-height: 35vh;
+  min-height: 25vh;
   background: $lightest-blue;
   margin-bottom: 2rem;
+
+  @include tablet-breakpoint {
+    min-height: 30vh;
+  }
 
   .port-nav {
     .port-nav-container {
@@ -71,17 +75,24 @@ $nav-border-line: 3px solid #fff;
       }
     }
   }
+}
 
-  .title-container {
-    display: flex;
-    min-height: 10rem;
+.title-container {
+  display: flex;
+  align-items: flex-end;
+  min-height: 5rem;
 
-    .port-title {
-      align-self: flex-end;
+  @include tablet-breakpoint {
+    min-height: 8rem;
+  }
+
+  .port-title {
+    font-size: 2rem;
+    font-weight: lighter;
+    letter-spacing: -1px;
+
+    @include tablet-breakpoint {
       font-size: 2.5rem;
-      font-weight: lighter;
-      letter-spacing: -1px;
-      padding-bottom: 1rem;
     }
   }
 }
