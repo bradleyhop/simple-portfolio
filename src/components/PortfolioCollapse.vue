@@ -152,7 +152,10 @@ export default {
 
 .button-container {
   padding: 0.4rem 0;
-  display: flex;
+
+  > *:first-child {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .link-button {

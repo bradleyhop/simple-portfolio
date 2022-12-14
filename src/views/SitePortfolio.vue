@@ -247,18 +247,6 @@ $nav-border-line: 3px solid #fff;
       }
     }
   }
-
-  .title-container {
-    display: flex;
-    min-height: 10rem;
-
-    .port-title {
-      align-self: flex-end;
-      font-size: 2.5rem;
-      font-weight: lighter;
-      letter-spacing: -1px;
-    }
-  }
 }
 
 .featured-text {
@@ -266,14 +254,23 @@ $nav-border-line: 3px solid #fff;
   font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: -1px;
+  margin-bottom: 1rem;
   text-align: center;
-  transform: rotate(-180deg);
-  writing-mode: vertical-lr;
+
+  @include tablet-breakpoint {
+    transform: rotate(-180deg);
+    writing-mode: vertical-lr;
+  }
 }
 
 .portcard-container {
   @extend .border-b-section;
   display: flex;
+  flex-direction: column;
+
+  @include tablet-breakpoint {
+    flex-direction: row;
+  }
 
   .portcard-section {
     display: flex;
