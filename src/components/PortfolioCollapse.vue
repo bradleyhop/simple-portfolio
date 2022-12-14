@@ -2,7 +2,7 @@
 import { Collapse } from "vue-collapsed";
 import { reactive } from "vue";
 
-//load link buttons
+//load local link button components
 import LiveLinkButton from "@/components/buttons/LiveSite.vue";
 import GithubLinkButton from "@/components/buttons/GitHubRepo.vue";
 // load icons
@@ -40,7 +40,7 @@ export default {
   },
 
   computed: {
-    // add vue-collapsed property to prop array
+    // add vue-collapsed property to prop array; no default open
     portList() {
       return reactive(
         this.dataList.map((obj) => ({ ...obj, isExpanded: false }))
@@ -89,7 +89,7 @@ export default {
             <p>{{ project.title }}</p>
             <div class="button-container">
               <LiveLinkButton :externalLink="project.link" />
-              <GithubLinkButton :gitLink="project.github" />
+              <GithubLinkButton v-if="project.github" :gitLink="project.github" />
             </div>
           </div>
         </li>
@@ -99,8 +99,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-// vue-collapsed component provided styling
 .collapse {
+  // npm vue-collapsed component provided styling
   transition: height var(--vc-auto-duration) cubic-bezier(0.3, 0, 0.6, 1);
 }
 
@@ -108,7 +108,7 @@ export default {
   padding: 0.5rem;
   border-bottom: 1px solid $gray-300;
 }
-// component styling
+
 .topic-collapse {
   color: $not-black;
   cursor: pointer;

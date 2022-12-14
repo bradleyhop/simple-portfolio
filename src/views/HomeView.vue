@@ -27,7 +27,7 @@ export default {
             alt="image of Bradley with forest and ocean behind him"
             class="me-img"
           />
-          <figcaption class="caption-me">Web Developer</figcaption>
+          <figcaption class="caption-me">Web Development</figcaption>
         </figure>
         <p class="tagline">
           I am a web and software developer living in Maine.
@@ -76,7 +76,7 @@ $shift-left: 20vw;
     }
 
     .caption-me {
-      color: $gray-green;
+      color: $green-900;
       font-size: 1rem;
       padding-left: 0.25rem;
       padding-top: 0.5rem;
@@ -87,9 +87,9 @@ $shift-left: 20vw;
 
   .tagline {
     color: $not-black;
-    font-size: 1.15rem;
-    letter-spacing: -0.5px;
-    padding: 1rem 0 5rem 5vw;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 1rem 0 4rem 5vw;
   }
 }
 
