@@ -39,39 +39,41 @@ export default {
 $nav-border-line: 3px solid #fff;
 
 .port-header {
-  min-height: 25vh;
+  min-height: 10vh;
   background: $lightest-blue;
   margin-bottom: 2rem;
 
   @include tablet-breakpoint {
     min-height: 30vh;
   }
+}
 
-  .port-nav {
-    .port-nav-container {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      min-height: 15vh;
+.port-nav-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 5vh;
 
-      .home-link {
-        font-size: 1.5rem;
-        border-top: 3px solid transparent;
-        letter-spacing: 1px;
+  @include tablet-breakpoint {
+    min-height: 15vh;
+  }
 
-        &:hover {
-          border-top: $nav-border-line;
-        }
-      }
+  .home-link {
+    font-size: 1.5rem;
+    border-top: 3px solid transparent;
+    letter-spacing: 1px;
 
-      .port-nav-list {
-        // override component styling
-        & > li {
-          &:hover {
-            border-top: $nav-border-line;
-          }
-        }
+    &:hover {
+      border-top: $nav-border-line;
+    }
+  }
+
+  .port-nav-list {
+    // override component styling
+    & > li {
+      &:hover {
+        border-top: $nav-border-line;
       }
     }
   }
