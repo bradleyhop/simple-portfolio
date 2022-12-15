@@ -1,10 +1,12 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
+import MobileNav from "@/components/MobileNav.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   components: {
     MenuList,
+    MobileNav,
     SiteFooter,
   },
 };
@@ -13,7 +15,12 @@ export default {
 <template>
   <header class="device-widths">
     <nav class="home-nav">
-      <MenuList />
+      <div class="big-menu">
+        <MenuList />
+      </div>
+      <div class="mobile-menu">
+        <MobileNav />
+      </div>
     </nav>
   </header>
 
@@ -43,11 +50,31 @@ export default {
 $shift-left: 20vw;
 $shift-left-mobile: 10vw;
 
+.big-menu {
+  display: none;
+
+  @include tablet-breakpoint {
+    display: block;
+  }
+}
+
+.mobile-menu {
+  display: block;
+
+  @include tablet-breakpoint {
+    display: none;
+  }
+}
+
 .home-nav {
-  min-height: 15vh;
-  display: flex;
-  align-content: center;
-  justify-content: flex-end;
+  min-height: 8vh;
+
+  @include tablet-breakpoint {
+    min-height: 15vh;
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+  }
 }
 
 .main-container {
