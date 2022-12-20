@@ -92,6 +92,10 @@ export default {
       font-size: 0.8rem;
       padding: 0 1rem;
       margin-bottom: 1rem;
+
+      @include tablet-breakpoint {
+        min-height: 9.5rem;
+      }
     }
 
     .link-container {
