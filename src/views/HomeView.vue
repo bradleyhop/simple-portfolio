@@ -102,6 +102,7 @@ $shift-left-mobile: 10vw;
     .caption-me {
       color: $green-900;
       font-size: 1rem;
+      letter-spacing: -0.5px;
       padding-left: 0.25rem;
       padding-top: 0.5rem;
       transform-origin: top right;
@@ -113,7 +114,12 @@ $shift-left-mobile: 10vw;
     color: $not-black;
     font-size: 1.1rem;
     letter-spacing: 1px;
+    margin-right: 2.5%;
     padding: 1rem 0 4rem 5vw;
+
+    @include tablet-breakpoint {
+      margin-right: 0;
+    }
   }
 }
 

@@ -122,11 +122,9 @@ export default {
   font-size: 1rem;
   max-width: 30rem;
   outline: none;
-  opacity: 0.5;
   padding: 0.5rem;
 
   &:focus {
-    opacity: 1;
     background-color: $gray-400;
   }
 }
