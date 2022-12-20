@@ -9,13 +9,14 @@ const extra = [
     projects: [
       {
         title: "Photo Matching App",
-        desc: "Returns a work of art from a curated list with the same dominant color (in its top three dominant colors) given an uploaded image. A development tool for a data science grad student. Built using AWS S3 and SQS services, Vue.js, and Sass. Python scripting for image processing completed by partner; front end interface written by myself.",
+        desc: "Given an uploaded image, returns a work of art from a curated list with the same dominant color (in its top three dominant colors). This app is intended to be a development tool for a graduate student in data science. AWS S3 and SQS services, Vue.js, and Sass were used in the development.",
         link: "https://bradleyhop.github.io/scratch-aic/",
         img: {
           src: "aic.png",
           alt: "screenshot of art institute of Chicago API photo matching app",
         },
-        github: "https://github.com/mrutherfoord/AIC-Photo-Match/tree/master/frontEnd",
+        github:
+          "https://github.com/mrutherfoord/AIC-Photo-Match/tree/master/frontEnd",
       },
       {
         title: "Post-Rock Band Name Generator",
@@ -46,7 +47,8 @@ const extra = [
           src: "wikiSearch.jpg",
           alt: "screenshot of wikipedia search and preview article application",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/wikiSearchApp",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/wikiSearchApp",
       },
     ],
   },
