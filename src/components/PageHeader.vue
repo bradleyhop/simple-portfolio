@@ -45,7 +45,7 @@ export default {
   </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $nav-border-line: 3px solid #fff;
 
 .port-header {
@@ -80,11 +80,9 @@ $nav-border-line: 3px solid #fff;
   }
 
   .port-nav-list {
-    // override component styling
-    & > li {
-      &:hover {
-        border-top: $nav-border-line !important;
-      }
+    // override MenuList component styling
+    & > li:hover {
+      border-top: $nav-border-line !important;
     }
   }
 }

@@ -23,11 +23,12 @@ const fCC = [
           src: "choropleth.png",
           alt: "screenshot of choropleth map project",
         },
+        desc: "A freeCodeCamp project, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass. Fullfils 17 user stories; passes testing",
         github: "https://github.com/bradleyhop/d3-choropleth",
       },
       {
         title: "Heat Map",
-        desc: "A freeCodeCamp project, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass. Fullfils 17 user stories; passes testing",
+        desc: "A freeCodeCamp project, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass.",
         link: "https://bradleyhop.github.io/d3-heatmap-build/",
         img: {
           src: "heatmap.png",
