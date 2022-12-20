@@ -1,12 +1,14 @@
 <script>
 import { RouterLink } from "vue-router";
 import MenuList from "@/components/MenuList.vue";
+import MobileNav from "@/components/MobileNav.vue";
 
 export default {
   name: "PageHeader",
 
   components: {
     MenuList,
+    MobileNav,
     RouterLink,
   },
 
@@ -22,12 +24,20 @@ export default {
 <template>
   <header class="port-header">
     <nav class="port-nav device-widths">
+      <!-- tablet< navigation -->
       <div class="port-nav-container">
         <RouterLink to="/" class="home-link clear-link-dec" title="to home">
           Bradley Smith
         </RouterLink>
-        <MenuList class="port-nav-list" />
+        <div class="menu-list-container">
+          <MenuList class="port-nav-list" />
+        </div>
+        <!-- mobile-only navigation -->
+        <div class="mobile-nav">
+          <MobileNav />
+        </div>
       </div>
+      <!-- page title -->
       <div class="title-container">
         <h1 class="port-title">{{ pageTitle }}</h1>
       </div>
@@ -53,7 +63,7 @@ $nav-border-line: 3px solid #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 5vh;
+  min-height: 6vh;
 
   @include tablet-breakpoint {
     min-height: 15vh;
@@ -73,9 +83,28 @@ $nav-border-line: 3px solid #fff;
     // override component styling
     & > li {
       &:hover {
-        border-top: $nav-border-line;
+        border-top: $nav-border-line !important;
       }
     }
+  }
+}
+
+.menu-list-container {
+  display: none;
+
+  @include tablet-breakpoint {
+    display: flex;
+  }
+}
+
+.mobile-nav {
+  min-height: 6vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  @include tablet-breakpoint {
+    display: none;
   }
 }
 
@@ -92,6 +121,7 @@ $nav-border-line: 3px solid #fff;
     font-size: 2rem;
     font-weight: lighter;
     letter-spacing: -1px;
+    margin-bottom: 0.5rem;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;

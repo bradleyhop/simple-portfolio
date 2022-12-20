@@ -30,16 +30,28 @@ export default {
   align-content: center;
   align-self: center;
   display: flex;
-  font-size: 1.25rem;
+  font-size: 1rem;
   list-style: none;
+
+  @include tablet-breakpoint {
+    font-size: 1.25rem;
+  }
 
   li {
     border-top: 3px solid transparent;
     color: $not-black;
-    margin-right: 4rem;
+    margin-right: 2rem;
+
+    @include tablet-breakpoint {
+      margin-right: 4rem;
+    }
 
     &:hover {
       border-top: 3px solid $lightest-blue;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

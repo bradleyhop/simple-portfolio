@@ -24,25 +24,43 @@ export default {
 </script>
 
 <template>
-  <nav class="mobile-menu">
+  <nav class="mobile-menu-container">
     <button class="mobile-menu-button" @click="setMobileMenu()">
-      <span class="menu-button-text"> menu </span>
+      <span class="menu-button-text">menu</span>
     </button>
-    <!-- mobile menu  -->
-    <div>
-      <ul v-if="toggleMenu" class="mobile-menu-list">
+
+    <div
+      class="mobile-menu-list"
+      :class="toggleMenu ? 'animate-menu' : 'remove-menu'"
+    >
+      <div class="close-button-container">
+        <button class="close-button" @click="setMobileMenu()">close</button>
+      </div>
+      <ul class="list-container">
         <li class="mobile-menu-item">
-          <RouterLink to="/" class="clear-link-dec menu-nav-item">
+          <RouterLink
+            to="/"
+            class="clear-link-dec menu-nav-item"
+            @click="setMobileMenu"
+          >
             home
           </RouterLink>
         </li>
         <li class="mobile-menu-item">
-          <RouterLink to="/portfolio" class="clear-link-dec menu-nav-item">
+          <RouterLink
+            to="/portfolio"
+            class="clear-link-dec menu-nav-item"
+            @click="setMobileMenu"
+          >
             portfolio
           </RouterLink>
         </li>
         <li class="mobile-menu-item">
-          <RouterLink to="/contact" class="clear-link-dec menu-nav-item">
+          <RouterLink
+            to="/contact"
+            class="clear-link-dec menu-nav-item"
+            @click="setMobileMenu"
+          >
             contact
           </RouterLink>
         </li>
@@ -52,46 +70,71 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.mobile-menu-container {
+  display: flex;
+}
+
 .mobile-menu-button {
   appearance: none;
   background: none;
-  border: none;
   cursor: pointer;
+
   .menu-button-text {
     color: $not-black;
+    font-size: 1.25rem;
+    padding: 2px 5px;
   }
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: -6vh;
 }
 
 .mobile-menu-list {
   background-color: $lightest-blue;
-  left: 0;
-  list-style: none;
-  list-style-position: inside;
-  min-height: 100vh;
+  height: 100%; // cover the whole page, not just the visable
   position: absolute;
-  top: 5vh;
-  width: 100vw;
+  left: 0;
+  top: 0;
   z-index: 9001;
-  animation: sliding 300ms forwards;
+  overflow-x: hidden;
+  transition: 200ms;
 
-  @keyframes sliding {
-    from {
-      transform: translateX(-100%);
-    }
-    to {
-      transform: translateX(0%);
+  .close-button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 6vh;
+
+    .close-button {
+      color: $not-black;
+      cursor: pointer;
+      font-size: 1.25rem;
+      padding: 2px 5px;
+      margin-right: 5%;
     }
   }
 
   .mobile-menu-item {
-    border-bottom: 1px solid $gray-50;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    font-size: 1.07rem;
-    line-height: 1.79rem;
-    padding: 0 2.29rem 0 1.71rem;
-    padding: 1.43rem 0;
+    list-style: none;
+    font-size: 1.75rem;
+    letter-spacing: 2px;
+    margin: 1.5rem 0;
+    transition: 200ms;
   }
+}
+
+.animate-menu {
+  width: 100vw;
+}
+
+.remove-menu {
+  width: 0vw;
 }
 </style>
