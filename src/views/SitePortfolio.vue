@@ -40,11 +40,20 @@ export default {
             src: "ghApp.png",
             alt: "screenshot of GitHub user search app",
           },
-          desc: "A Frontend Mentor project, this app pulls GitHub user profile information and dispays it based on a professional-designed Figma file. Built using Vue.js 3, Vite, GitHub Ocktokit API, and Sass. Light or Dark theme displays based on user preferance on load; can be manually changed. ",
+          desc: "This Frontend Mentor project retrieves and displays GitHub user profile information. The design is based on a professionally design via a Figma file. Vue.js 3, Vite, GitHub Ocktokit API, and Sass were used to create this page. On load, the light or dark theme is displayed dependent on the user's preference; this can be modified manually.",
+        },
+        {
+          title: "Planet Facts Site",
+          link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
+          github: "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
+          img: {
+            src: "desktopPlanet.png",
+            alt: "screenshot of planet facts website",
+          },
+          desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, ans Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
         },
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match
-        fCC[1].projects[0], // pomo timer
       ],
     };
   },
@@ -91,10 +100,10 @@ export default {
             </a>
           </h3>
           <p class="heading-copy">
-            This community-based learning platform helps developers enhance and
-            their knowledge and skills with real-world frontend projects. I
-            choose and build projects using a professional design file &mdash;I
-            utilize
+            This community-based learning platform assists developers in
+            improving their knowledge and skills through the use of real-world
+            frontend projects. I select and build projects using a professional
+            design file &mdash; in my case,&nbsp;
             <a
               href="https://figma.com"
               target="_blank"
@@ -102,8 +111,7 @@ export default {
               class="figma-link"
               >Figma</a
             >
-            in my case &mdash; to create the website. I may then request
-            feedback and evaluate the work of my peers.
+            . I can then solicit feedback and evaluate my peers' work.
           </p>
           <p class="port-link-copy">
             <a
@@ -111,7 +119,8 @@ export default {
               target="_blank"
               rel="noreferrer noopener"
               class="fm-profile-link"
-              >Find my Frontend Mentor portofolio here
+            >
+              Find my Frontend Mentor portofolio here
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
@@ -147,19 +156,11 @@ export default {
             </a>
           </h3>
           <p class="heading-copy">
-            I use freeCodeCamp as my primary source of learning and project
-            building. Courses are designed to be taken in order starting with
-            basic HTML and CSS, to learning frontend and backend frameworks with
-            javascript.
-          </p>
-          <p class="heading-copy">
-            Each project has a series of user stories checked by a unit testing
-            tool provided by freeCodeCamp. The green hamburger-icon in the top
-            left drops down to show a list of projects. Be sure to select the
-            correct project from the drop-down menu, select "Run Tests", and
-            then click the button below to show the results. Note: Vue is not
-            officially supported by these unit tests, but I was able to get
-            nearly all projects to pass.
+            FreeCodeCamp provides instruction and projects for students to learn
+            front and back end web development. The projects I've built for the
+            certificates I've earned are all my own design and implementation.
+            There is a testing app that freeCodeCamp provides, but some projects
+            may not pass due to a lack of Vue.js support.
           </p>
           <p class="port-link-copy">
             <a
@@ -167,7 +168,8 @@ export default {
               target="_blank"
               rel="noreferrer noopener"
               class="fcc-port-link"
-              >Find my freeCodeCamp portofolio here
+            >
+              Find my freeCodeCamp portofolio here
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
@@ -189,10 +191,8 @@ export default {
         <article class="extras-section">
           <h3 class="port-heading extras-heading">Extraciricular</h3>
           <p class="heading-copy">
-            In addition to freeCodeCamp, I use other resources to increase my
-            knowledge and practice my skills. Here are various algorithm
-            exercises, classes, and projects not part of the freeCodeCamp
-            curriculum.
+            These are projects that were a collaboration, or just something fun
+            to test and expand my skills.
           </p>
           <div class="port-collapse-container">
             <PortfolioCollapse :dataList="extraData" />

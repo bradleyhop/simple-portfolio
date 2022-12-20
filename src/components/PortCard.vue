@@ -94,7 +94,7 @@ export default {
       margin-bottom: 1rem;
 
       @include tablet-breakpoint {
-        min-height: 13.5rem;
+        min-height: 12.5rem;
       }
     }
 
