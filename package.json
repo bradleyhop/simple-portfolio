@@ -6,7 +6,7 @@
   "author": "Bradley Smith",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp ./public/netlify.toml ./dist",
+    "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
