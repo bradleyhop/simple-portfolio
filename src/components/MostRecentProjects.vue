@@ -12,7 +12,7 @@ export default {
         <h3 class="recent-item-heading">Plant Facts Site</h3>
         <p class="recent-item-copy">
           A Frontend Mentor project, this is an eight-page fact site for all
-          planets in our solar system. Built from a profossionally designed
+          planets in our solar system. Built from a professionally designed
           Figma file using Vue.js 3, Vue Router, Vite, and Sass.
         </p>
       </li>

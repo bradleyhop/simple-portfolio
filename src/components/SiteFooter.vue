@@ -33,7 +33,7 @@ export default {
             rel="noopener noreferrer"
             title="my GitHub profile"
           >
-            Github
+            GitHub
           </a>
         </li>
         <li>
@@ -84,7 +84,7 @@ export default {
       </ul>
     </nav>
     <p class="footer-copyright">
-      Copyright &copy; 2022 &mdash; crafted from scratch by
+      Copyright &copy; 2022 &mdash; crafted from scratch with care by
       <span class="my-name">Bradley Smith</span>
     </p>
   </footer>
@@ -94,7 +94,7 @@ export default {
 footer {
   align-items: center;
   justify-content: center;
-  padding: 5rem 0 1rem 0;
+  padding: 10rem 0 1rem 0;
   font-size: 0.9rem;
 }
 
@@ -116,7 +116,7 @@ footer {
   opacity: 0.8;
 
   > li {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.9rem;
     letter-spacing: -0.5px;
   }
 }
@@ -135,5 +135,10 @@ footer {
   &:hover {
     border-bottom: 3px solid $lightest-blue;
   }
+}
+
+.my-name {
+  letter-spacing: 0.5px;
+  font-weight: bold;
 }
 </style>

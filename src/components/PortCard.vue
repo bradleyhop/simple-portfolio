@@ -59,19 +59,21 @@ export default {
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 90%;
+  margin: auto;
 
   @include tablet-breakpoint {
-    width: 15rem;
+    width: 30rem;
   }
 
   .card-img {
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    object-fit: cover;
+    object-fit: fit;
     width: auto;
 
     @include tablet-breakpoint {
-      height: 11rem;
+      height: 16rem;
       width: inherit;
     }
   }
@@ -82,26 +84,25 @@ export default {
 
     .card-title {
       color: $not-black;
-      font-weight: normal;
+      font-size: 1.1rem;
       letter-spacing: -1px;
       margin: 1rem;
-      text-align: left;
     }
 
     .card-desc {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
       padding: 0 1rem;
       margin-bottom: 1rem;
 
       @include tablet-breakpoint {
-        min-height: 12.5rem;
+        min-height: 9rem;
       }
     }
 
     .link-container {
       display: flex;
-      justify-content: space-around;
-      align-items: center;
+      justify-content: space-evenly;
       min-height: 3rem;
       padding-bottom: 0.5rem;
       margin-bottom: 1rem;
