@@ -60,7 +60,7 @@ export default {
             throw new Error(response.statusText);
           } else {
             console.log("successful submition");
-            this.successMessage = "Form submitted! Thank you!! ";
+            this.errorMessage = "Form submitted! Thank you!! ";
           }
         })
         .catch((error) => {
@@ -83,7 +83,8 @@ export default {
       class="contact-form"
       name="contact-me"
       method="POST"
-      accept-charset="UTF-8"
+      ref="form"
+      @submit.prevent="submit"
     >
       <label class="contact-label" for="email">Your Email</label>
       <input
@@ -91,14 +92,23 @@ export default {
         id="email"
         type="email"
         name="email"
+        v-model="form.email"
         required
       />
       <label class="contact-label message-label" for="message">Message</label>
-      <textarea class="textbox" rows="6" id="message" name="message" required />
-      <!-- test when site is live! -->
-      <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+      <textarea
+        class="textbox"
+        rows="6"
+        id="message"
+        name="message"
+        v-model="form.message"
+        required
+      />
       <input type="submit" class="submit-form-input" value="Send Message" />
     </form>
+
+    <!-- test when site is live! -->
+    <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
   </main>
 
   <SiteFooter class="device-widths" />
