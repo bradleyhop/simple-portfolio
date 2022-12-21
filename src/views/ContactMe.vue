@@ -34,6 +34,15 @@ export default {
   },
 
   methods: {
+    // encode form data into uri
+    encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+
     submit() {
       // we're using Netlify to handle form submission; here's their article on doing so with Vue:
       // https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
@@ -50,10 +59,12 @@ export default {
           if (!response.ok) {
             throw new Error(response.statusText);
           } else {
+            console.log("successful submition");
             this.successMessage = "Form submitted! Thank you!! ";
           }
         })
         .catch((error) => {
+          console.log(error);
           this.errorMessage = "Error! Form not submitted: ";
           this.errorMessage += error;
         });
