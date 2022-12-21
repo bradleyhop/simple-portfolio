@@ -82,7 +82,7 @@ export default {
     <form
       class="contact-form"
       name="contact-me"
-      method="post"
+      method="POST"
       accept-charset="UTF-8"
     >
       <label class="contact-label" for="email">Your Email</label>
@@ -90,7 +90,7 @@ export default {
         class="textbox"
         id="email"
         type="email"
-        name="fromEmail"
+        name="email"
         required
       />
       <label class="contact-label message-label" for="message">Message</label>
