@@ -97,7 +97,7 @@ export default {
 
 .mobile-menu-list {
   background-color: $lightest-blue;
-  height: 100%; // cover the whole page, not just the visable
+  height: 100%; // cover the whole page, not just the visible
   position: absolute;
   left: 0;
   top: 0;

@@ -29,6 +29,7 @@ export default {
       textBodyDefault: "message",
       defaultForm, // form object
       errorMessage: "", // show user error after form submit, v-if
+      successMessage: "",
     };
   },
 
@@ -49,7 +50,7 @@ export default {
           if (!response.ok) {
             throw new Error(response.statusText);
           } else {
-            this.textSnackbar = "Form submitted! Thank you!! ";
+            this.successMessage = "Form submitted! Thank you!! ";
           }
         })
         .catch((error) => {
@@ -116,7 +117,7 @@ export default {
 }
 
 .textbox {
-  background: $gray-300;
+  background: $gray-200;
   border: none;
   color: $not-black;
   font-size: 1rem;
@@ -125,7 +126,7 @@ export default {
   padding: 0.5rem;
 
   &:focus {
-    background-color: $gray-400;
+    background-color: $gray-300;
   }
 }
 
@@ -135,7 +136,7 @@ export default {
   color: #fff;
   cursor: pointer;
   font-family: "Raleway", sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.9rem;
   letter-spacing: 0.5px;
   margin-top: 1.5rem;
   padding: 0.75rem;

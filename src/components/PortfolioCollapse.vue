@@ -100,7 +100,7 @@ export default {
 
 <style lang="scss" scoped>
 .collapse {
-  // npm vue-collapsed component provided styling
+  // npm vue-collapsed component-provided styling
   transition: height var(--vc-auto-duration) cubic-bezier(0.3, 0, 0.6, 1);
 }
 
@@ -120,12 +120,6 @@ export default {
   .chevron {
     fill: $not-black;
     float: right;
-
-    // placeholder
-    &:hover {
-      transform: rotate(180deg);
-      transition: 200ms ease;
-    }
   }
 }
 
@@ -137,7 +131,8 @@ export default {
 }
 
 .topic-copy {
-  margin: 1rem 0;
+  line-height: 1.5rem;
+  margin: 1rem 0 2rem 0;
 }
 
 .topic-list {

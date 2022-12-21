@@ -50,7 +50,7 @@ export default {
     border: none;
     background-color: $lightest-blue;
     border-radius: 100px;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     padding: 0.5rem 0.75rem;
 
     &:hover {

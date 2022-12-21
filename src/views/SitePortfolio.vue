@@ -120,7 +120,7 @@ export default {
               rel="noreferrer noopener"
               class="fm-profile-link"
             >
-              Find my Frontend Mentor portofolio here
+              Find my Frontend Mentor portfolio here
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
@@ -169,7 +169,7 @@ export default {
               rel="noreferrer noopener"
               class="fcc-port-link"
             >
-              Find my freeCodeCamp portofolio here
+              Find my freeCodeCamp portfolio here
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 role="img"
@@ -189,7 +189,7 @@ export default {
         </article>
 
         <article class="extras-section">
-          <h3 class="port-heading extras-heading">Extraciricular</h3>
+          <h3 class="port-heading extras-heading">Extracurricular</h3>
           <p class="heading-copy">
             These are projects that were a collaboration, or just something fun
             to test and expand my skills.
@@ -307,6 +307,7 @@ $nav-border-line: 3px solid #fff;
 }
 
 .heading-copy {
+  line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -347,11 +348,17 @@ $nav-border-line: 3px solid #fff;
   font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 0.5px;
-  margin-bottom: 0.25rem;
+  width: 75%;
+  margin: 1.5rem auto 0.5rem auto;
 }
 
 .port-collapse-container {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  @include tablet-breakpoint {
+    width: 75%;
+    margin: auto;
+  }
 }
 
 .extras-section {

@@ -61,7 +61,6 @@ $shift-left-mobile: 10vw;
 
   @include tablet-breakpoint {
     margin-left: $shift-left;
-    min-height: 100vh;
   }
 }
 
@@ -103,7 +102,7 @@ $shift-left-mobile: 10vw;
       color: $green-900;
       font-size: 1rem;
       letter-spacing: -0.5px;
-      padding-left: 0.5rem;
+      padding-left: 0.25rem;
       padding-top: 0.5rem;
       transform-origin: top right;
       writing-mode: vertical-rl;
