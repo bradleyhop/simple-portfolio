@@ -89,7 +89,10 @@ export default {
             <p>{{ project.title }}</p>
             <div class="button-container">
               <LiveLinkButton :externalLink="project.link" />
-              <GithubLinkButton v-if="project.github" :gitLink="project.github" />
+              <GithubLinkButton
+                v-if="project.github"
+                :gitLink="project.github"
+              />
             </div>
           </div>
         </li>
@@ -105,8 +108,12 @@ export default {
 }
 
 .collapse-container {
-  padding: 0.5rem;
+  padding: 1rem;
   border-bottom: 1px solid $gray-300;
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .topic-collapse {

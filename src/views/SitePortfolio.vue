@@ -45,7 +45,8 @@ export default {
         {
           title: "Planet Facts Site",
           link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
-          github: "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
+          github:
+            "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
           img: {
             src: "desktopPlanet.png",
             alt: "screenshot of planet facts website",
