@@ -24,7 +24,7 @@ export default {
         <h1 class="my-name">Bradley Smith</h1>
         <figure class="img-container">
           <img
-            src="@/assets/img/meLong.jpg"
+            src="@/assets/img/meLongSmaller.jpg"
             alt="image of Bradley with forest and ocean behind him"
             class="me-img"
           />
