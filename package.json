@@ -14,6 +14,7 @@
     "@mdi/js": "^7.0.96",
     "vue": "^3.2.41",
     "vue-collapsed": "^1.0.2",
+    "vue-gtag": "^2.0.1",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
