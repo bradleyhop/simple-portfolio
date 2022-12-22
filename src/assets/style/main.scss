@@ -47,13 +47,13 @@ button {
  * NOTE: no mobile breakpoint because that is the default
  */
 @mixin tablet-breakpoint {
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 800px) {
     @content;
   }
 }
 
 @mixin desktop-breakpoint {
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1400px) {
     @content;
   }
 }
@@ -86,7 +86,15 @@ html {
   background-color: $gray-50;
   color: $not-black;
   font-family: "Raleway", sans-serif;
-  font-size: 16px; // REM
+  font-size: 14px; // REM
+
+  @include tablet-breakpoint {
+    font-size: 14px;
+  }
+
+  @include desktop-breakpoint {
+    font-size: 16px;
+  }
 }
 
 .clear-link-dec {

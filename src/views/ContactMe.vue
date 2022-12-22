@@ -29,12 +29,12 @@ export default {
       textBodyDefault: "message",
       defaultForm, // form object
       errorMessage: "", // show user error after form submit, v-if
-      successMessage: "",
+      successMessage: "", // show user that form submission workded
     };
   },
 
   methods: {
-    // encode form data into uri
+    // encode form data into uri; called by handleSubmit
     encode(data) {
       return Object.keys(data)
         .map(
@@ -43,7 +43,7 @@ export default {
         .join("&");
     },
 
-    submit() {
+    handleSubmit() {
       // we're using Netlify to handle form submission; here's their article on doing so with Vue:
       // https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
       fetch("/", {
@@ -59,14 +59,17 @@ export default {
           if (!response.ok) {
             throw new Error(response.statusText);
           } else {
-            console.log("successful submition");
-            this.errorMessage = "Form submitted! Thank you!! ";
+            this.successMessage = "Form submitted! Thank you!";
           }
         })
         .catch((error) => {
-          console.log(error);
           this.errorMessage = "Error! Form not submitted: ";
           this.errorMessage += error;
+        })
+        .finally(() => {
+          // reset form
+          this.form.message = "";
+          this.form.email = "";
         });
     },
   },
@@ -84,7 +87,7 @@ export default {
       name="contact-me"
       method="POST"
       ref="form"
-      @submit.prevent="submit"
+      @submit.prevent="handleSubmit"
     >
       <label class="contact-label" for="email">Your Email</label>
       <input
@@ -107,8 +110,15 @@ export default {
       <input type="submit" class="submit-form-input" value="Send Message" />
     </form>
 
-    <!-- test when site is live! -->
-    <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
+    <!-- show user of the status of their form submission -->
+    <div class="submit-feedback-container">
+      <p v-if="errorMessage" class="submit-feedback error-message">
+        {{ errorMessage }}
+      </p>
+      <p v-if="successMessage" class="submit-feedback success-message">
+        {{ successMessage }}
+      </p>
+    </div>
   </main>
 
   <SiteFooter class="device-widths" />
@@ -167,6 +177,23 @@ export default {
     background-color: $lightest-blue;
     color: $not-black;
     transition: 200ms ease;
+  }
+}
+
+.submit-feedback-container {
+  height: 3rem;
+
+  .submit-feedback {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    color: $red-700;
+  }
+
+  .success-message {
+    color: $green-900;
   }
 }
 </style>
