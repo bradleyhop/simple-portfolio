@@ -13,6 +13,7 @@ const extra = [
         link: "https://bradleyhop.github.io/scratch-aic/",
         img: {
           src: "aic.png",
+          webp: "aic.webp",
           alt: "screenshot of art institute of Chicago API photo matching app",
         },
         github:
@@ -24,6 +25,7 @@ const extra = [
         link: "https://bradleyhop.github.io/postRockBandName/",
         img: {
           src: "postrockBandname.jpg",
+          webp: "postrockBandname.webp",
           alt: "screenshot of post rock band name quiz",
         },
         github: "https://github.com/bradleyhop/postrock-bandname/",
@@ -34,6 +36,7 @@ const extra = [
         copy: "A spin-off from the freeCodeCamp quote generator; gives a terminal feeling to the computer programming-themed quotes.",
         img: {
           src: "terminalQuote.jpg",
+          webp: "terminalQuote.webp",
           alt: "screenshot of terminal style random quote generator",
         },
         github:
@@ -45,6 +48,7 @@ const extra = [
         copy: "This was an old freeCodeCamp project no longer a part of the official cirriculum. Uses Wikimedia's API and Boostrap to show article previews.",
         img: {
           src: "wikiSearch.jpg",
+          webp: "wikiSearch.webp",
           alt: "screenshot of wikipedia search and preview article application",
         },
         github:

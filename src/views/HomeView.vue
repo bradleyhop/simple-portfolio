@@ -23,11 +23,18 @@ export default {
       <article class="main-info-container">
         <h1 class="my-name">Bradley Smith</h1>
         <figure class="img-container">
-          <img
-            src="@/assets/img/meLongSmaller.jpg"
-            alt="image of Bradley with forest and ocean behind him"
-            class="me-img"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="@/assets/img/meLongSmaller.webp"
+            />
+            <source type="image/jpg" srcset="@/assets/img/meLongSmaller.jpg" />
+            <img
+              src="@/assets/img/meLongSmaller.jpg"
+              alt="image of Bradley with forest and ocean behind him"
+              class="me-img"
+            />
+          </picture>
           <figcaption class="caption-me">Web Development</figcaption>
         </figure>
         <p class="tagline">
@@ -84,17 +91,19 @@ $shift-left-mobile: 10vw;
     display: flex;
     margin-left: 5vw;
     margin-top: 4rem;
+    min-height: 20rem;
+    width: auto;
 
     @include tablet-breakpoint {
       margin-top: 5rem;
+      min-height: 30rem;
     }
 
     .me-img {
-      height: auto;
-      width: 17rem;
+      height: 20rem;
 
       @include tablet-breakpoint {
-        width: 25rem;
+        height: 30rem;
       }
     }
 

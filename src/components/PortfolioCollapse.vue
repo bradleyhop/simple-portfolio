@@ -80,11 +80,20 @@ export default {
           :key="project.title"
           class="project-item"
         >
-          <img
-            :src="`./screenshots/${project.img.src}`"
-            :alt="project.img.alt"
-            class="project-img"
-          />
+          <picture class="project-img">
+            <source
+              type="image/webp"
+              :srcset="`./screenshots/${project.img.webp}`"
+            />
+            <source
+              type="image/jpg"
+              :srcset="`./screenshots/${project.img.src}`"
+            />
+            <img
+              :src="`./screenshots/${project.img.src}`"
+              :alt="project.img.alt"
+            />
+          </picture>
           <div class="links-container">
             <p>{{ project.title }}</p>
             <div class="button-container">

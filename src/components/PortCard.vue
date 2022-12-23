@@ -16,6 +16,10 @@ export default {
       type: String,
       default: "",
     },
+    imgWebp: {
+      type: String,
+      default: "",
+    },
     imgAlt: {
       type: String,
       default: "",
@@ -42,7 +46,11 @@ export default {
 
 <template>
   <div class="port-card-container">
-    <img class="card-img" :src="imgSrc" :alt="imgAlt" />
+    <picture class="card-img">
+      <source type="image/webp" :srcset="imgWebp" />
+      <source type="image/jpg" :srcset="imgSrc" />
+      <img :src="imgSrc" :alt="imgAlt" />
+    </picture>
     <div class="bottom-card-container">
       <h2 class="card-title">{{ cardTitle }}</h2>
       <p class="card-desc">{{ cardDesc }}</p>
