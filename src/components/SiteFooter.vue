@@ -94,8 +94,12 @@ export default {
 footer {
   align-items: center;
   justify-content: center;
-  padding: 10rem 0 1rem 0;
+  padding: 5rem 0 1rem 0;
   font-size: 0.9rem;
+
+  @include tablet-breakpoint {
+    padding: 10rem 0 1rem 0;
+  }
 }
 
 .footer-list-container {
@@ -126,6 +130,7 @@ footer {
   margin: 3rem 0 1rem 0;
   font-size: 0.9rem;
   letter-spacing: 0.75px;
+  opacity: 0.7;
 }
 
 .footer-link {
