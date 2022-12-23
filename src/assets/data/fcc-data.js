@@ -11,7 +11,8 @@ const fCC = [
         title: "Treemap Diagram",
         link: "https://bradleyhop.github.io/d3-treemap-build/",
         img: {
-          src: "treemap.png",
+          src: "treemap.jpg",
+          webp: "treemap.webp",
           alt: "screenshot of treemap diagram project",
         },
         github: "https://github.com/bradleyhop/d3-treemap-diagram",
@@ -20,7 +21,8 @@ const fCC = [
         title: "Choropleth Map",
         link: "https://bradleyhop.github.io/d3-choropleth-build/",
         img: {
-          src: "choropleth.png",
+          src: "choropleth.jpg",
+          webp: "choropleth.webp",
           alt: "screenshot of choropleth map project",
         },
         desc: "A freeCodeCamp project, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass. Fullfils 17 user stories; passes testing",
@@ -31,7 +33,8 @@ const fCC = [
         desc: "A freeCodeCamp project, this app visualizes data with a heat map. Built using D3.js, Vue.js, Sass.",
         link: "https://bradleyhop.github.io/d3-heatmap-build/",
         img: {
-          src: "heatmap.png",
+          src: "heatmap.jpg",
+          webp: "heatmap.webp",
           alt: "screenshot of heat map project",
         },
         github: "https://github.com/bradleyhop/d3-heat-map",
@@ -40,7 +43,8 @@ const fCC = [
         title: "Scatterplot Graph",
         link: "https://bradleyhop.github.io/d3-scatterplot-build/",
         img: {
-          src: "scatterplot.png",
+          src: "scatterplot.jpg",
+          webp: "scatterplot.webp",
           alt: "screenshot of scatterplot graph project",
         },
         github: "https://github.com/bradleyhop/d3-scatter-plot",
@@ -49,7 +53,8 @@ const fCC = [
         title: "Bar Chart",
         link: "https://bradleyhop.github.io/d3-barchart-build/",
         img: {
-          src: "barChart.png",
+          src: "barChart.jpg",
+          webp: "barChart.webp",
           alt: "screenshot for bar chart project",
         },
         github: "https://github.com/bradleyhop/d3-bar-chart",
@@ -66,6 +71,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/pomodoroTimer/",
         img: {
           src: "pomodoroTimer.jpg",
+          webp: "pomodoroTimer.webp",
           alt: "screenshot of pomodoro timer app",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/pomodoro-timer/",
@@ -76,6 +82,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/js-calculator/",
         img: {
           src: "jsCalculator.jpg",
+          webp: "jsCalculator.webp",
           alt: "screenshot of markdown to javascript calculator",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/js-calculator/",
@@ -86,6 +93,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/drumMachine/",
         img: {
           src: "drumMachine.jpg",
+          webp: "drumMachine.webp",
           alt: "screenshot of game boy inspired drum machine",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/drum-machine/",
@@ -96,6 +104,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/markdownPreviewer/markdownPre.html",
         img: {
           src: "markdownPreviewer.jpg",
+          webp: "markdownPreviewer.webp",
           alt: "screenshot of markdown to html previewer",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/markdownPreviewer/",
@@ -106,6 +115,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/randomQuotes/randomQuote.html",
         img: {
           src: "randomQuoteGenerator.jpg",
+          webp: "randomQuoteGenerator.webp",
           alt: "screenshot of random quote machine",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/randomQuotes/",
@@ -121,6 +131,7 @@ const fCC = [
         link: "https://github.com/bradleyhop/freeCodeCampAlgorithms",
         img: {
           src: "jsCert.jpg",
+          webp: "jsCert.webp",
           alt: "javascript algorithm certification",
         },
         github: "",
@@ -136,6 +147,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/",
         img: {
           src: "portfolio.jpg",
+          webp: "portfolio.webp",
           alt: "screenshot of portfolio webpage",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io",
@@ -145,6 +157,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/techDoc/techDoc.html",
         img: {
           src: "fccTechDoc.jpg",
+          webp: "fccTechDoc.webp",
           alt: "screenshot of technical documentation project",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/techDoc",
@@ -154,6 +167,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/productLandingPage/productLandingPage.html",
         img: {
           src: "fccProductLanding.jpg",
+          webp: "fccProductLanding.webp",
           alt: "screenshot of product landing page",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/productLandingPage",
@@ -163,6 +177,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/surveyForm/surveyForm.html",
         img: {
           src: "survey.jpg",
+          webp: "survey.webp",
           alt: "screenshot of survey form",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/surveyForm",
@@ -172,6 +187,7 @@ const fCC = [
         link: "https://bradleyhop.github.io/tribute/tribute.html",
         img: {
           src: "tribute.jpg",
+          webp: "tribute.webp",
           alt: "screenshot of tribute webpage to Frankie Manning",
         },
         github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/tribute",

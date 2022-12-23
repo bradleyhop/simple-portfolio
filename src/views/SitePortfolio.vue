@@ -38,6 +38,7 @@ export default {
             "https://github.com/bradleyhop/frontend-mentor-github-user-search-app",
           img: {
             src: "ghApp.png",
+            webp: "ghApp.webp",
             alt: "screenshot of GitHub user search app",
           },
           desc: "This Frontend Mentor project retrieves and displays GitHub user profile information. The design is based on a professionally design via a Figma file. Vue.js 3, Vite, GitHub Ocktokit API, and Sass were used to create this page. On load, the light or dark theme is displayed dependent on the user's preference; this can be modified manually.",
@@ -49,6 +50,7 @@ export default {
             "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
           img: {
             src: "desktopPlanet.png",
+            webp: "desktopPlanet.webp",
             alt: "screenshot of planet facts website",
           },
           desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, ans Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
@@ -72,6 +74,7 @@ export default {
         <div v-for="project in featuredProjects" :key="project.title">
           <PortCard
             :imgSrc="`./screenshots/${project.img.src}`"
+            :imgWebp="`./screenshots/${project.img.webp}`"
             :imgAlt="project.img.alt"
             :cardTitle="project.title"
             :cardDesc="project.desc"
