@@ -46,11 +46,13 @@ export default {
 
 <template>
   <div class="port-card-container">
-    <picture class="card-img">
-      <source type="image/webp" :srcset="imgWebp" />
-      <source type="image/jpg" :srcset="imgSrc" />
-      <img :src="imgSrc" :alt="imgAlt" />
-    </picture>
+    <div class="img-container">
+      <picture class="card-img">
+        <source type="image/webp" :srcset="imgWebp" />
+        <source type="image/jpg" :srcset="imgSrc" />
+        <img :src="imgSrc" :alt="imgAlt" />
+      </picture>
+    </div>
     <div class="bottom-card-container">
       <h2 class="card-title">{{ cardTitle }}</h2>
       <p class="card-desc">{{ cardDesc }}</p>
@@ -63,28 +65,58 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+$card-border-radius: 5px;
+
 .port-card-container {
-  border-radius: 4px;
+  border-radius: $card-border-radius;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  width: 90%;
   margin: auto;
+  margin-bottom: 1rem;
+  width: 90%;
 
   @include tablet-breakpoint {
     width: 30rem;
   }
 
-  .card-img {
-    border-top-left-radius: inherit;
-    border-top-right-radius: inherit;
-    object-fit: fit;
-    width: auto;
+  @include desktop-breakpoint {
+    display: flex;
+    margin: 1rem 0.5rem;
+    width: initial;
+  }
 
-    @include tablet-breakpoint {
-      height: 16rem;
-      width: inherit;
+  .img-container {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+
+    @include desktop-breakpoint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12rem;
+    }
+
+    .card-img {
+      object-fit: contain;
+      border-top-left-radius: $card-border-radius;
+      border-top-right-radius: $card-border-radius;
+      object-fit: cover;
+
+      @include tablet-breakpoint {
+        height: 16rem;
+        width: inherit;
+      }
+
+      @include desktop-breakpoint {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        border-top-left-radius: initial;
+        border-top-right-radius: initial;
+        height: auto;
+        margin: 0.5rem;
+        width: 12rem;
+      }
     }
   }
+
 
   .bottom-card-container {
     border-bottom-left-radius: inherit;
@@ -106,14 +138,25 @@ export default {
       @include tablet-breakpoint {
         min-height: 9rem;
       }
+
+      @include desktop-breakpoint {
+        min-height: initial;
+      }
     }
 
     .link-container {
       display: flex;
       justify-content: space-evenly;
       min-height: 3rem;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+
+      @include desktop-breakpoint {
+        justify-content: initial;
+
+        & > * {
+          padding: 0 1rem 0.5rem 1rem;
+        }
+      }
     }
   }
 }
