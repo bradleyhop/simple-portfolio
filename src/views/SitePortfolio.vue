@@ -246,7 +246,10 @@ $nav-border-line: 3px solid #fff;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+
+    @include desktop-breakpoint {
+      display: block;
+    }
   }
 }
 
