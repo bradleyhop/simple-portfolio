@@ -75,10 +75,6 @@ $card-border-radius: 5px;
   width: 90%;
 
   @include tablet-breakpoint {
-    width: 30rem;
-  }
-
-  @include desktop-breakpoint {
     display: flex;
     margin: 1rem 0.5rem;
     width: initial;
@@ -88,7 +84,7 @@ $card-border-radius: 5px;
     border-top-left-radius: $card-border-radius;
     border-top-right-radius: $card-border-radius;
 
-    @include desktop-breakpoint {
+    @include tablet-breakpoint {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,11 +98,6 @@ $card-border-radius: 5px;
       object-fit: cover;
 
       @include tablet-breakpoint {
-        height: 16rem;
-        width: inherit;
-      }
-
-      @include desktop-breakpoint {
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         border-top-left-radius: initial;
         border-top-right-radius: initial;
@@ -134,14 +125,6 @@ $card-border-radius: 5px;
       line-height: 1.5rem;
       padding: 0 1rem;
       margin-bottom: 1rem;
-
-      @include tablet-breakpoint {
-        min-height: 9rem;
-      }
-
-      @include desktop-breakpoint {
-        min-height: initial;
-      }
     }
 
     .link-container {
@@ -150,7 +133,7 @@ $card-border-radius: 5px;
       min-height: 3rem;
       padding-bottom: 1rem;
 
-      @include desktop-breakpoint {
+      @include tablet-breakpoint {
         justify-content: initial;
 
         & > * {

@@ -219,7 +219,7 @@ $nav-border-line: 3px solid #fff;
 }
 
 .featured-text {
-  color: $gray-600;
+  color: $gray-700;
   font-size: 1.5rem;
   font-weight: normal;
   letter-spacing: -1px;
@@ -247,7 +247,7 @@ $nav-border-line: 3px solid #fff;
     justify-content: space-around;
     align-items: center;
 
-    @include desktop-breakpoint {
+    @include tablet-breakpoint {
       display: block;
     }
   }
