@@ -27,14 +27,22 @@ export default {
             <source
               type="image/webp"
               srcset="@/assets/img/meLongSmaller.webp"
+              alt="image of Bradley with forest and ocean behind him"
+              class="me-img"
             />
-            <source type="image/jpg" srcset="@/assets/img/meLongSmaller.jpg" />
+            <source
+              type="image/jpg"
+              srcset="@/assets/img/meLongSmaller.jpg"
+              alt="image of Bradley with forest and ocean behind him"
+              class="me-img"
+            />
             <img
               src="@/assets/img/meLongSmaller.jpg"
               alt="image of Bradley with forest and ocean behind him"
               class="me-img"
             />
           </picture>
+
           <figcaption class="caption-me">Web Development</figcaption>
         </figure>
         <p class="tagline">
@@ -92,7 +100,6 @@ $shift-left-mobile: 10vw;
     margin-left: 5vw;
     margin-top: 4rem;
     min-height: 20rem;
-    width: auto;
 
     @include tablet-breakpoint {
       margin-top: 5rem;
@@ -101,6 +108,7 @@ $shift-left-mobile: 10vw;
 
     .me-img {
       height: 20rem;
+      width: auto;
 
       @include tablet-breakpoint {
         height: 30rem;
