@@ -12,7 +12,7 @@ const extra = [
         desc: "Given an uploaded image, returns a work of art from a curated list with the same dominant color (in its top three dominant colors). This app is intended to be a development tool for a graduate student in data science. AWS S3 and SQS services, Vue.js, and Sass were used in the development.",
         link: "https://bradleyhop.github.io/scratch-aic/",
         img: {
-          src: "aic.png",
+          src: "aic.jpg",
           webp: "aic.webp",
           alt: "screenshot of art institute of Chicago API photo matching app",
         },
