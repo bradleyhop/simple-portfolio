@@ -54,7 +54,6 @@ export default {
           ...this.form,
         }),
       })
-        // TODO: replace these dummy vue-data messages with a div?
         .then((response) => {
           if (!response.ok) {
             throw new Error(response.statusText);
