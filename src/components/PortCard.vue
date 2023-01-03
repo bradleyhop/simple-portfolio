@@ -108,7 +108,6 @@ $card-border-radius: 5px;
     }
   }
 
-
   .bottom-card-container {
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;

@@ -2,10 +2,23 @@
 import MenuList from "@/components/MenuList.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
+// preload profile pic
+// only prelaod webp since most modern browswers support that format
+
 export default {
   components: {
     MenuList,
     SiteFooter,
+  },
+
+  data: () => {
+    // preload profile webp pic
+    const profilePic = new Image();
+    profilePic.src = "./img/meLongSmaller.webp";
+
+    return {
+      profilePic,
+    };
   },
 };
 </script>
@@ -26,7 +39,7 @@ export default {
           <picture>
             <source
               type="image/webp"
-              srcset="@/assets/img/meLongSmaller.webp"
+              :srcset="profilePic.src"
               alt="image of Bradley with forest and ocean behind him"
               class="me-img"
             />
