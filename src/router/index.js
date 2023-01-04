@@ -8,7 +8,7 @@ const SitePortfolio = () => import("../views/SitePortfolio.vue");
 const ContactMe = () => import("../views/ContactMe.vue");
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
 
   routes: [
     {
