@@ -1,14 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-// import SitePortfolio from "@/views/SitePortfolio.vue";
-// import ContactMe from "@/views/ContactMe.vue";
-
-// Lazy loading
-const SitePortfolio = () => import("../views/SitePortfolio.vue");
-const ContactMe = () => import("../views/ContactMe.vue");
+import SitePortfolio from "@/views/SitePortfolio.vue";
+import ContactMe from "@/views/ContactMe.vue";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
 
   routes: [
     {
