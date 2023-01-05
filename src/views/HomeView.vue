@@ -59,7 +59,7 @@ export default {
           <figcaption class="caption-me">Web Development</figcaption>
         </figure>
         <p class="tagline">
-          I am a web and software developer living in Maine.
+          I am a web and software developer<br /> living in Maine.
         </p>
       </article>
     </div>
@@ -71,6 +71,7 @@ export default {
 <style lang="scss">
 $shift-left: 20vw;
 $shift-left-mobile: 10vw;
+$shift-content-left: 5vw;
 
 .home-nav {
   display: flex;
@@ -97,22 +98,25 @@ $shift-left-mobile: 10vw;
     color: $not-black;
     font-size: 3rem;
     font-weight: 300;
-    letter-spacing: 2px;
-    margin-left: -1.75rem;
+    letter-spacing: 2.5px;
+    max-width: 100%;
+    position: relative;
     padding-top: 4rem;
+    right: 1rem;
 
     @include tablet-breakpoint {
       font-size: 6rem;
-      margin-left: -8rem;
       padding-top: 8rem;
+      right: 11.5rem;
     }
   }
 
   .img-container {
     display: flex;
-    margin-left: 5vw;
+    padding-left: $shift-content-left;
     margin-top: 4rem;
     min-height: 20rem;
+    width: auto;
 
     @include tablet-breakpoint {
       margin-top: 5rem;
@@ -132,8 +136,7 @@ $shift-left-mobile: 10vw;
       color: $green-900;
       font-size: 1rem;
       letter-spacing: -0.5px;
-      padding-left: 0.25rem;
-      padding-top: 0.5rem;
+      padding: 0.25rem 0 0 0.25rem;
       transform-origin: top right;
       writing-mode: vertical-rl;
     }
@@ -141,13 +144,17 @@ $shift-left-mobile: 10vw;
 
   .tagline {
     color: $not-black;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     margin-right: 2.5%;
-    padding: 1rem 0 4rem 5vw;
+    padding: 2rem 0 4rem $shift-content-left;
+    max-width: 30rem;
 
     @include tablet-breakpoint {
+      position: relative;
+      left: 14rem;
       margin-right: 0;
+      padding-top: 3rem;
     }
   }
 }
