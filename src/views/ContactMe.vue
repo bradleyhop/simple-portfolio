@@ -1,14 +1,12 @@
 <script>
 // project custom Vue components
 import PageHeader from "@/components/PageHeader.vue";
-import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   name: "ContactMe",
 
   components: {
     PageHeader,
-    SiteFooter,
   },
 
   props: {
@@ -119,8 +117,6 @@ export default {
       </p>
     </div>
   </main>
-
-  <SiteFooter class="device-widths" />
 </template>
 
 <style lang="scss">
