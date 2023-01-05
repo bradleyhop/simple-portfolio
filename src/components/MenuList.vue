@@ -38,20 +38,23 @@ export default {
   }
 
   li {
-    border-top: 3px solid transparent;
-    color: $not-black;
     margin-right: 2rem;
 
     @include tablet-breakpoint {
       margin-right: 4rem;
     }
 
-    &:hover {
-      border-top: 3px solid $lightest-blue;
-    }
-
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  a {
+    border-top: 3px solid transparent;
+    color: $not-black;
+
+    &:hover {
+      border-top: 3px solid $lightest-blue;
     }
   }
 }
