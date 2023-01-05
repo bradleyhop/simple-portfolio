@@ -49,12 +49,12 @@ export default {
 $nav-border-line: 3px solid #fff;
 
 .port-header {
-  min-height: 10vh;
   background: $lightest-blue;
   margin-bottom: 2rem;
+  min-height: 17vh;
 
   @include tablet-breakpoint {
-    min-height: 30vh;
+    min-height: 36vh;
   }
 }
 
@@ -81,7 +81,7 @@ $nav-border-line: 3px solid #fff;
 
   .port-nav-list {
     // override MenuList component styling
-    & > li:hover {
+    & > li > a:hover {
       border-top: $nav-border-line !important;
     }
   }
@@ -119,7 +119,6 @@ $nav-border-line: 3px solid #fff;
     font-size: 2rem;
     font-weight: lighter;
     letter-spacing: -1px;
-    margin-bottom: 0.5rem;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;

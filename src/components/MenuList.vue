@@ -27,9 +27,8 @@ export default {
 
 <style lang="scss" scoped>
 .menu-list {
-  align-content: center;
-  align-self: center;
   display: flex;
+  align-items: center;
   font-size: 1rem;
   list-style: none;
 
