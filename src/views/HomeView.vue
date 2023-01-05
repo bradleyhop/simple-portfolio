@@ -1,14 +1,9 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
-import SiteFooter from "@/components/SiteFooter.vue";
-
-// preload profile pic
-// only prelaod webp since most modern browswers support that format
 
 export default {
   components: {
     MenuList,
-    SiteFooter,
   },
 
   data: () => {
@@ -65,8 +60,6 @@ export default {
       </article>
     </div>
   </main>
-
-  <SiteFooter class="home-footer" />
 </template>
 
 <style lang="scss">
