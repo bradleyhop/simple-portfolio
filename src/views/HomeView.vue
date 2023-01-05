@@ -76,7 +76,6 @@ $shift-content-left: 5vw;
 
 .home-nav {
   display: flex;
-  align-content: center;
   justify-content: flex-end;
   min-height: 8vh;
 
