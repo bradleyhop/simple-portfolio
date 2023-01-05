@@ -14,7 +14,7 @@ export default {
   data: () => {
     // preload profile webp pic
     const profilePic = new Image();
-    profilePic.src = "./img/meLongSmaller.webp";
+    profilePic.src = "./img/profilePic-350.webp";
 
     return {
       profilePic,
@@ -41,25 +41,26 @@ export default {
               type="image/webp"
               :srcset="profilePic.src"
               alt="image of Bradley with forest and ocean behind him"
-              class="me-img"
             />
             <source
               type="image/jpg"
-              srcset="@/assets/img/meLongSmaller.jpg"
+              srcset="@/assets/img/profilePic-350.jpg"
               alt="image of Bradley with forest and ocean behind him"
-              class="me-img"
             />
             <img
-              src="@/assets/img/meLongSmaller.jpg"
+              src="@/assets/img/profilePic-350.jpg"
               alt="image of Bradley with forest and ocean behind him"
               class="me-img"
+              width="350"
+              height="415"
             />
           </picture>
 
           <figcaption class="caption-me">Web Development</figcaption>
         </figure>
         <p class="tagline">
-          I am a web and software developer<br /> living in Maine.
+          I am a web and software developer<br />
+          living in Maine.
         </p>
       </article>
     </div>
