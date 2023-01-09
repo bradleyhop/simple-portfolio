@@ -84,8 +84,15 @@ export default {
       </ul>
     </nav>
     <p class="footer-copyright">
-      Copyright &copy; 2022 &mdash; crafted from scratch with care by
-      <span class="my-name">Bradley Smith</span>
+      Copyright &copy; 2023 &mdash; crafted from scratch with care by
+      <a
+        href="https://github.com/bradleyhop/simple-portfolio"
+        class="my-name clear-link-dec"
+        target="_blank"
+        rel="noopener noreferer"
+      >
+        Bradley Smith
+      </a>
     </p>
   </footer>
 </template>
@@ -144,5 +151,9 @@ footer {
 .my-name {
   letter-spacing: 0.5px;
   font-weight: bold;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
