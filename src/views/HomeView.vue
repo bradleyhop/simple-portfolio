@@ -63,7 +63,7 @@ export default {
 </template>
 
 <style lang="scss">
-$shift-left: 20vw;
+$shift-left: 15vw;
 $shift-left-mobile: 10vw;
 $shift-content-left: 5vw;
 
@@ -90,16 +90,16 @@ $shift-content-left: 5vw;
   .my-name {
     color: $not-black;
     font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 2.5px;
+    letter-spacing: 1.5px;
     max-width: 100%;
     position: relative;
-    padding-top: 4rem;
+    padding-top: 2rem;
     right: 1rem;
 
     @include tablet-breakpoint {
       font-size: 6rem;
-      padding-top: 8rem;
+      letter-spacing: 2.5px;
+      padding-top: 4rem;
       right: 11.5rem;
     }
   }
@@ -139,6 +139,7 @@ $shift-content-left: 5vw;
     color: $not-black;
     font-size: 1.2rem;
     letter-spacing: 1px;
+    line-height: 1.75rem;
     margin-right: 2.5%;
     padding: 2rem 0 4rem $shift-content-left;
     max-width: 30rem;

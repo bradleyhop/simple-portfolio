@@ -17,15 +17,14 @@ export default {
   },
 
   data: () => {
-    const defaultForm = Object.freeze({
+    const DEFAULT_FORM = Object.freeze({
       email: "",
       message: "",
     });
 
     return {
-      form: Object.assign({}, defaultForm),
-      textBodyDefault: "message",
-      defaultForm, // form object
+      DEFAULT_FORM, // form object
+      userForm: Object.assign({}, DEFAULT_FORM), // user-input into form
       errorMessage: "", // show user error after form submit, v-if
       successMessage: "", // show user that form submission workded
     };
@@ -49,7 +48,7 @@ export default {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: this.encode({
           "form-name": "contact-me",
-          ...this.form,
+          ...this.userForm,
         }),
       })
         .then((response) => {
@@ -65,8 +64,8 @@ export default {
         })
         .finally(() => {
           // reset form
-          this.form.message = "";
-          this.form.email = "";
+          this.userForm.message = "";
+          this.userForm.email = "";
         });
     },
   },
@@ -83,7 +82,7 @@ export default {
       class="contact-form"
       name="contact-me"
       method="POST"
-      ref="form"
+      ref="userForm"
       @submit.prevent="handleSubmit"
     >
       <label class="contact-label" for="email">Your Email</label>
@@ -92,7 +91,7 @@ export default {
         id="email"
         type="email"
         name="email"
-        v-model="form.email"
+        v-model="userForm.email"
         required
       />
       <label class="contact-label message-label" for="message">Message</label>
@@ -101,7 +100,7 @@ export default {
         rows="6"
         id="message"
         name="message"
-        v-model="form.message"
+        v-model="userForm.message"
         required
       />
       <input type="submit" class="submit-form-input" value="Send Message" />
