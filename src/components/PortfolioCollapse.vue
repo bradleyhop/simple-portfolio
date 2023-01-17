@@ -3,21 +3,25 @@ import { Collapse } from "vue-collapsed";
 import { reactive } from "vue";
 
 //load local link button components
-import LiveLinkButton from "@/components/buttons/LiveSite.vue";
-import GithubLinkButton from "@/components/buttons/GitHubRepo.vue";
+import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
+
 // load icons
 import { mdiChevronDown } from "@mdi/js";
+import { mdiGithub } from "@mdi/js";
+import { mdiOpenInNew } from "@mdi/js";
 
 export default {
   name: "PortfolioCollapse",
 
   components: {
     Collapse,
-    LiveLinkButton,
-    GithubLinkButton,
+    OutsideLinkButton,
   },
 
   data: () => ({
+    // mdi icon paths
+    mdiGithub,
+    mdiOpenInNew,
     mdiChevronDown,
   }),
 
@@ -97,10 +101,16 @@ export default {
           <div class="links-container">
             <p>{{ project.title }}</p>
             <div class="button-container">
-              <LiveLinkButton :externalLink="project.link" />
-              <GithubLinkButton
+              <OutsideLinkButton
+                buttonTitle="Live Site"
+                :outsideLink="project.link"
+                :svgPath="mdiOpenInNew"
+              />
+              <OutsideLinkButton
                 v-if="project.github"
-                :gitLink="project.github"
+                buttonTitle="GitHub Repo"
+                :outsideLink="project.github"
+                :svgPath="mdiGithub"
               />
             </div>
           </div>

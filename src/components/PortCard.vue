@@ -1,44 +1,59 @@
 <script>
 // load buttons
-import LiveLinkButton from "@/components/buttons/LiveSite.vue";
-import GithubLinkButton from "@/components/buttons/GitHubRepo.vue";
+import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
+
+// load icons
+import { mdiGithub } from "@mdi/js";
+import { mdiOpenInNew } from "@mdi/js";
 
 export default {
   name: "PortCard",
 
+  data: () => ({
+    // mdi icon paths
+    mdiGithub,
+    mdiOpenInNew,
+  }),
+
   components: {
-    LiveLinkButton,
-    GithubLinkButton,
+    OutsideLinkButton,
   },
 
   props: {
     imgSrc: {
       type: String,
       default: "",
+      required: true,
     },
     imgWebp: {
       type: String,
       default: "",
+      required: true,
     },
     imgAlt: {
       type: String,
       default: "",
+      required: true,
     },
     cardTitle: {
       type: String,
       default: "",
+      required: true,
     },
     cardDesc: {
       type: String,
       default: "",
+      required: true,
     },
     liveLink: {
       type: String,
       default: "",
+      required: true,
     },
     gitLink: {
       type: String,
       default: "",
+      required: true,
     },
   },
 };
@@ -57,8 +72,16 @@ export default {
       <h2 class="card-title">{{ cardTitle }}</h2>
       <p class="card-desc">{{ cardDesc }}</p>
       <div class="link-container">
-        <LiveLinkButton :externalLink="liveLink" />
-        <GithubLinkButton :gitLink="gitLink" />
+        <OutsideLinkButton
+          buttonTitle="Live Site"
+          :outsideLink="liveLink"
+          :svgPath="mdiOpenInNew"
+        />
+        <OutsideLinkButton
+          buttonTitle="GitHub Repo"
+          :outsideLink="gitLink"
+          :svgPath="mdiGithub"
+        />
       </div>
     </div>
   </div>

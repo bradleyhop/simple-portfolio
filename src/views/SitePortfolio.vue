@@ -8,7 +8,7 @@ import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
 import fCC from "@/assets/data/fcc-data.js";
 import extra from "@/assets/data/extra-data.js";
 
-// load only the icons we need!
+// mdi icons
 import { mdiFire, mdiOpenInNew } from "@mdi/js";
 
 export default {
