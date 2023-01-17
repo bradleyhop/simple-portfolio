@@ -1,15 +1,17 @@
 <script>
-import { mdiOpenInNew } from "@mdi/js";
-
 export default {
-  name: "LiveLinkButton",
-
-  data: () => ({
-    mdiOpenInNew, // mdi icon
-  }),
+  name: "OutsideLinkButton",
 
   props: {
-    externalLink: {
+    outsideLink: {
+      type: String,
+      required: true,
+    },
+    svgPath: {
+      type: String,
+      required: true,
+    },
+    buttonTitle: {
       type: String,
       required: true,
     },
@@ -20,13 +22,13 @@ export default {
 <template>
   <button class="link-button">
     <a
-      :href="externalLink"
-      class="clear-link-dec"
+      :href="outsideLink"
+      class="card-link"
       target="_blank"
       rel="noopener noreferrer"
       title="live demo"
     >
-      <span class="button-text">Live Site</span>
+      <span class="button-text">{{ buttonTitle }}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         role="img"
@@ -34,7 +36,7 @@ export default {
         viewBox="0 0 24 24"
         class="svg-icon"
       >
-        <path :d="mdiOpenInNew"></path>
+        <path :d="svgPath"></path>
       </svg>
     </a>
   </button>
