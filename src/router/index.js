@@ -16,13 +16,13 @@ const router = createRouter({
       path: "/portfolio",
       name: "SitePortfolio",
       // component: SitePortfolio,
-      component: () => import("@/views/SitePortfolio.vue"),
+      component: () => import("../views/SitePortfolio.vue"),
     },
     {
       path: "/contact",
       name: "ContactMe",
       // component: ContactMe,
-      component: () => import("@/views/ContactMe.vue"),
+      component: () => import("../views/ContactMe.vue"),
     },
   ],
 });
