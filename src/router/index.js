@@ -4,8 +4,7 @@ import HomeView from "@/views/HomeView.vue";
 // import ContactMe from "@/views/ContactMe.vue";
 
 const router = createRouter({
-  // history: createWebHistory(import.meta.env.BASE_URL),
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
 
   routes: [
     {
