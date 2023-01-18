@@ -1,9 +1,11 @@
 <script>
 import MenuList from "@/components/MenuList.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 export default {
   components: {
     MenuList,
+    SiteFooter,
   },
 
   data: () => {
@@ -60,6 +62,8 @@ export default {
       </article>
     </div>
   </main>
+
+  <SiteFooter class="home-footer" />
 </template>
 
 <style lang="scss">
@@ -91,7 +95,6 @@ $shift-content-left: 5vw;
     color: $not-black;
     font-size: 3rem;
     letter-spacing: 1.5px;
-    max-width: 100%;
     position: relative;
     padding-top: 2rem;
     right: 1rem;
@@ -154,10 +157,10 @@ $shift-content-left: 5vw;
 }
 
 .home-footer {
-  padding-left: $shift-left-mobile !important; // override .device-widths
+  padding-left: $shift-left-mobile !important;
 
   @include tablet-breakpoint {
-    padding-left: $shift-left !important; // override .device-widths
+    padding-left: $shift-left !important;
   }
 }
 </style>
