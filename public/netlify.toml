@@ -4,7 +4,7 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
+  force=true
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   # Allows for page view components to be dynamically linked
