@@ -81,6 +81,17 @@ export default {
             Codewars
           </a>
         </li>
+        <li>
+          <a
+            href="https://wakatime.com/@bradleyhop"
+            target="_blank"
+            class="footer-link"
+            rel="noopener noreferrer"
+            title="my freeCodeCamp profile"
+          >
+            WakaTime
+          </a>
+        </li>
       </ul>
     </nav>
     <p class="footer-copyright">

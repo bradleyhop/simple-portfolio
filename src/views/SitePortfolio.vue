@@ -3,6 +3,7 @@
 import PageHeader from "@/components/PageHeader.vue";
 import PortCard from "@/components/PortCard.vue";
 import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 // arrays holding project info
 import fCC from "@/assets/data/fcc-data.js";
@@ -18,6 +19,7 @@ export default {
     PageHeader,
     PortCard,
     PortfolioCollapse,
+    SiteFooter,
   },
 
   data() {
@@ -204,6 +206,8 @@ export default {
       <!-- .complete-portfolio -->
     </div>
   </main>
+
+  <SiteFooter class="device-widths" />
 </template>
 
 <style lang="scss">
@@ -223,6 +227,9 @@ $nav-border-line: 3px solid #fff;
   text-align: center;
 
   @include tablet-breakpoint {
+    font-size: 1.75rem;
+    line-height: 3.5rem;
+    margin-bottom: 0;
     transform: rotate(-180deg);
     writing-mode: vertical-lr;
   }
