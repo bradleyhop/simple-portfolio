@@ -1,7 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/HomeView.vue";
-// import SitePortfolio from "@/views/SitePortfolio.vue";
-// import ContactMe from "@/views/ContactMe.vue";
+
+// save ourselves from manually importing every page view component;
+// takes in page view file name, outputs path as string
+const loadComponent = (view) => {
+    return () => import(`../views/${view}.vue`);
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,19 +13,17 @@ const router = createRouter({
     {
       path: "/",
       name: "HomeView",
-      component: HomeView,
+      component: loadComponent('HomeView'),
     },
     {
       path: "/portfolio",
       name: "SitePortfolio",
-      // component: SitePortfolio,
-      component: () => import("../views/SitePortfolio.vue"),
+      component: loadComponent('SitePortfolio'),
     },
     {
       path: "/contact",
       name: "ContactMe",
-      // component: ContactMe,
-      component: () => import("../views/ContactMe.vue"),
+      component: loadComponent('ContactMe'),
     },
   ],
 });
