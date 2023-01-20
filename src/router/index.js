@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
-import SitePortfolio from "@/views/SitePortfolio.vue";
 import ContactMe from "@/views/ContactMe.vue";
 
 const router = createRouter({
@@ -15,7 +14,7 @@ const router = createRouter({
     {
       path: "/portfolio",
       name: "SitePortfolio",
-      component: SitePortfolio,
+      component: () => import("@/views/SitePortfolio.vue"),
     },
     {
       path: "/contact",
