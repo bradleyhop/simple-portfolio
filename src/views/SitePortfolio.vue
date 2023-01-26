@@ -29,6 +29,7 @@ export default {
       // mdi icons
       mdiFire,
       mdiOpenInNew,
+      // four top projects to showcase
       featuredProjects: [
         {
           // GitHub User Search app object
@@ -117,7 +118,7 @@ export default {
             >
             . I can then solicit feedback and evaluate my peers' work.
           </p>
-          <p class="port-link-copy">
+          <div class="port-link-container">
             <a
               href="https://frontendmentor.io/profile/bradleyhop"
               target="_blank"
@@ -135,7 +136,7 @@ export default {
                 <path :d="mdiOpenInNew"></path>
               </svg>
             </a>
-          </p>
+          </div>
         </article>
 
         <article class="fcc-section">
@@ -166,7 +167,7 @@ export default {
             There is a testing app that freeCodeCamp provides, but some projects
             may not pass due to a lack of Vue.js support.
           </p>
-          <p class="port-link-copy">
+          <div class="port-link-container">
             <a
               href="https://frontendmentor.io/profile/bradleyhop"
               target="_blank"
@@ -184,7 +185,7 @@ export default {
                 <path :d="mdiOpenInNew"></path>
               </svg>
             </a>
-          </p>
+          </div>
 
           <h4 class="cert-title">Certificates Earned</h4>
           <div class="port-collapse-container">
@@ -285,10 +286,6 @@ $nav-border-line: 3px solid #fff;
 
   .figma-link {
     color: $figma-purple;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   .fm-profile-link {
@@ -296,7 +293,7 @@ $nav-border-line: 3px solid #fff;
     display: flex;
 
     &:hover {
-      transform: scale(1.02);
+      text-decoration: underline;
     }
   }
 }
@@ -305,15 +302,7 @@ $nav-border-line: 3px solid #fff;
   fill: $not-black;
   height: 1.5rem;
   width: 1.5rem;
-}
-
-.fcc-port-link {
-  color: $fcc-green;
-  display: flex;
-
-  &:hover {
-    transform: scale(1.02);
-  }
+  vertical-align: top;
 }
 
 .heading-copy {
@@ -344,12 +333,20 @@ $nav-border-line: 3px solid #fff;
     margin-left: -5px;
     margin-right: -6px;
   }
+
+  .fcc-port-link {
+    color: $fcc-green;
+    display: flex;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
-.port-link-copy {
-  align-items: center;
-  display: flex;
+.port-link-container {
   letter-spacing: 0.4px;
+  line-height: 1.5rem;
   margin: 1rem 0;
 }
 
@@ -358,8 +355,8 @@ $nav-border-line: 3px solid #fff;
   font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 0.5px;
-  width: 75%;
   margin: 1.5rem auto 0.5rem auto;
+  width: 75%;
 }
 
 .port-collapse-container {
