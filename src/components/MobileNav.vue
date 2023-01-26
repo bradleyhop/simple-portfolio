@@ -89,7 +89,8 @@ export default {
 .list-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
+  height: 100dvh;
   align-items: center;
   justify-content: center;
   margin-top: -6vh;
@@ -97,7 +98,6 @@ export default {
 
 .mobile-menu-list {
   background-color: $lightest-blue;
-  height: 100%; // cover the whole page, not just the visible
   position: absolute;
   left: 0;
   top: 0;
@@ -132,6 +132,7 @@ export default {
 
 .animate-menu {
   width: 100vw;
+  width: 100dvw;
 }
 
 .remove-menu {

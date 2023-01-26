@@ -1,47 +1,5 @@
 @import "color.scss";
 
-// reset browser defaults
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  // don't rely on browser defaults; must set explicitly
-  font: inherit;
-}
-
-html {
-  color-scheme: dark light; // sets dark as default
-}
-
-body {
-  min-height: 100vh;
-}
-
-// remain responsive
-img,
-picture,
-svg,
-video {
-  display: block;
-  max-width: 100%;
-}
-
-a {
-  text-decoration: none;
-}
-
-// don't use div's for buttons
-button {
-  background: transparent;
-  border: 0;
-}
-// end CSS reset
-
 /*
  * Device size breakpoints
  * NOTE: no mobile breakpoint because that is the default
@@ -64,6 +22,61 @@ button {
   }
 }
 
+
+// reset browser defaults
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  // don't rely on browser defaults; must set explicitly
+  font: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $gray-50;
+  color: $not-black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px; // REM
+
+  @include tablet-breakpoint {
+    font-size: 14px;
+  }
+
+  @include desktop-breakpoint {
+    font-size: 16px;
+  }
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+// remain responsive
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+// don't use div's for buttons
+button {
+  background: transparent;
+  border: 0;
+}
+// end CSS reset
+
 // set max-widths for content
 .device-widths {
   margin: auto;
@@ -79,21 +92,6 @@ button {
 
   @include large-desktop-breakpoint {
     width: 60vw;
-  }
-}
-
-html {
-  background-color: $gray-50;
-  color: $not-black;
-  font-family: "Raleway", sans-serif;
-  font-size: 14px; // REM
-
-  @include tablet-breakpoint {
-    font-size: 14px;
-  }
-
-  @include desktop-breakpoint {
-    font-size: 16px;
   }
 }
 

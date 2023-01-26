@@ -1,8 +1,8 @@
-# new-portfolio
+# Bradley Smith Portfolio
 
-[live site at bradleysmith.tech](https://bradleysmith.tech)
+[Live site at bradleysmith.tech](https://bradleysmith.tech)
 
-My professional portfolio's source code. Built using Vue.js 3, Vue
+My professional portfolio's source code. Built as an SPA using Vue.js 3, Vue
 Router, and SASS.
 
 Namecheap handles the domain name, and Netlify hosts the live site. Netlify also
