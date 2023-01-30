@@ -183,7 +183,7 @@ export default {
 
   .submit-feedback {
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .error-message {
