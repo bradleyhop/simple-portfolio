@@ -149,7 +149,7 @@ $shift-content-left: 5vw;
 
     @include tablet-breakpoint {
       position: relative;
-      left: 14rem;
+      margin-left: 14rem;
       margin-right: 0;
       padding-top: 3rem;
     }

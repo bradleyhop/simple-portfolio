@@ -6,9 +6,7 @@ import { reactive } from "vue";
 import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
 
 // load icons
-import { mdiChevronDown } from "@mdi/js";
-import { mdiGithub } from "@mdi/js";
-import { mdiOpenInNew } from "@mdi/js";
+import { mdiChevronDown, mdiGithub, mdiOpenInNew } from "@mdi/js";
 
 export default {
   name: "PortfolioCollapse",
