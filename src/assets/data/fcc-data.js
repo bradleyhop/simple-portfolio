@@ -74,7 +74,8 @@ const fCC = [
           webp: "pomodoroTimer.webp",
           alt: "screenshot of pomodoro timer app",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/pomodoro-timer/",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/pomodoro-timer/",
       },
       {
         title: "Javascript Calculator",
@@ -85,7 +86,8 @@ const fCC = [
           webp: "jsCalculator.webp",
           alt: "screenshot of markdown to javascript calculator",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/js-calculator/",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/js-calculator/",
       },
       {
         title: "Drum Machine",
@@ -96,7 +98,8 @@ const fCC = [
           webp: "drumMachine.webp",
           alt: "screenshot of game boy inspired drum machine",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/drum-machine/",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/drum-machine/",
       },
       {
         title: "Markdown Previewer",
@@ -107,7 +110,8 @@ const fCC = [
           webp: "markdownPreviewer.webp",
           alt: "screenshot of markdown to html previewer",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/markdownPreviewer/",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/markdownPreviewer/",
       },
       {
         title: "Random Quote Machine",
@@ -118,7 +122,8 @@ const fCC = [
           webp: "randomQuoteGenerator.webp",
           alt: "screenshot of random quote machine",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/randomQuotes/",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/randomQuotes/",
       },
     ],
   },
@@ -160,7 +165,8 @@ const fCC = [
           webp: "fccTechDoc.webp",
           alt: "screenshot of technical documentation project",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/techDoc",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/techDoc",
       },
       {
         title: "Product Landing Page",
@@ -170,7 +176,8 @@ const fCC = [
           webp: "fccProductLanding.webp",
           alt: "screenshot of product landing page",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/productLandingPage",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/productLandingPage",
       },
       {
         title: "Survey Form",
@@ -180,7 +187,8 @@ const fCC = [
           webp: "survey.webp",
           alt: "screenshot of survey form",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/surveyForm",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/surveyForm",
       },
       {
         title: "Tribute",
@@ -190,7 +198,8 @@ const fCC = [
           webp: "tribute.webp",
           alt: "screenshot of tribute webpage to Frankie Manning",
         },
-        github: "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/tribute",
+        github:
+          "https://github.com/bradleyhop/bradleyhop.github.io/tree/master/tribute",
       },
     ],
   },
