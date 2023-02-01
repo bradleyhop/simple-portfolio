@@ -62,9 +62,16 @@ export default {
   <div class="port-card-container">
     <div class="img-container">
       <picture class="card-img">
-        <source type="image/webp" :srcset="imgWebp" />
-        <source type="image/jpg" :srcset="imgSrc" />
-        <img :src="imgSrc" :alt="imgAlt" />
+        <a
+          :href="liveLink"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="live site"
+        >
+          <source type="image/webp" :srcset="imgWebp" />
+          <source type="image/jpg" :srcset="imgSrc" />
+          <img :src="imgSrc" :alt="imgAlt" />
+        </a>
       </picture>
     </div>
     <div class="bottom-card-container">
@@ -126,6 +133,13 @@ $card-border-radius: 5px;
         height: auto;
         margin: 0.5rem;
         width: 12rem;
+
+        &:hover {
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+            0 3px 6px rgba(0, 0, 0, 0.23);
+          transition: ease-in;
+          transition-duration: 100ms;
+        }
       }
     }
   }
@@ -137,7 +151,7 @@ $card-border-radius: 5px;
     .card-title {
       color: $not-black;
       font-size: 1.1rem;
-      letter-spacing: -1px;
+      letter-spacing: -0.5px;
       margin: 1rem;
     }
 

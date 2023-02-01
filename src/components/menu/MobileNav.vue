@@ -124,7 +124,7 @@ export default {
     cursor: pointer;
     list-style: none;
     font-size: 1.75rem;
-    letter-spacing: 2px;
+    letter-spacing: 6px;
     margin: 1.5rem 0;
     transition: 200ms;
   }
