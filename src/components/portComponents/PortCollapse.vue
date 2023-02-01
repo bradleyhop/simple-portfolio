@@ -9,7 +9,7 @@ import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
 import { mdiChevronDown, mdiGithub, mdiOpenInNew } from "@mdi/js";
 
 export default {
-  name: "PortfolioCollapse",
+  name: "PortCollapse",
 
   components: {
     Collapse,

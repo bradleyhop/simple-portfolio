@@ -1,6 +1,6 @@
 <script>
-import MenuList from "@/components/MenuList.vue";
-import SiteFooter from "@/components/SiteFooter.vue";
+import MenuList from "@/components/menu/MenuList.vue";
+import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
 export default {
   components: {
