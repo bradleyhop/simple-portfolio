@@ -1,7 +1,7 @@
 <script>
 import { RouterLink } from "vue-router";
-import MenuList from "@/components/MenuList.vue";
-import MobileNav from "@/components/MobileNav.vue";
+import MenuList from "@/components/menu/MenuList.vue";
+import MobileNav from "@/components/menu/MobileNav.vue";
 
 export default {
   name: "PageHeader",

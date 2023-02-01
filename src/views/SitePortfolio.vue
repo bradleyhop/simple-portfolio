@@ -1,9 +1,8 @@
 <script>
-// project custom Vue components
-import PageHeader from "@/components/PageHeader.vue";
-import PortCard from "@/components/PortCard.vue";
-import PortfolioCollapse from "@/components/PortfolioCollapse.vue";
-import SiteFooter from "@/components/SiteFooter.vue";
+import PageHeader from "@/components/persistent/PageHeader.vue";
+import PortCard from "@/components/portComponents/PortCard.vue";
+import PortCollapse from "@/components/portComponents/PortCollapse.vue";
+import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
 // arrays holding project info
 import fCC from "@/assets/data/fcc-data.js";
@@ -18,7 +17,7 @@ export default {
   components: {
     PageHeader,
     PortCard,
-    PortfolioCollapse,
+    PortCollapse,
     SiteFooter,
   },
 
@@ -189,7 +188,7 @@ export default {
 
           <h4 class="cert-title">Certificates Earned</h4>
           <div class="port-collapse-container">
-            <PortfolioCollapse :dataList="freecodecampData" />
+            <PortCollapse :dataList="freecodecampData" />
           </div>
         </article>
 
@@ -200,7 +199,7 @@ export default {
             to test and expand my skills.
           </p>
           <div class="port-collapse-container">
-            <PortfolioCollapse :dataList="extraData" />
+            <PortCollapse :dataList="extraData" />
           </div>
         </article>
       </section>

@@ -1,7 +1,6 @@
 <script>
-// project custom Vue components
-import PageHeader from "@/components/PageHeader.vue";
-import SiteFooter from "@/components/SiteFooter.vue";
+import PageHeader from "@/components/persistent/PageHeader.vue";
+import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
 export default {
   name: "ContactMe",
