@@ -165,9 +165,10 @@ export default {
   cursor: pointer;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
+  font-weight: bold;
   letter-spacing: 0.5px;
   margin-top: 1.5rem;
-  padding: 0.75rem;
+  padding: 0.75rem 0;
   width: 8rem;
 
   &:hover {
