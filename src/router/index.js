@@ -28,7 +28,7 @@ const router = createRouter({
     },
     // catch-all
     {
-      path: "/pathMatch(.*)*",
+      path: "/:pathMatch(.*)*",
       redirect: "/404",
     },
   ],

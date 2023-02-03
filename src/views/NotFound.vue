@@ -47,7 +47,7 @@ export default {
 
 .go-home {
   font-size: 2rem;
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
 
   &:hover {
     border-top: 3px solid #fff;
