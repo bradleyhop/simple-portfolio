@@ -20,6 +20,17 @@ const router = createRouter({
       name: "ContactMe",
       component: () => import("@/views/ContactMe.vue"),
     },
+    // handle 404 with grace
+    {
+      path: "/404",
+      name: "NotFound",
+      component: () => import("@/views/NotFound.vue"),
+    },
+    // catch-all
+    {
+      path: "/pathMatch(.*)*",
+      redirect: "/404",
+    },
   ],
 });
 

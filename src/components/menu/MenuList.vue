@@ -13,12 +13,20 @@ export default {
 <template>
   <ul class="menu-list">
     <li>
-      <RouterLink to="/portfolio" class="clear-link-dec">
+      <RouterLink
+        to="/portfolio"
+        class="clear-link-dec"
+        title="See samples of my work"
+      >
         portfolio
       </RouterLink>
     </li>
     <li>
-      <RouterLink to="/contact" class="clear-link-dec" title="to contact">
+      <RouterLink
+        to="/contact"
+        class="clear-link-dec menu-title"
+        title="Send me an email"
+      >
         contact
       </RouterLink>
     </li>

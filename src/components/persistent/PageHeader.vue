@@ -26,7 +26,7 @@ export default {
     <nav class="port-nav device-widths">
       <!-- tablet< navigation -->
       <div class="port-nav-container">
-        <RouterLink to="/" class="home-link clear-link-dec" title="to home">
+        <RouterLink to="/" class="home-link clear-link-dec" title="Back to home">
           Bradley Smith
         </RouterLink>
         <div class="menu-list-container">

@@ -1,0 +1,56 @@
+<script>
+import { RouterLink } from "vue-router";
+
+export default {
+  name: "NotFound",
+
+  components: {
+    RouterLink,
+  },
+};
+</script>
+
+<template>
+  <main class="not-found-container">
+    <h1 class="four-oh-four">404</h1>
+    <h2 class="pnf">Page Not Found</h2>
+    <div class="link-container">
+      <RouterLink to="/" class="go-home clear-link-dec">
+        BACK TO HOME
+      </RouterLink>
+    </div>
+  </main>
+</template>
+
+<style lang="scss" scoped>
+.not-found-container {
+  background-color: $lightest-blue;
+  text-align: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.four-oh-four {
+  font-size: 10rem;
+  letter-spacing: -4px;
+  //padding-bottom: 0.25rem;
+}
+
+.pnf {
+  font-size: 2rem;
+  letter-spacing: -2px;
+  padding-bottom: 3.5rem;
+}
+
+.go-home {
+  font-size: 2rem;
+  letter-spacing: 3px;
+
+  &:hover {
+    border-top: 3px solid #fff;
+  }
+}
+</style>
