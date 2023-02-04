@@ -25,18 +25,17 @@ export default {
 <style lang="scss" scoped>
 .not-found-container {
   background-color: $lightest-blue;
-  text-align: center;
-  min-height: 100vh;
-  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-align: center;
 }
 
 .four-oh-four {
   font-size: 10rem;
   letter-spacing: -4px;
-  //padding-bottom: 0.25rem;
 }
 
 .pnf {

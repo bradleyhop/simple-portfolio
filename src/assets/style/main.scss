@@ -83,16 +83,19 @@ button {
   width: 95vw;
 
   @include tablet-breakpoint {
-    width: 70vw;
+    width: 60vw;
   }
 
   @include desktop-breakpoint {
-    width: 75vw;
+    width: 60vw;
   }
 
   @include large-desktop-breakpoint {
-    width: 60vw;
+    width: 55vw;
   }
+}
+
+html {
 }
 
 .clear-link-dec {

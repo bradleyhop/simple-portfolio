@@ -67,8 +67,8 @@ export default {
 </template>
 
 <style lang="scss">
-$shift-left: 15vw;
-$shift-left-mobile: 10vw;
+$shift-left: 25vw;
+$shift-left-mobile: 15vw;
 $shift-content-left: 5vw;
 
 .home-nav {
@@ -97,13 +97,13 @@ $shift-content-left: 5vw;
     letter-spacing: 1.5px;
     position: relative;
     padding-top: 2rem;
-    right: 1rem;
+    right: 2.5rem;
 
     @include tablet-breakpoint {
-      font-size: 6rem;
+      font-size: 5rem;
       letter-spacing: 2.5px;
       padding-top: 4rem;
-      right: 11.5rem;
+      right: 10rem;
     }
   }
 
