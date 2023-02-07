@@ -26,12 +26,10 @@ export default {
           <picture>
             <source
               type="image/webp"
-              :src="`./img/profilePic-350.webp`"
               :srcset="`./img/profilePic-250.webp 250w, ./img/profilePic-350.webp 350w`"
             />
             <source
               type="image/jpg"
-              :src="`./img/profilePic-350.jpg`"
               :srcset="`./img/profilePic-250.jpg 250w, ./img/profilePic-350.jpg 350w`"
             />
             <img
