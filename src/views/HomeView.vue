@@ -7,16 +7,6 @@ export default {
     MenuList,
     SiteFooter,
   },
-
-  data: () => {
-    // preload profile webp pic
-    const profilePic = new Image();
-    profilePic.src = "./img/profilePic-350.webp";
-
-    return {
-      profilePic,
-    };
-  },
 };
 </script>
 
@@ -36,25 +26,23 @@ export default {
           <picture>
             <source
               type="image/webp"
-              :srcset="profilePic.src"
-              alt="image of Bradley with forest and ocean behind him"
+              :src="`./img/profilePic-350.webp`"
+              :srcset="`./img/profilePic-250.webp 250w, ./img/profilePic-350.webp 350w`"
             />
             <source
               type="image/jpg"
-              srcset="@/assets/img/profilePic-350.jpg"
-              alt="image of Bradley with forest and ocean behind him"
+              :src="`./img/profilePic-350.jpg`"
+              :srcset="`./img/profilePic-250.jpg 250w, ./img/profilePic-350.jpg 350w`"
             />
             <img
-              src="@/assets/img/profilePic-350.jpg"
-              alt="image of Bradley with forest and ocean behind him"
+              :src="`./img/profilePic-350.jpg`"
+              alt="profile picture of Bradley Smith"
               class="me-img"
-              width="350"
-              height="415"
             />
           </picture>
-
           <figcaption class="caption-me">Web Development</figcaption>
         </figure>
+
         <p class="tagline">
           I am a web and software developer<br />
           living in Maine.
@@ -111,20 +99,19 @@ $shift-content-left: 5vw;
     display: flex;
     padding-left: $shift-content-left;
     margin-top: 4rem;
-    min-height: 20rem;
-    width: auto;
 
     @include tablet-breakpoint {
       margin-top: 5rem;
-      min-height: 30rem;
     }
 
     .me-img {
-      height: 20rem;
-      width: auto;
+      // set to actual image dimensions
+      width: 250px;
+      height: 296px;
 
       @include tablet-breakpoint {
-        height: 30rem;
+        width: 350px;
+        height: 415px;
       }
     }
 
