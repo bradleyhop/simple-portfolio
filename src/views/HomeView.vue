@@ -23,14 +23,27 @@ export default {
       <article class="main-info-container">
         <h1 class="my-name">Bradley Smith</h1>
         <figure class="img-container">
+          <!-- webp images are preloaded in the <head>. jpg given as backup -->
           <picture>
             <source
               type="image/webp"
-              :srcset="`./img/profilePic-250.webp 250w, ./img/profilePic-350.webp 350w`"
+              :srcset="`./img/profilePic-250.webp 250w`"
+              media="(max-width: 600px)"
+            />
+            <source
+              type="image/webp"
+              :srcset="`./img/profilePic-350.webp 350w`"
+              media="(min-width: 600.1px)"
             />
             <source
               type="image/jpg"
-              :srcset="`./img/profilePic-250.jpg 250w, ./img/profilePic-350.jpg 350w`"
+              :srcset="`./img/profilePic-250.jpg 250w`"
+              media="(max-width: 600px)"
+            />
+            <source
+              type="image/jpg"
+              :srcset="`./img/profilePic-350.jpg 350w`"
+              media="(min-width: 600.1px)"
             />
             <img
               :src="`./img/profilePic-350.jpg`"

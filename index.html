@@ -32,7 +32,8 @@
     <meta property="og:image:height" content="225" />
     <meta property="og:url" content="https://bradleysmith.tech" />
 
-    <!-- google fonts -->
+    <!-- google fonts; vite plugin downloads these and bundles with the app, for
+    speed-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -40,18 +41,18 @@
       rel="stylesheet"
     />
 
-    <!-- preload our homepage profile picture -->
-    <link
-      rel="preload"
-      as="image"
-      href="./img/profilePic-350.webp"
-      media="(max-width: 799px)"
-    />
+    <!-- preload our homepage profile picture; media attr must match source tags -->
     <link
       rel="preload"
       as="image"
       href="./img/profilePic-250.webp"
-      media="(min-width: 799.1px)"
+      media="(max-width: 600px)"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./img/profilePic-350.webp"
+      media="(min-width: 600.1px)"
     />
   </head>
 
