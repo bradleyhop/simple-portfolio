@@ -12,6 +12,12 @@ submission to my email account.
 No CSS frameworks or component libraries were used in building this page. I
 choose to build everything as part of a learning experience.
 
+## Four-Hundos
+
+The site meets Google's Lighthouse perfect scores for Performance,
+Accessibility, Best Practices, and SEO on desktop devices. For mobile devices,
+all Lighthouse scores are 92+ with most being 100.
+
 ## Note on Building and Serving Through Netlify
 
 For dynamic routing to work, be sure to turn off any of Netlify's
