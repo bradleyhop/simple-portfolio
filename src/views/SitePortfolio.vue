@@ -86,23 +86,23 @@ export default {
     </div>
 
     <div class="portfolio-container device-widths">
-      <section class="complete-portfolio">
-        <article class="frontend-mentor">
-          <h3 class="port-heading fm-heading-container">
-            <a
-              href="https://frontendmentor.io"
-              target="_blank"
-              rel="noreferrer noopener"
-              class="fm-heading-link"
-            >
-              <img
-                src="/img/frontend-mentor-seeklogocom.svg"
-                alt="frontend mentor icon"
-                class="fmIcon"
-              />
-              <span class="fm-text">Frontend Mentor</span>
-            </a>
-          </h3>
+      <section class="frontend-mentor-container">
+        <h3 class="port-heading fm-heading-container">
+          <a
+            href="https://frontendmentor.io"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="fm-heading-link"
+          >
+            <img
+              src="/img/frontend-mentor-seeklogocom.svg"
+              alt="frontend mentor icon"
+              class="fmIcon"
+            />
+            <span class="fm-text">Frontend Mentor</span>
+          </a>
+        </h3>
+        <article class="port-copy">
           <p class="heading-copy">
             This community-based learning platform assists developers in
             improving their knowledge and skills through the use of real-world
@@ -137,34 +137,36 @@ export default {
             </a>
           </div>
         </article>
+      </section>
 
-        <article class="fcc-section">
-          <h3 class="port-heading fcc-heading">
-            <a
-              href="https://freecodecamp.org"
-              target="_blank"
-              rel="noreferrer noopener"
+      <section class="fcc-section">
+        <h3 class="port-heading fcc-heading">
+          <a
+            href="https://freecodecamp.org"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            &lpar;
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="fcc-icon"
             >
-              &lpar;
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                role="img"
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                class="fcc-icon"
-              >
-                <path :d="mdiFire"></path>
-              </svg>
-              &rpar;&nbsp;freeCodeCamp
-              <!-- home-made freeCodeCamp icon using material icon fire and some css trickery -->
-            </a>
-          </h3>
+              <path :d="mdiFire"></path>
+            </svg>
+            &rpar;&nbsp;freeCodeCamp
+            <!-- home-made freeCodeCamp icon using material icon fire and some css trickery -->
+          </a>
+        </h3>
+        <article class="port-copy">
           <p class="heading-copy">
             FreeCodeCamp provides instruction and projects for students to learn
             front and back end web development. The projects I've built for the
-            certificates I've earned are all my own design and implementation.
-            There is a testing app that freeCodeCamp provides, but some projects
-            may not pass due to a lack of Vue.js support.
+            certificates I've completed are all my own design and
+            implementation. There is a testing app that freeCodeCamp provides,
+            but some projects may not pass due to a lack of Vue.js support.
           </p>
           <div class="port-link-container">
             <a
@@ -185,15 +187,19 @@ export default {
               </svg>
             </a>
           </div>
+        </article>
 
-          <h4 class="cert-title">Certificates Earned</h4>
+        <section class="port-copy">
+          <h3 class="cert-title">Certificates Earned</h3>
           <div class="port-collapse-container">
             <PortCollapse :dataList="freecodecampData" />
           </div>
-        </article>
+        </section>
+      </section>
 
-        <article class="extras-section">
-          <h3 class="port-heading extras-heading">Extracurricular</h3>
+      <section class="extras-section">
+        <h3 class="port-heading extras-heading">Extracurricular</h3>
+        <article class="port-copy">
           <p class="heading-copy">
             These are projects that were a collaboration, or just something fun
             to test and expand my skills.
@@ -263,13 +269,19 @@ $nav-border-line: 3px solid #fff;
   margin: 1rem 0;
 }
 
-.frontend-mentor {
+.port-copy {
+  max-width: 80ch;
+  margin: auto;
+}
+
+.frontend-mentor-container {
   @extend .border-b-section;
 
   .fm-heading-container {
     .fm-heading-link {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
 
     .fmIcon {
@@ -315,6 +327,7 @@ $nav-border-line: 3px solid #fff;
   .fcc-heading {
     color: $fcc-green;
     display: flex;
+    justify-content: center;
 
     a {
       color: $fcc-green;
@@ -354,20 +367,23 @@ $nav-border-line: 3px solid #fff;
   font-size: 0.9rem;
   font-weight: normal;
   letter-spacing: 0.5px;
-  margin: 1.5rem auto 0.5rem auto;
-  width: 75%;
+  margin: 1.5rem auto 0.5rem 0;
 }
 
 .port-collapse-container {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
   @include tablet-breakpoint {
-    width: 75%;
     margin: auto;
   }
 }
 
 .extras-section {
   @extend .border-b-section;
+}
+
+.extras-heading {
+  display: flex;
+  justify-content: center;
 }
 </style>

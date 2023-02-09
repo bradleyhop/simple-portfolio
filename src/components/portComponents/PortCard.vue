@@ -74,22 +74,24 @@ export default {
         </a>
       </picture>
     </div>
-    <div class="bottom-card-container">
+    <section class="bottom-card-container">
       <h2 class="card-title">{{ cardTitle }}</h2>
-      <p class="card-desc">{{ cardDesc }}</p>
-      <div class="link-container">
-        <OutsideLinkButton
-          buttonTitle="Live Site"
-          :outsideLink="liveLink"
-          :svgPath="mdiOpenInNew"
-        />
-        <OutsideLinkButton
-          buttonTitle="GitHub Repo"
-          :outsideLink="gitLink"
-          :svgPath="mdiGithub"
-        />
-      </div>
-    </div>
+      <article class="card-copy">
+        <p class="card-desc">{{ cardDesc }}</p>
+        <div class="link-container">
+          <OutsideLinkButton
+            buttonTitle="Live Site"
+            :outsideLink="liveLink"
+            :svgPath="mdiOpenInNew"
+          />
+          <OutsideLinkButton
+            buttonTitle="GitHub Repo"
+            :outsideLink="gitLink"
+            :svgPath="mdiGithub"
+          />
+        </div>
+      </article>
+    </section>
   </div>
 </template>
 
@@ -150,16 +152,20 @@ $card-border-radius: 5px;
 
     .card-title {
       color: $not-black;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       letter-spacing: -0.5px;
       margin: 1rem;
     }
 
     .card-desc {
-      font-size: 0.9rem;
+      font-size: 1rem;
       line-height: 1.5rem;
       padding: 0 1rem;
       margin-bottom: 1rem;
+    }
+
+    .card-copy {
+      max-width: 80ch;
     }
 
     .link-container {

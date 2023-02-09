@@ -14,7 +14,7 @@ choose to build everything as part of a learning experience.
 
 ## Note on Building and Serving Through Netlify
 
-For Vue Router dynamic routing to work, be sure to turn off any of Netlify's
+For dynamic routing to work, be sure to turn off any of Netlify's
 asset optimization features (save image compression). Of course, be sure to
 have the `_redirects` file with the content of `/*    /index.html   200` in the
 `public/` directory of the project; this file helps Netlify use Vue Router to

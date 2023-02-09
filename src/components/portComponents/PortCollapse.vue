@@ -97,7 +97,7 @@ export default {
             />
           </picture>
           <div class="links-container">
-            <p>{{ project.title }}</p>
+            <h4 class="project-title">{{ project.title }}</h4>
             <div class="button-container">
               <OutsideLinkButton
                 buttonTitle="Live Site"
@@ -152,11 +152,13 @@ export default {
   width: 8rem;
   margin-right: 1rem;
   object-fit: cover;
+  align-self: center;
 }
 
 .topic-copy {
   line-height: 1.5rem;
   margin: 1rem 0 2rem 0;
+  max-width: 80ch;
 }
 
 .topic-list {
@@ -164,13 +166,24 @@ export default {
 }
 
 .project-item {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   display: flex;
-  align-items: center;
+  border-bottom: 2px solid $gray-200;
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+.project-title {
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
 }
 
 .button-container {
   padding: 0.4rem 0;
+  margin-bottom: 0.75rem;
 
   > *:first-child {
     margin-bottom: 0.5rem;
@@ -182,7 +195,7 @@ export default {
   background-color: $lightest-blue;
   border-radius: 100px;
   cursor: pointer;
-  font-size: 0.7rem;
+  font-size: 1rem;
   margin-right: 1rem;
 
   &:hover {
