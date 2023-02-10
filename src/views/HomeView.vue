@@ -1,11 +1,13 @@
 <script>
 import MenuList from "@/components/menu/MenuList.vue";
+import MostRecentProjects from "@/components/articles/MostRecentProjects.vue";
 import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
 export default {
   components: {
     MenuList,
     SiteFooter,
+    MostRecentProjects,
   },
 };
 </script>
@@ -55,10 +57,11 @@ export default {
         </figure>
 
         <p class="tagline">
-          I am a web and software developer<br />
-          living in Maine.
+          I am a web and software developer living in Maine.
         </p>
       </article>
+
+      <MostRecentProjects />
     </div>
   </main>
 
@@ -90,6 +93,8 @@ $shift-content-left: 5vw;
 }
 
 .main-info-container {
+  margin-bottom: 5rem;
+
   .my-name {
     color: $not-black;
     font-size: 3rem;
@@ -138,10 +143,10 @@ $shift-content-left: 5vw;
 
   .tagline {
     color: $not-black;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
-    line-height: 1.75rem;
-    margin-right: 2.5%;
+    line-height: 2rem;
+    margin-right: 5%;
     padding: 2rem 0 4rem $shift-content-left;
     max-width: 30rem;
 
