@@ -103,21 +103,20 @@ export default {
 
       .recent-item-copy {
         letter-spacing: 0.5px;
-        line-height: 1.5rem;
+        line-height: 150%;
         max-width: 50ch;
       }
 
       .linky {
-        display: flex;
-        color: $not-black;
-        margin-top: 8px;
+        color: $green-900;
 
         &:hover {
           text-decoration: underline;
         }
 
         .svg-icon {
-          fill: $not-black;
+          display: inline;
+          fill: $green-900;
           height: 1.1em;
           margin-left: 0.2rem;
           width: 1.1em;

@@ -147,7 +147,7 @@ $shift-content-left: 5vw;
     color: $not-black;
     font-size: 1.5rem;
     letter-spacing: 1px;
-    line-height: 2rem;
+    line-height: 150%;
     margin-right: 5%;
     padding: 2rem 0 4rem $shift-content-left;
     max-width: 30rem;
