@@ -64,9 +64,11 @@ $nav-border-line: 3px solid #fff;
   flex-direction: row;
   justify-content: space-between;
   min-height: 6vh;
+  min-height: 6dvh;
 
   @include tablet-breakpoint {
-    min-height: 15vh;
+    min-height: 10vh;
+    min-height: 10dvh;
   }
 
   .home-link {

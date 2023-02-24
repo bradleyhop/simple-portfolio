@@ -29,26 +29,26 @@ export default {
           <picture>
             <source
               type="image/webp"
-              :srcset="`./img/profilePic-250.webp 250w`"
+              :srcset="`./img/me-long-250.webp 250w`"
               media="(max-width: 600px)"
             />
             <source
               type="image/webp"
-              :srcset="`./img/profilePic-350.webp 350w`"
+              :srcset="`./img/me-long-325.webp 325w`"
               media="(min-width: 600.1px)"
             />
             <source
               type="image/jpg"
-              :srcset="`./img/profilePic-250.jpg 250w`"
+              :srcset="`./img/me-long-250.jpg 250w`"
               media="(max-width: 600px)"
             />
             <source
               type="image/jpg"
-              :srcset="`./img/profilePic-350.jpg 350w`"
+              :srcset="`./img/me-long-325.jpg 325w`"
               media="(min-width: 600.1px)"
             />
             <img
-              :src="`./img/profilePic-350.jpg`"
+              :src="`./img/me-long-325.jpg`"
               alt="profile picture of Bradley Smith"
               class="me-img"
             />
@@ -77,9 +77,11 @@ $shift-content-left: 5vw;
   display: flex;
   justify-content: flex-end;
   min-height: 8vh;
+  min-height: 8dvh;
 
   @include tablet-breakpoint {
-    min-height: 15vh;
+    min-height: 10vh;
+    min-height: 10dvh;
   }
 }
 
@@ -114,20 +116,20 @@ $shift-content-left: 5vw;
   .img-container {
     display: flex;
     padding-left: $shift-content-left;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
 
     @include tablet-breakpoint {
-      margin-top: 5rem;
+      margin-top: 3rem;
     }
 
     .me-img {
-      // set to actual image dimensions
+      // set to actual image dimensions for optimal Lighthouse rating ;)
       width: 250px;
-      height: 296px;
+      height: 458px;
 
       @include tablet-breakpoint {
-        width: 350px;
-        height: 415px;
+        width: 325px;
+        height: 596px;
       }
     }
 
@@ -166,4 +168,11 @@ $shift-content-left: 5vw;
     padding-left: $shift-left !important;
   }
 }
+/*
+ *
+ * .long-pic {
+ *   width: 350px;
+ *   height: auto;
+ * }
+ */
 </style>
