@@ -146,7 +146,7 @@ footer {
 
 .footer-copyright {
   color: $not-black;
-  margin: 3rem 0 1rem 0;
+  margin: 3rem 0.5rem 1rem 0;
   font-size: 0.9rem;
   letter-spacing: 0.75px;
   line-height: 1.4rem;

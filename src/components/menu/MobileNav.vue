@@ -18,6 +18,15 @@ export default {
     // toggle mobile menu
     setMobileMenu: function () {
       this.toggleMenu = !this.toggleMenu;
+
+      // trigger global class (in main.scss) to hide page content when mobile menu is open
+      const el = document.getElementById("app");
+
+      if (this.toggleMenu) {
+        el.classList.add("hideMain");
+      } else {
+        el.classList.remove("hideMain");
+      }
     },
   },
 };
