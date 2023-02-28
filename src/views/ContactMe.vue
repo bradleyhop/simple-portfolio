@@ -26,7 +26,6 @@ export default {
     return {
       DEFAULT_FORM, // form object
       userForm: Object.assign({}, DEFAULT_FORM), // user-input into form
-      errorMessage: "", // show user error after form submit, v-if
       successMessage: "", // show user that form submission workded
     };
   },
@@ -54,14 +53,14 @@ export default {
       })
         .then((response) => {
           if (!response.ok) {
-            throw new Error(response.statusText);
+            throw new Error();
           } else {
-            this.successMessage = "Form submitted! Thank you!";
+            this.successMessage = "Form submitted. Thank you!";
           }
         })
-        .catch((error) => {
-          this.errorMessage = "Error! Form not submitted: ";
-          this.errorMessage += error;
+        .catch(() => {
+          // redirect to error page
+          this.$router.push("404");
         })
         .finally(() => {
           // reset form
@@ -77,41 +76,40 @@ export default {
   <PageHeader pageTitle="Contact" />
 
   <main class="device-widths">
-    <h2 class="contact-tagline">Let's connect</h2>
+    <div v-if="!successMessage" class="form-wrapper">
+      <h2 class="contact-tagline">Let's connect</h2>
 
-    <form
-      class="contact-form"
-      name="contact-me"
-      method="POST"
-      ref="userForm"
-      @submit.prevent="handleSubmit"
-    >
-      <label class="contact-label" for="email">Your Email</label>
-      <input
-        class="textbox"
-        id="email"
-        type="email"
-        name="email"
-        v-model="userForm.email"
-        required
-      />
-      <label class="contact-label message-label" for="message">Message</label>
-      <textarea
-        class="textbox"
-        rows="6"
-        id="message"
-        name="message"
-        v-model="userForm.message"
-        required
-      />
-      <input type="submit" class="submit-form-input" value="Send Message" />
-    </form>
+      <form
+        class="contact-form"
+        name="contact-me"
+        method="POST"
+        ref="userForm"
+        @submit.prevent="handleSubmit"
+      >
+        <label class="contact-label" for="email">Your Email</label>
+        <input
+          class="textbox"
+          id="email"
+          type="email"
+          name="email"
+          v-model="userForm.email"
+          required
+        />
+        <label class="contact-label message-label" for="message">Message</label>
+        <textarea
+          class="textbox"
+          rows="6"
+          id="message"
+          name="message"
+          v-model="userForm.message"
+          required
+        />
+        <input type="submit" class="submit-form-input" value="Send Message" />
+      </form>
+    </div>
 
     <!-- show user of the status of their form submission -->
     <div class="submit-feedback-container">
-      <p v-if="errorMessage" class="submit-feedback error-message">
-        {{ errorMessage }}
-      </p>
       <p v-if="successMessage" class="submit-feedback success-message">
         {{ successMessage }}
       </p>
@@ -122,6 +120,10 @@ export default {
 </template>
 
 <style lang="scss">
+main {
+  min-height: 40vh;
+}
+
 .contact-tagline {
   font-size: 2rem;
   font-weight: lighter;
@@ -179,8 +181,6 @@ export default {
 }
 
 .submit-feedback-container {
-  height: 3rem;
-
   .submit-feedback {
     padding-top: 1rem;
     font-size: 2rem;
