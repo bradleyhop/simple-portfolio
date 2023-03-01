@@ -52,9 +52,22 @@ html {
   }
 }
 
-body {
-  min-height: 100dvh;
-  min-height: 100vh;
+main {
+  // min height for header is 17vh; push footer to bottom; see PagerHeader.vue
+  min-height: 83dvh;
+  min-height: 83vh;
+
+  @include tablet-breakpoint {
+    // header 25vh
+    min-height: 75dvh;
+    min-height: 75vh;
+  }
+
+  @include desktop-breakpoint {
+    // min height for header is 30vh
+    min-height: 70dvh;
+    min-height: 70vh;
+  }
 }
 
 // remain responsive
@@ -100,8 +113,13 @@ button {
   text-decoration: none;
 }
 
+// hide web content when mobile menu is displayed; invoked by menu component
 .hideMain {
   & main {
     display: none;
   }
 }
+
+// margin for last element of page to push give space to footer; only use when
+// content doesn't take up at least 100vh
+$footer-push: 7rem;

@@ -112,12 +112,8 @@ export default {
 footer {
   align-items: center;
   justify-content: center;
-  padding: 7rem 0 1rem 0;
+  margin-bottom: 1rem;
   font-size: 0.9rem;
-
-  @include tablet-breakpoint {
-    padding: 10rem 0 1rem 0;
-  }
 }
 
 .footer-list-container {

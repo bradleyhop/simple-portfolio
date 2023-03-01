@@ -386,4 +386,8 @@ $nav-border-line: 3px solid #fff;
   display: flex;
   justify-content: center;
 }
+
+.portfolio-container {
+  margin-bottom: $footer-push;
+}
 </style>

@@ -61,7 +61,9 @@ export default {
         </p>
       </article>
 
+      <div class="recent-project-container">
       <MostRecentProjects />
+      </div>
     </div>
   </main>
 
@@ -168,11 +170,8 @@ $shift-content-left: 5vw;
     padding-left: $shift-left !important;
   }
 }
-/*
- *
- * .long-pic {
- *   width: 350px;
- *   height: auto;
- * }
- */
+
+.recent-project-container {
+  margin-bottom: $footer-push;
+}
 </style>
