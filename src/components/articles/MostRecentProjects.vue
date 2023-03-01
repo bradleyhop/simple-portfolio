@@ -96,7 +96,7 @@ export default {
 
       .recent-item-heading {
         color: $green-900;
-        letter-spacing: 0.5px;
+        letter-spacing: 1px;
         margin-bottom: 1rem;
         min-width: 20rem;
       }

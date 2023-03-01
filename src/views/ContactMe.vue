@@ -120,10 +120,6 @@ export default {
 </template>
 
 <style lang="scss">
-main {
-  min-height: 40vh;
-}
-
 .contact-tagline {
   font-size: 2rem;
   font-weight: lighter;

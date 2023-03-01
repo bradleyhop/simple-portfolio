@@ -98,10 +98,11 @@ export default {
 .list-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   height: 100dvh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
+  margin-top: -6dvh;
   margin-top: -6vh;
 }
 
@@ -118,6 +119,7 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    min-height: 6dvh;
     min-height: 6vh;
 
     .close-button {

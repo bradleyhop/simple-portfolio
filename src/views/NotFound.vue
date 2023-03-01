@@ -28,8 +28,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   min-height: 100dvh;
+  min-height: 100vh;
   text-align: center;
 }
 
