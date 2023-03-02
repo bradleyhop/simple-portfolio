@@ -27,9 +27,13 @@ export default {
         <figure class="img-container">
           <!-- webp images are preloaded in the <head>. jpg given as backup -->
           <picture>
+            <!-- Lighthouse wants a higher res picture for Best Practices
+                 Cellphones have a high pixel density, hence double desktop
+                 width
+            -->
             <source
               type="image/webp"
-              :srcset="`./img/me-long-250.webp 250w`"
+              :srcset="`./img/me-long-500.webp 250w`"
               media="(max-width: 600px)"
             />
             <source
@@ -39,7 +43,7 @@ export default {
             />
             <source
               type="image/jpg"
-              :srcset="`./img/me-long-250.jpg 250w`"
+              :srcset="`./img/me-long-500.jpg 250w`"
               media="(max-width: 600px)"
             />
             <source
@@ -62,7 +66,7 @@ export default {
       </article>
 
       <div class="recent-project-container">
-      <MostRecentProjects />
+        <MostRecentProjects />
       </div>
     </div>
   </main>
