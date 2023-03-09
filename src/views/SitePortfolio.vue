@@ -53,7 +53,7 @@ export default {
             webp: "desktopPlanet.webp",
             alt: "screenshot of planet facts website",
           },
-          desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, ans Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
+          desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, and Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
         },
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match

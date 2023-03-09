@@ -19,7 +19,8 @@ export default {
     setMobileMenu: function () {
       this.toggleMenu = !this.toggleMenu;
 
-      // trigger global class (in main.scss) to hide page content when mobile menu is open
+      // trigger global class (in main.scss since this component is style scoped)
+      // to hide page content when mobile menu is open
       const el = document.getElementById("app");
 
       if (this.toggleMenu) {
@@ -34,7 +35,7 @@ export default {
 
 <template>
   <nav class="mobile-menu-container">
-    <button class="mobile-menu-button" @click="setMobileMenu()">
+    <button class="mobile-menu-button" @click="setMobileMenu">
       <span class="menu-button-text">menu</span>
     </button>
 
@@ -43,7 +44,7 @@ export default {
       :class="toggleMenu ? 'animate-menu' : 'remove-menu'"
     >
       <div class="close-button-container">
-        <button class="close-button" @click="setMobileMenu()">close</button>
+        <button class="close-button" @click="setMobileMenu">close</button>
       </div>
       <ul class="list-container">
         <li class="mobile-menu-item">
@@ -98,12 +99,12 @@ export default {
 .list-container {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
   height: 100vh;
+  height: 100dvh;
   align-items: center;
   justify-content: center;
-  margin-top: -6dvh;
   margin-top: -6vh;
+  margin-top: -6dvh;
 }
 
 .mobile-menu-list {
@@ -119,8 +120,8 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    min-height: 6dvh;
     min-height: 6vh;
+    min-height: 6dvh;
 
     .close-button {
       color: $not-black;
