@@ -54,8 +54,8 @@ html {
 
 main {
   // min height for header is 17vh; push footer to bottom; see PagerHeader.vue
-  min-height: 83dvh;
   min-height: 83vh;
+  min-height: 83dvh;
 
   @include tablet-breakpoint {
     // header 25vh
@@ -65,8 +65,8 @@ main {
 
   @include desktop-breakpoint {
     // min height for header is 30vh
-    min-height: 70dvh;
     min-height: 70vh;
+    min-height: 70dvh;
   }
 }
 

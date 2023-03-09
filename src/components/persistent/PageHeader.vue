@@ -51,17 +51,17 @@ $nav-border-line: 3px solid #fff;
 .port-header {
   background: $lightest-blue;
   margin-bottom: 2rem;
-  min-height: 17dvh;
   min-height: 17vh;
+  min-height: 17dvh;
 
   @include tablet-breakpoint {
-    min-height: 25dvh;
     min-height: 25vh;
+    min-height: 25dvh;
   }
 
   @include desktop-breakpoint {
-    min-height: 30dvh;
     min-height: 30vh;
+    min-height: 30dvh;
   }
 }
 
@@ -70,12 +70,12 @@ $nav-border-line: 3px solid #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  min-height: 6dvh;
   min-height: 6vh;
+  min-height: 6dvh;
 
   @include tablet-breakpoint {
-    min-height: 10dvh;
     min-height: 10vh;
+    min-height: 10dvh;
   }
 
   .home-link {
@@ -105,8 +105,8 @@ $nav-border-line: 3px solid #fff;
 }
 
 .mobile-nav {
-  min-height: 6dvh;
   min-height: 6vh;
+  min-height: 6dvh;
   display: flex;
   justify-content: flex-end;
   align-items: center;
