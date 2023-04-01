@@ -77,7 +77,7 @@ export default {
   .recents-heading {
     font-size: 2em;
     letter-spacing: -0.5px;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .recents-list {
@@ -95,10 +95,10 @@ export default {
       }
 
       .recent-item-heading {
-        color: $green-900;
         letter-spacing: 1px;
-        margin-bottom: 1rem;
+        line-height: 150%;
         min-width: 20rem;
+        font-weight: bold;
       }
 
       .recent-item-copy {
@@ -109,13 +109,14 @@ export default {
 
       .linky {
         color: $green-900;
+        display: flex;
 
         &:hover {
           text-decoration: underline;
         }
 
         .svg-icon {
-          display: inline;
+          align-self: center;
           fill: $green-900;
           height: 1.1em;
           margin-left: 0.2rem;

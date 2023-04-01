@@ -363,9 +363,9 @@ $nav-border-line: 3px solid #fff;
 }
 
 .cert-title {
-  color: $fcc-green;
+  //color: $fcc-green;
   font-size: 0.9rem;
-  font-weight: normal;
+  font-weight: bold;
   letter-spacing: 0.5px;
   margin: 1.5rem auto 0.5rem 0;
 }
