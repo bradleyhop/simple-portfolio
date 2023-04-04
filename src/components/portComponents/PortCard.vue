@@ -151,7 +151,6 @@ $card-border-radius: 5px;
     border-bottom-right-radius: inherit;
 
     .card-title {
-      color: $not-black;
       font-size: 1.2rem;
       letter-spacing: -0.5px;
       margin: 1rem;

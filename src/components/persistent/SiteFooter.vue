@@ -95,7 +95,7 @@ export default {
       </ul>
     </nav>
     <p class="footer-copyright">
-      Copyright &copy; 2023 &mdash; crafted from scratch with care by
+      Copyright &copy; 2023 &mdash;
       <a
         href="https://github.com/bradleyhop/simple-portfolio"
         class="my-name clear-link-dec"

@@ -88,7 +88,7 @@ export default {
       >
         <label class="contact-label" for="email">Your Email</label>
         <input
-          class="textbox"
+          class="contact-textbox"
           id="email"
           type="email"
           name="email"
@@ -97,7 +97,7 @@ export default {
         />
         <label class="contact-label message-label" for="message">Message</label>
         <textarea
-          class="textbox"
+          class="contact-textbox"
           rows="6"
           id="message"
           name="message"
@@ -153,7 +153,7 @@ export default {
   margin-top: 1.25rem;
 }
 
-.textbox {
+.contact-textbox {
   background: $gray-200;
   border: none;
   color: $not-black;
@@ -193,10 +193,6 @@ export default {
     font-size: 2rem;
   }
 
-  .error-message {
-    color: $red-700;
-  }
-
   .success-message {
     color: $green-900;
   }
@@ -206,8 +202,9 @@ export default {
   margin: 2rem 0;
 
   .link-honeybook-form {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: $green-900;
+    line-height: 150%;
 
     &:hover {
       text-decoration: underline;

@@ -59,8 +59,8 @@ main {
 
   @include tablet-breakpoint {
     // header 25vh
-    min-height: 75dvh;
     min-height: 75vh;
+    min-height: 75dvh;
   }
 
   @include desktop-breakpoint {

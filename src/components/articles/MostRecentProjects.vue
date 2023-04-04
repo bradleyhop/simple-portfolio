@@ -42,9 +42,9 @@ export default {
       <li class="recent-item">
         <h3 class="recent-item-heading">Plant Facts Site</h3>
         <p class="recent-item-copy">
-          A Frontend Mentor project, this is an eight-view SPA fact site for all
-          planets in our solar system. Built from a professionally designed
-          Figma file using Vue.js 3, Vue Router, Vite, and Sass.<br />
+          A Frontend Mentor project, this is an SPA fact site for planets in our
+          solar system. Built from a professionally designed Figma file using
+          Vue.js 3, Vue Router, Vite, and Sass.<br />
           <a
             href="https://bradleyhop.github.io/frontend-mentor-planet-facts-site/"
             class="linky"
@@ -76,7 +76,7 @@ export default {
 
   .recents-heading {
     font-size: 2em;
-    letter-spacing: -0.5px;
+    letter-spacing: 1.5px;
     margin-bottom: 2rem;
   }
 
@@ -97,7 +97,7 @@ export default {
       .recent-item-heading {
         letter-spacing: 1px;
         line-height: 150%;
-        min-width: 20rem;
+        min-width: 18rem;
         font-weight: bold;
       }
 
