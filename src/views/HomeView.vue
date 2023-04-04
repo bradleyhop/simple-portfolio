@@ -61,7 +61,8 @@ export default {
         </figure>
 
         <p class="tagline">
-          I am a web and software developer living in Maine.
+          I am a front end web developer specializing in the Vue.js development
+          environment.
         </p>
       </article>
 
@@ -104,16 +105,15 @@ $shift-content-left: 5vw;
   margin-bottom: 5rem;
 
   .my-name {
-    color: $not-black;
     font-size: 3rem;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     position: relative;
     padding-top: 2rem;
     right: 2.5rem;
 
     @include tablet-breakpoint {
       font-size: 5rem;
-      letter-spacing: 2.5px;
+      letter-spacing: 5px;
       padding-top: 4rem;
       right: 10rem;
     }
@@ -150,7 +150,6 @@ $shift-content-left: 5vw;
   }
 
   .tagline {
-    color: $not-black;
     font-size: 1.5rem;
     letter-spacing: 1px;
     line-height: 150%;

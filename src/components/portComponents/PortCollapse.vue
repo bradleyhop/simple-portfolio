@@ -142,7 +142,7 @@ export default {
   text-align: left;
 
   .chevron {
-    fill: $not-black;
+    fill: $green-900;
     float: right;
   }
 }
@@ -210,7 +210,6 @@ export default {
 
   .button-text {
     align-self: center;
-    color: $not-black;
   }
 
   .svg-icon {
