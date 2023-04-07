@@ -29,7 +29,7 @@ export default {
       mdiFire,
       mdiOpenInNew,
       // four top projects to showcase
-      featuredProjects: [
+      featuredProjects: Object.freeze([
         {
           // GitHub User Search app object
           title: "GitHub User Search App",
@@ -57,7 +57,7 @@ export default {
         },
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match
-      ],
+      ]),
     };
   },
 };
