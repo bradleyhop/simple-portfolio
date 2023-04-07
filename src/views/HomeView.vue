@@ -155,13 +155,13 @@ $shift-content-left: 5vw;
     line-height: 150%;
     margin-right: 5%;
     padding: 2rem 0 4rem $shift-content-left;
-    max-width: 30rem;
+    max-width: 60rem;
 
-    @include tablet-breakpoint {
+    @media (min-width: 850px){
       position: relative;
-      margin-left: 14rem;
       margin-right: 0;
-      padding-top: 3rem;
+      padding-left: calc($shift-content-left + 400px);
+      margin-top: -2.6rem;
     }
   }
 }
