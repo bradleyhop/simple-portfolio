@@ -51,18 +51,6 @@ $nav-border-line: 3px solid #fff;
 .port-header {
   background: $lightest-blue;
   margin-bottom: 2rem;
-  min-height: 17vh;
-  min-height: 17dvh;
-
-  @include tablet-breakpoint {
-    min-height: 25vh;
-    min-height: 25dvh;
-  }
-
-  @include desktop-breakpoint {
-    min-height: 30vh;
-    min-height: 30dvh;
-  }
 }
 
 .port-nav-container {
@@ -129,6 +117,7 @@ $nav-border-line: 3px solid #fff;
     font-size: 2rem;
     font-weight: lighter;
     letter-spacing: -1px;
+    padding-bottom: 1rem;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;
