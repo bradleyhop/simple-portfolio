@@ -64,7 +64,7 @@ export default {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           role="img"
-          alt="image indicating an outside link"
+          alt="expand collapseable element"
           viewBox="0 0 24 24"
           class="svg-icon chevron"
         >
@@ -156,7 +156,7 @@ export default {
 }
 
 .topic-copy {
-  line-height: 1.5rem;
+  line-height: 150%;
   margin: 1rem 0 2rem 0;
   max-width: 80ch;
 }
@@ -182,11 +182,22 @@ export default {
 }
 
 .button-container {
-  padding: 0.4rem 0;
   margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+
+
+  @include tablet-breakpoint {
+    flex-direction: row;
+  }
 
   > *:first-child {
+    margin-right: 1rem;
     margin-bottom: 0.5rem;
+
+    @include tablet-breakpoint {
+      margin-bottom: 0;
+    }
   }
 }
 

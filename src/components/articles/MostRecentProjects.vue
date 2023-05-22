@@ -22,7 +22,7 @@ export default {
           <a
             href="https://bainstructionaldesign.com"
             class="linky"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
             target="_blank"
             title="Bradley Adamczyk Portfolio"
           >
@@ -48,7 +48,7 @@ export default {
           <a
             href="https://bradleyhop.github.io/frontend-mentor-planet-facts-site/"
             class="linky"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
             target="_blank"
             title="Frontend Mentor Planet Fact Site"
           >
