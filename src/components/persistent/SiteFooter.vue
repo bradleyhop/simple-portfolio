@@ -100,7 +100,7 @@ export default {
         href="https://github.com/bradleyhop/simple-portfolio"
         class="my-name clear-link-dec"
         target="_blank"
-        rel="noopener noreferer"
+        rel="noopener noreferrer"
       >
         Bradley Smith
       </a>
@@ -145,7 +145,7 @@ footer {
   margin: 3rem 0.5rem 1rem 0;
   font-size: 0.9rem;
   letter-spacing: 0.75px;
-  line-height: 1.4rem;
+  line-height: 150%;
 }
 
 .footer-link {

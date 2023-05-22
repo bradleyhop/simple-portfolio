@@ -11,7 +11,7 @@
 }
 
 @mixin desktop-breakpoint {
-  @media only screen and (min-width: 1400px) {
+  @media only screen and (min-width: 1200px) {
     @content;
   }
 }
@@ -21,7 +21,6 @@
     @content;
   }
 }
-
 
 // reset browser defaults
 *,
@@ -40,7 +39,7 @@
 html {
   background-color: $gray-50;
   color: $not-black;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 14px; // REM
 
   @include tablet-breakpoint {

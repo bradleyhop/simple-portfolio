@@ -158,7 +158,7 @@ $card-border-radius: 5px;
 
     .card-desc {
       font-size: 1rem;
-      line-height: 1.5rem;
+      line-height: 150%;
       padding: 0 1rem;
       margin-bottom: 1rem;
     }
@@ -175,10 +175,15 @@ $card-border-radius: 5px;
 
       @include tablet-breakpoint {
         justify-content: initial;
+        flex-direction: column;
 
         & > * {
           padding: 0 1rem 0.5rem 1rem;
         }
+      }
+
+      @include desktop-breakpoint {
+        flex-direction: row;
       }
     }
   }
