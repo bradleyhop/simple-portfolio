@@ -46,6 +46,7 @@ export default {
 
   li {
     margin-right: 2rem;
+    text-transform: lowercase;
 
     @include tablet-breakpoint {
       margin-right: 4rem;

@@ -120,6 +120,10 @@ footer {
   display: flex;
 }
 
+.nav-list {
+  text-transform: lowercase;
+}
+
 .footer-router {
   border-bottom: 3px solid transparent;
 

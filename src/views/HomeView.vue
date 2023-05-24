@@ -157,7 +157,7 @@ $shift-content-left: 5vw;
     padding: 2rem 0 4rem $shift-content-left;
     max-width: 60rem;
 
-    @media (min-width: 850px){
+    @media (min-width: 850px) {
       position: relative;
       margin-right: 0;
       padding-left: calc($shift-content-left + 400px);

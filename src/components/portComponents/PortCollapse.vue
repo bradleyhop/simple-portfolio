@@ -186,7 +186,6 @@ export default {
   display: flex;
   flex-direction: column;
 
-
   @include tablet-breakpoint {
     flex-direction: row;
   }
