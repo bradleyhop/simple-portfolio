@@ -23,9 +23,9 @@ export default {
 
 <template>
   <header class="port-header">
-    <nav class="port-nav device-widths">
+    <div class="port-nav device-widths">
       <!-- tablet< navigation -->
-      <div class="port-nav-container">
+      <nav class="port-nav-container">
         <RouterLink
           to="/"
           class="home-link clear-link-dec"
@@ -40,17 +40,39 @@ export default {
         <div class="mobile-nav">
           <MobileNav />
         </div>
-      </div>
+      </nav>
       <!-- page title -->
       <div class="title-container">
         <h1 class="port-title">{{ pageTitle }}</h1>
+        <nav v-if="pageTitle === 'Portfolio'" class="port-subnav">
+          <ul class="port-nav-list sub-nav-list">
+            <li>
+              <a href="#portFeatured" class="clear-link-dec">featured</a>
+            </li>
+            <li>
+              <a href="#portFrontendMentor" class="clear-link-dec">
+                frontend mentor
+              </a>
+            </li>
+            <li>
+              <a href="#portFCC" class="clear-link-dec">freeCodeCamp</a>
+            </li>
+            <li>
+              <a href="#portExtra" class="clear-link-dec">extracurricular</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </div>
   </header>
 </template>
 
 <style lang="scss">
 $nav-border-line: 3px solid #fff;
+
+[id] {
+  scroll-margin-top: 1rem;
+}
 
 .port-header {
   background: $lightest-blue;
@@ -79,12 +101,12 @@ $nav-border-line: 3px solid #fff;
       border-top: $nav-border-line;
     }
   }
+}
 
-  .port-nav-list {
-    // override MenuList component styling
-    & > li > a:hover {
-      border-top: $nav-border-line !important;
-    }
+.port-nav-list {
+  // override MenuList component styling
+  & > li > a:hover {
+    border-top: $nav-border-line !important;
   }
 }
 
@@ -110,7 +132,8 @@ $nav-border-line: 3px solid #fff;
 
 .title-container {
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   min-height: 5rem;
 
   @include tablet-breakpoint {
@@ -125,6 +148,22 @@ $nav-border-line: 3px solid #fff;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;
+    }
+  }
+}
+
+.sub-nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding-bottom: 1rem;
+  font-size: 0.95rem;
+
+  & > li {
+    padding-right: 1.5rem;
+
+    &:last-child {
+      padding-right: 0;
     }
   }
 }

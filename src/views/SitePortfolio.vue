@@ -68,7 +68,7 @@ export default {
 
   <main>
     <div class="portcard-container device-widths">
-      <h2 class="featured-text">featured</h2>
+      <h2 id="portFeatured" class="featured-text">featured</h2>
 
       <section class="portcard-section">
         <div v-for="project in featuredProjects" :key="project.title">
@@ -85,7 +85,7 @@ export default {
       </section>
     </div>
 
-    <div class="portfolio-container device-widths">
+    <div id="portFrontendMentor" class="portfolio-container device-widths">
       <section class="frontend-mentor-container">
         <h3 class="port-heading fm-heading-container">
           <a
@@ -139,7 +139,7 @@ export default {
         </article>
       </section>
 
-      <section class="fcc-section">
+      <section id="portFCC" class="fcc-section">
         <h3 class="port-heading fcc-heading">
           <a
             href="https://freecodecamp.org"
@@ -197,7 +197,7 @@ export default {
         </section>
       </section>
 
-      <section class="extras-section">
+      <section id="portExtra" class="extras-section">
         <h3 class="port-heading extras-heading">Extracurricular</h3>
         <article class="port-copy">
           <p class="heading-copy">
