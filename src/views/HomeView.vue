@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <header class="device-widths">
+  <header>
     <nav class="home-nav">
       <!-- no mobile menu on homepage -->
       <MenuList />
@@ -24,46 +24,50 @@ export default {
     <div class="main-container">
       <article class="main-info-container">
         <h1 class="my-name">Bradley Smith</h1>
-        <figure class="img-container">
-          <!-- webp images are preloaded in the <head>. jpg given as backup -->
-          <picture>
-            <!-- Lighthouse wants a higher res picture for Best Practices
+        <div class="content-main-container">
+          <figure class="img-container">
+            <!-- webp images are preloaded in the <head>. jpg given as backup -->
+            <picture>
+              <!-- Lighthouse wants a higher res picture for Best Practices
                  Cellphones have a high pixel density, hence double desktop
                  width
             -->
-            <source
-              type="image/webp"
-              :srcset="`./img/me-long-500.webp 250w`"
-              media="(max-width: 600px)"
-            />
-            <source
-              type="image/webp"
-              :srcset="`./img/me-long-325.webp 325w`"
-              media="(min-width: 600.1px)"
-            />
-            <source
-              type="image/jpg"
-              :srcset="`./img/me-long-500.jpg 250w`"
-              media="(max-width: 600px)"
-            />
-            <source
-              type="image/jpg"
-              :srcset="`./img/me-long-325.jpg 325w`"
-              media="(min-width: 600.1px)"
-            />
-            <img
-              :src="`./img/me-long-325.jpg`"
-              alt="profile picture of Bradley Smith"
-              class="me-img"
-            />
-          </picture>
-          <figcaption class="caption-me">Web Development</figcaption>
-        </figure>
+              <source
+                type="image/webp"
+                :srcset="`./img/me-long-500.webp 250w`"
+                media="(max-width: 600px)"
+              />
+              <source
+                type="image/webp"
+                :srcset="`./img/me-long-325.webp 325w`"
+                media="(min-width: 600.1px)"
+              />
+              <source
+                type="image/jpg"
+                :srcset="`./img/me-long-500.jpg 250w`"
+                media="(max-width: 600px)"
+              />
+              <source
+                type="image/jpg"
+                :srcset="`./img/me-long-325.jpg 325w`"
+                media="(min-width: 600.1px)"
+              />
+              <img
+                :src="`./img/me-long-325.jpg`"
+                alt="profile picture of Bradley Smith"
+                class="me-img"
+              />
+            </picture>
+            <figcaption class="caption-me">Web Development</figcaption>
+          </figure>
 
-        <p class="tagline">
-          I am a front end web developer specializing in the Vue.js development
-          environment.
-        </p>
+          <p class="tagline">
+            <span>
+              I am a front end web developer that loves crafting websites in the
+              Vue.js development environment.
+            </span>
+          </p>
+        </div>
       </article>
 
       <div class="recent-project-container">
@@ -99,70 +103,74 @@ $shift-content-left: 5vw;
   @include tablet-breakpoint {
     margin-left: $shift-left;
   }
+
+  .content-main-container {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include desktop-breakpoint {
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 5rem;
+    }
+  }
 }
 
-.main-info-container {
-  margin-bottom: 5rem;
+.my-name {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  position: relative;
+  padding-top: 2rem;
+  right: 2.5rem;
 
-  .my-name {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    position: relative;
-    padding-top: 2rem;
-    right: 2.5rem;
+  @include tablet-breakpoint {
+    font-size: 4rem;
+    letter-spacing: 4px;
+    padding-top: 3rem;
+    right: 10.5rem;
+  }
+}
 
-    @include tablet-breakpoint {
-      font-size: 5rem;
-      letter-spacing: 5px;
-      padding-top: 4rem;
-      right: 10rem;
+.img-container {
+  display: flex;
+  padding-left: $shift-content-left;
+  margin-top: 2.5rem;
+
+  .me-img {
+    // set to actual image dimensions for optimal Lighthouse rating ;)
+    width: 250px;
+    height: 458px;
+
+    @include large-desktop-breakpoint {
+      width: 325px;
+      height: 596px;
     }
   }
 
-  .img-container {
-    display: flex;
-    padding-left: $shift-content-left;
-    margin-top: 2.5rem;
-
-    @include tablet-breakpoint {
-      margin-top: 3rem;
-    }
-
-    .me-img {
-      // set to actual image dimensions for optimal Lighthouse rating ;)
-      width: 250px;
-      height: 458px;
-
-      @include tablet-breakpoint {
-        width: 325px;
-        height: 596px;
-      }
-    }
-
-    .caption-me {
-      color: $green-900;
-      font-size: 1rem;
-      letter-spacing: -0.5px;
-      padding: 0.25rem 0 0 0.25rem;
-      transform-origin: top right;
-      writing-mode: vertical-rl;
-    }
+  .caption-me {
+    color: $green-900;
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    padding: 0.25rem 0 0 0.25rem;
+    transform-origin: top right;
+    writing-mode: vertical-rl;
   }
+}
 
-  .tagline {
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-    line-height: 150%;
-    margin-right: 5%;
-    padding: 2rem 0 4rem $shift-content-left;
-    max-width: 60rem;
+.tagline {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  min-height: 25vh;
+  min-height: 25dvh;
+  padding-left: $shift-content-left;
+  // positioning
+  display: flex;
+  align-items: center;
 
-    @media (min-width: 850px) {
-      position: relative;
-      margin-right: 0;
-      padding-left: calc($shift-content-left + 400px);
-      margin-top: -2.6rem;
-    }
+  @include desktop-breakpoint {
+    max-width: 30vw;
+    min-height: 100%;
+    padding-left: 0;
   }
 }
 
