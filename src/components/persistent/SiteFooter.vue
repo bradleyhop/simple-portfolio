@@ -98,7 +98,7 @@ export default {
       Copyright &copy; 2023 &mdash;
       <a
         href="https://github.com/bradleyhop/simple-portfolio"
-        class="my-name clear-link-dec"
+        class="my-name-footer clear-link-dec"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -161,8 +161,7 @@ footer {
   }
 }
 
-.my-name {
-  letter-spacing: 0.5px;
+.my-name-footer {
   font-weight: bold;
 
   &:hover {

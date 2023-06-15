@@ -51,10 +51,6 @@ export default {
     @include tablet-breakpoint {
       margin-right: 4rem;
     }
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 
   a {
