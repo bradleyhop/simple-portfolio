@@ -14,7 +14,7 @@ export default {
 
 <template>
   <header>
-    <nav class="home-nav">
+    <nav class="home-nav device-widths">
       <!-- no mobile menu on homepage -->
       <MenuList />
     </nav>
