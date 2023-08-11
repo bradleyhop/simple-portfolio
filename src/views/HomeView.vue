@@ -62,10 +62,7 @@ export default {
           </figure>
 
           <p class="tagline">
-            <span>
-              I am a front end web developer that loves crafting websites in the
-              Vue.js development environment.
-            </span>
+            <span> I am a front end web developer. </span>
           </p>
         </div>
       </article>
@@ -183,6 +180,6 @@ $shift-content-left: 5vw;
 }
 
 .recent-project-container {
-  margin-bottom: $footer-push;
+  margin-bottom: $footer-push !important;
 }
 </style>
