@@ -47,18 +47,38 @@ export default {
         <nav v-if="pageTitle === 'Portfolio'" class="port-subnav">
           <ul class="port-nav-list sub-nav-list">
             <li>
-              <a href="#portFeatured" class="clear-link-dec">featured</a>
+              <a
+                href="#portFeatured"
+                class="clear-link-dec"
+                title="featured projects"
+                >featured</a
+              >
             </li>
             <li>
-              <a href="#portFrontendMentor" class="clear-link-dec">
-                frontend mentor
+              <a
+                href="#portFrontendMentor"
+                class="clear-link-dec"
+                title="Frontend Mentor Projects"
+              >
+                Frontend Mentor
               </a>
             </li>
             <li>
-              <a href="#portFCC" class="clear-link-dec">freeCodeCamp</a>
+              <a
+                href="#portFCC"
+                class="clear-link-dec"
+                title="freeCodeCamp
+                learning platform"
+                >freeCodeCamp</a
+              >
             </li>
             <li>
-              <a href="#portExtra" class="clear-link-dec">extracurricular</a>
+              <a
+                href="#portExtra"
+                class="clear-link-dec"
+                title="non-platform-specific projects"
+                >extracurricular</a
+              >
             </li>
           </ul>
         </nav>

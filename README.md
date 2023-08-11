@@ -3,13 +3,13 @@
 [Live Site at bradleysmith.tech](https://bradleysmith.tech)
 
 My professional portfolio's source code. Built as an SPA using Vue.js 3, Vue
-Router, and SASS.
+Router, and SCSS.
 
 Namecheap handles the domain name, and Netlify hosts the live site and
-handles form submissions and send notifications to my email.
+handles form submissions.
 
 No CSS frameworks or component libraries were used in building this page. I
-choose to build everything as part of a learning experience.
+choose to build everything from scratch as part of a learning experience.
 
 ## Four-Hundos
 
