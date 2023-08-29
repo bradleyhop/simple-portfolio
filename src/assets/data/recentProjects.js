@@ -6,7 +6,7 @@ const recents = [
       chart. The data is loaded via local JSON and the chart is drawn using
       only CSS. Built from a professionally designed Figma file using Vue.js,
       Vite, and Sass.`,
-    link: "https://github.com/bradleyhop/frontend-mentor-expenses-chart-component",
+    link: "https://bradleyhop.github.io/frontend-mentor-expenses-chart-component/",
     linkTitle: "Fronent Mentor Expense Chart Component",
     linkText: "Frontend Mentor Expense Chart Component",
   },
