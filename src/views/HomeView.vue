@@ -185,16 +185,16 @@ $shift-content-left: 5vw;
 
 .port-button-link {
   background-color: $green-900;
-  border-radius: 7px;
+  border-radius: 100px;
   color: $not-white;
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  padding: 0.75rem 1.5rem;
 
   &:hover {
     transition: box-shadow 200ms;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 }
 
