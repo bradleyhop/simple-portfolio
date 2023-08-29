@@ -1,5 +1,6 @@
 <script>
 import MenuList from "@/components/menu/MenuList.vue";
+// RouterLink is already imported from MenuList
 import MostRecentProjects from "@/components/articles/MostRecentProjects.vue";
 import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
@@ -26,12 +27,12 @@ export default {
         <h1 class="my-name">Bradley Smith</h1>
         <div class="content-main-container">
           <figure class="img-container">
-            <!-- webp images are preloaded in the <head>. jpg given as backup -->
             <picture>
-              <!-- Lighthouse wants a higher res picture for Best Practices
-                 Cellphones have a high pixel density, hence double desktop
-                 width
-            -->
+              <!--
+                - Lighthouse wants a higher res picture for Best Practices
+                -  Cellphones have a high pixel density, hence double desktop
+                -  width
+                -->
               <source
                 type="image/webp"
                 :srcset="`./img/me-long-500.webp 250w`"
@@ -61,9 +62,12 @@ export default {
             <figcaption class="caption-me">Web Development</figcaption>
           </figure>
 
-          <p class="tagline">
-            <span> I am a front end web developer. </span>
-          </p>
+          <div class="tagline">
+            <p>I am a front end web developer.</p>
+            <RouterLink to="/portfolio" title="See samples of my work">
+              <button class="port-button-link">View My Portfolio</button>
+            </RouterLink>
+          </div>
         </div>
       </article>
 
@@ -102,17 +106,18 @@ $shift-content-left: 5vw;
   }
 
   .content-main-container {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
 
     @include desktop-breakpoint {
-      grid-template-columns: 1fr 1fr;
+      flex-direction: row;
       margin-bottom: 5rem;
     }
   }
 }
 
 .my-name {
+  color: $green-900;
   font-size: 3rem;
   letter-spacing: 2px;
   position: relative;
@@ -159,15 +164,37 @@ $shift-content-left: 5vw;
   line-height: 1.5;
   min-height: 25vh;
   min-height: 25dvh;
-  padding-left: $shift-content-left;
   // positioning
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   @include desktop-breakpoint {
     max-width: 30vw;
     min-height: 100%;
     padding-left: 0;
+    min-width: 40rem;
+  }
+
+  & p {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.port-button-link {
+  background-color: $green-900;
+  border-radius: 7px;
+  color: $not-white;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+
+  &:hover {
+    transition: box-shadow 200ms;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   }
 }
 
