@@ -114,6 +114,7 @@ $card-border-radius: 5px;
   .img-container {
     border-top-left-radius: $card-border-radius;
     border-top-right-radius: $card-border-radius;
+    min-height: 10rem;
 
     @include tablet-breakpoint {
       display: flex;
