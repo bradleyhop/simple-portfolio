@@ -44,6 +44,8 @@ export default {
       <!-- page title -->
       <div class="title-container">
         <h1 class="port-title">{{ pageTitle }}</h1>
+
+        <!-- portfolio sub-navigation -->
         <nav v-if="pageTitle === 'Portfolio'" class="port-subnav">
           <ul class="port-nav-list sub-nav-list">
             <li>
@@ -51,8 +53,9 @@ export default {
                 href="#portFeatured"
                 class="clear-link-dec"
                 title="featured projects"
-                >featured</a
               >
+                featured
+              </a>
             </li>
             <li>
               <a
@@ -67,21 +70,23 @@ export default {
               <a
                 href="#portFCC"
                 class="clear-link-dec"
-                title="freeCodeCamp
-                learning platform"
-                >freeCodeCamp</a
+                title="freeCodeCamp learning platform"
               >
+                freeCodeCamp
+              </a>
             </li>
             <li>
               <a
                 href="#portExtra"
                 class="clear-link-dec"
                 title="non-platform-specific projects"
-                >extracurricular</a
               >
+                extracurricular
+              </a>
             </li>
           </ul>
         </nav>
+        <!-- end portfolio sub-navigation -->
       </div>
     </div>
   </header>
@@ -164,7 +169,7 @@ $nav-border-line: 3px solid #fff;
     font-size: 2rem;
     font-weight: lighter;
     letter-spacing: -1px;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;
@@ -176,14 +181,18 @@ $nav-border-line: 3px solid #fff;
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding-bottom: 1rem;
-  font-size: 0.95rem;
+  padding-bottom: 1.5rem;
+  font-size: 0.85rem;
+  width: 100%;
+  justify-content: space-evenly;
 
-  & > li {
-    padding-right: 1.5rem;
+  @include tablet-breakpoint {
+    font-size: 0.95rem;
+    width: initial;
+    justify-content: flex-start;
 
-    &:last-child {
-      padding-right: 0;
+    & > li {
+      padding-right: 1.5rem;
     }
   }
 }
