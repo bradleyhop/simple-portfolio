@@ -86,7 +86,7 @@ export default {
         ref="userForm"
         @submit.prevent="handleSubmit"
       >
-        <label class="contact-label" for="email">Your Email</label>
+        <label class="contact-label" for="email">Email</label>
         <input
           class="contact-textbox"
           id="email"
