@@ -2,8 +2,8 @@
   "name": "simple-portfolio",
   "description": "Personal portfolio site",
   "homepage": "https://bradleysmith.tech",
-  "version": "1.5.0",
-  "license": "UNLICENSED",
+  "version": "1.6.2",
+  "license": "MIT",
   "private": true,
   "author": "Bradley Smith",
   "scripts": {
