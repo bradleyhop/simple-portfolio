@@ -115,6 +115,7 @@ export default {
       </p>
     </div>
 
+    <!-- HoneyBook Form
     <div class="honeybook-form">
       <a
         href="https://www.honeybook.com/widget/bradleysmithtech_249771/cf_id/640776c1dce5be0c6820ca44"
@@ -125,6 +126,7 @@ export default {
         Or Use my HoneyBook Contact Form to Start a Project Inquiry!
       </a>
     </div>
+    -->
   </main>
 
   <SiteFooter class="device-widths" />

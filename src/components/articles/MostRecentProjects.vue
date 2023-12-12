@@ -44,6 +44,7 @@ export default {
             </svg>
           </a>
         </p>
+        <hr v-if="article.id < projectArticles.length - 1" class="divider" />
       </li>
     </ul>
   </section>
@@ -65,31 +66,31 @@ export default {
     padding-bottom: 4rem;
 
     .recent-item {
-      display: flex;
       font-size: 1.25rem;
       flex-direction: column;
       margin-bottom: 2rem;
 
-      @include tablet-breakpoint {
-        flex-direction: row;
-      }
-
       .recent-item-heading {
+        color: $green-900;
         letter-spacing: 1px;
         line-height: 150%;
         min-width: 20rem;
         font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
       }
 
       .recent-item-copy {
         letter-spacing: 0.5px;
         line-height: 150%;
-        max-width: 50ch;
+        max-width: 80ch;
+        margin-bottom: 1rem;
       }
 
       .linky {
         color: $green-900;
         display: flex;
+        margin: 0.25rem 0;
 
         &:hover {
           text-decoration: underline;
@@ -102,6 +103,14 @@ export default {
           margin-left: 0.2rem;
           width: 1.1em;
         }
+      }
+
+      .divider {
+        border-width: 0;
+        background-color: $lightest-blue;
+        color: $lightest-blue;
+        height: 2px;
+        width: 106%; // stylishly extending to the right
       }
     }
   }

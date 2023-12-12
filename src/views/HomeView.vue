@@ -15,7 +15,7 @@ export default {
 
 <template>
   <header>
-    <nav class="home-nav device-widths">
+    <nav class="home-nav">
       <!-- no mobile menu on homepage -->
       <MenuList />
     </nav>
@@ -70,7 +70,9 @@ export default {
           </div>
         </div>
       </article>
+    </div>
 
+    <div class="main-container project-container">
       <div class="recent-project-container">
         <MostRecentProjects />
       </div>
@@ -111,9 +113,13 @@ $shift-content-left: 5vw;
 
     @include desktop-breakpoint {
       flex-direction: row;
-      margin-bottom: 5rem;
+      padding-bottom: 5rem;
     }
   }
+}
+
+.main-info-container {
+  margin-bottom: 5rem;
 }
 
 .my-name {
@@ -204,6 +210,10 @@ $shift-content-left: 5vw;
   @include tablet-breakpoint {
     padding-left: $shift-left !important;
   }
+}
+
+.project-container {
+  background: $gray-50;
 }
 
 .recent-project-container {
