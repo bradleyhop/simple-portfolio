@@ -1,6 +1,6 @@
 const recents = [
   {
-    id: 1,
+    id: 0,
     title: "Expense Chart Component",
     body: `A Frontend Mentor Project, this is a expense report with a bar
       chart. The data is loaded via local JSON and the chart is drawn using
@@ -11,7 +11,7 @@ const recents = [
     linkText: "Frontend Mentor Expense Chart Component",
   },
   {
-    id: 2,
+    id: 1,
     title: "Professional Portfolio",
     body: `Update and redesign client's professional portfolio page. Built
       in WordPress with Elementor and custom CSS.`,
@@ -20,7 +20,7 @@ const recents = [
     linkText: "Bradley Adamczyk Portfolio",
   },
   {
-    id: 3,
+    id: 2,
     title: "Plant Facts Site",
     body: `A Frontend Mentor project; a Single Page Application fact site for planets
       in our solar system. Built from a supllied professionally designed Figma file

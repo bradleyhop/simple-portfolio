@@ -5,7 +5,7 @@
  * NOTE: no mobile breakpoint because that is the default
  */
 @mixin tablet-breakpoint {
-  @media only screen and (min-width: 800px) {
+  @media only screen and (min-width: 760px) {
     @content;
   }
 }
