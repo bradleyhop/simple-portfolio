@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
+// load home view by default
+import HomeView from "@/views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +9,7 @@ const router = createRouter({
     {
       path: "/",
       name: "HomeView",
-      component: () => import("@/views/HomeView.vue"),
+      component: HomeView,
     },
     {
       path: "/portfolio",
