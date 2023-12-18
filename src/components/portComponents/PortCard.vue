@@ -8,11 +8,13 @@ import { mdiGithub, mdiOpenInNew } from "@mdi/js";
 export default {
   name: "PortCard",
 
-  data: () => ({
-    // mdi icon paths
-    mdiGithub,
-    mdiOpenInNew,
-  }),
+  data() {
+    return {
+      // mdi icon paths
+      mdiGithub,
+      mdiOpenInNew,
+    };
+  },
 
   components: {
     OutsideLinkButton,
@@ -176,15 +178,10 @@ $card-border-radius: 5px;
 
       @include tablet-breakpoint {
         justify-content: initial;
-        flex-direction: column;
 
         & > * {
           padding: 0 1rem 0.5rem 1rem;
         }
-      }
-
-      @include desktop-breakpoint {
-        flex-direction: row;
       }
     }
   }

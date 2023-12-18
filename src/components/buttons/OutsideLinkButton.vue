@@ -45,14 +45,14 @@ export default {
 button {
   display: flex;
   border: none;
-  background-color: $lightest-blue;
+  background-color: $green-900;
   border-radius: 100px;
   font-size: 0.9em;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1rem;
 
   &:hover {
     transition: box-shadow 200ms;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 }
 
@@ -61,12 +61,13 @@ button {
 
   .button-text {
     align-self: center;
-    color: $not-black;
+    color: $not-white;
+    font-weight: bold;
     padding-right: 4px;
   }
 
   .svg-icon {
-    fill: $not-black;
+    fill: $not-white;
     height: 1.4em;
     width: 1.4em;
   }
