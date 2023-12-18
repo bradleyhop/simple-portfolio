@@ -92,6 +92,7 @@ export default {
           id="email"
           type="email"
           name="email"
+          autocomplete="email"
           v-model="userForm.email"
           required
         />

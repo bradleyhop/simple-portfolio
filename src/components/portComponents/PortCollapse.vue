@@ -16,12 +16,14 @@ export default {
     OutsideLinkButton,
   },
 
-  data: () => ({
-    // mdi icon paths
-    mdiGithub,
-    mdiOpenInNew,
-    mdiChevronDown,
-  }),
+  data() {
+    return {
+      // mdi icon paths
+      mdiGithub,
+      mdiOpenInNew,
+      mdiChevronDown,
+    };
+  },
 
   props: {
     dataList: {
@@ -126,7 +128,7 @@ export default {
 
 .collapse-container {
   padding: 1rem;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 2px solid $gray-300;
 
   &:last-child {
     border-bottom: none;
@@ -168,7 +170,7 @@ export default {
 .project-item {
   margin-bottom: 1rem;
   display: flex;
-  border-bottom: 2px solid $gray-200;
+  border-bottom: 2px solid $lightest-blue;
 
   &:last-child {
     border-bottom: none;

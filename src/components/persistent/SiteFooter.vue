@@ -1,6 +1,12 @@
 <script>
 export default {
   name: "SiteFooter",
+
+  data() {
+    return {
+      year: new Date().getFullYear(),
+    };
+  },
 };
 </script>
 
@@ -81,21 +87,10 @@ export default {
             Codewars
           </a>
         </li>
-        <li>
-          <a
-            href="https://wakatime.com/@bradleyhop"
-            target="_blank"
-            class="footer-link"
-            rel="noopener noreferrer"
-            title="my freeCodeCamp profile"
-          >
-            WakaTime
-          </a>
-        </li>
       </ul>
     </nav>
     <p class="footer-copyright">
-      Copyright &copy; 2023 &mdash;
+      Copyright &copy; {{ year }} &mdash;
       <a
         href="https://github.com/bradleyhop/simple-portfolio"
         class="my-name-footer clear-link-dec"

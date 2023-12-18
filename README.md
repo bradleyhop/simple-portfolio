@@ -10,8 +10,8 @@ Router, and SCSS.
 Namecheap handles the domain name, and Netlify hosts the live site and
 handles form submissions.
 
-No CSS frameworks or component libraries were used in building this page. I
-choose to build everything from scratch as part of a learning experience.
+No CSS frameworks or component libraries were used in building this page as way
+to help deepen my foundational understanding of CSS.
 
 ## Four-Hundos
 

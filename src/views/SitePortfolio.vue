@@ -31,6 +31,19 @@ export default {
       // four top projects to showcase
       featuredProjects: Object.freeze([
         {
+          // Coffeeroaster Subscription Site
+          title: "Coffeeroaster Subscription Site",
+          link: "https://bradleyhop.github.io/frontend-mentor-coffeeroasters-sub/#/",
+          github:
+            "https://github.com/bradleyhop/frontend-mentor-coffeeroasters-sub",
+          img: {
+            src: "coffeeroasters.jpg",
+            webp: "coffeeroasters.webp",
+            alt: "screenshot of coffee roasters subscription site",
+          },
+          desc: "A Frontend Mentor Project, this is a three-page subscription site. Available ordering options change depending on user choices. User choices are saved in a global state. Built from a professionally designed Figma file using Vue.js, Vite, Pinia, and Sass.",
+        },
+        {
           // GitHub User Search app object
           title: "GitHub User Search App",
           link: "https://bradleyhop.github.io/frontend-mentor-github-user-search-app/",
@@ -43,18 +56,20 @@ export default {
           },
           desc: "This Frontend Mentor project retrieves and displays GitHub user profile information. The design is based on a professionally design via a Figma file. Vue.js 3, Vite, GitHub Ocktokit API, and Sass were used to create this page. On load, the light or dark theme is displayed dependent on the user's preference; this can be modified manually.",
         },
-        {
-          title: "Planet Facts Site",
-          link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
-          github:
-            "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
-          img: {
-            src: "desktopPlanet.png",
-            webp: "desktopPlanet.webp",
-            alt: "screenshot of planet facts website",
-          },
-          desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, and Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
-        },
+        /*
+         * {
+         *   title: "Planet Facts Site",
+         *   link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
+         *   github:
+         *     "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
+         *   img: {
+         *     src: "desktopPlanet.png",
+         *     webp: "desktopPlanet.webp",
+         *     alt: "screenshot of planet facts website",
+         *   },
+         *   desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, and Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
+         * },
+         */
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match
       ]),
@@ -220,8 +235,8 @@ export default {
 $nav-border-line: 3px solid #fff;
 
 .border-b-section {
-  border-bottom: 1px solid #e0e0e0e0;
-  padding-bottom: 1rem;
+  border-bottom: 2px solid $lightest-blue;
+  padding: 1.25rem 0;
 }
 
 .featured-text {
@@ -301,7 +316,7 @@ $nav-border-line: 3px solid #fff;
 
   .fm-profile-link {
     color: $figma-purple;
-    display: flex;
+    display: inline-flex;
 
     &:hover {
       text-decoration: underline;
@@ -348,7 +363,7 @@ $nav-border-line: 3px solid #fff;
 
   .fcc-port-link {
     color: $fcc-green;
-    display: flex;
+    display: inline-flex;
 
     &:hover {
       text-decoration: underline;

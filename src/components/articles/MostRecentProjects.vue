@@ -5,10 +5,12 @@ import { mdiOpenInNew } from "@mdi/js";
 export default {
   name: "MostRecentProjects",
 
-  data: () => ({
-    mdiOpenInNew,
-    projectArticles: Object.freeze(recents),
-  }),
+  data() {
+    return {
+      mdiOpenInNew,
+      projectArticles: Object.freeze(recents),
+    };
+  },
 };
 </script>
 
@@ -23,7 +25,7 @@ export default {
       >
         <h3 class="recent-item-heading">{{ article.title }}</h3>
         <p class="recent-item-copy">
-          {{ article.body }}
+          <span class="recent-item-body" v-html="article.body"></span>
           <br />
           <a
             :href="article.link"
@@ -44,7 +46,7 @@ export default {
             </svg>
           </a>
         </p>
-        <hr v-if="article.id < projectArticles.length - 1" class="divider" />
+        <hr class="divider" />
       </li>
     </ul>
   </section>
