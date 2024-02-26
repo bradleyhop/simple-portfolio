@@ -25,9 +25,11 @@ export default {
     return {
       freecodecampData: fCC, // freecodecamp data
       extraData: extra, // extracurricular data
+
       // mdi icons
       mdiFire,
       mdiOpenInNew,
+
       // four top projects to showcase
       featuredProjects: Object.freeze([
         {
