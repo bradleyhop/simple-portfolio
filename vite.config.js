@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import webfontDownload from "vite-plugin-webfont-dl";
+import { VitePluginRadar } from "vite-plugin-radar";
 import { createHtmlPlugin } from "vite-plugin-html";
 import pluginPurgeCSS from "@mojojoejo/vite-plugin-purgecss";
 
@@ -11,8 +12,14 @@ export default defineConfig({
   plugins: [
     vue(),
     webfontDownload(),
+    VitePluginRadar({
+      // google analytics id
+      analytics: {
+        id: "G-PCJSPMG67T",
+      },
+    }),
     createHtmlPlugin({
-      // minifies, removes comments from .html files only
+      // minifies and removes comments from .html files only
       minify: true,
     }),
     // removes unused css
