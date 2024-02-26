@@ -30,6 +30,7 @@
     "prettier": "^2.7.1",
     "sass": "^1.56.1",
     "vite": "^3.1.8",
+    "vite-plugin-html": "^3.2.2",
     "vite-plugin-webfont-dl": "^3.6.0"
   }
 }
