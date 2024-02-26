@@ -4,6 +4,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import webfontDownload from "vite-plugin-webfont-dl";
 import { createHtmlPlugin } from "vite-plugin-html";
+import pluginPurgeCSS from "@mojojoejo/vite-plugin-purgecss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,6 +15,8 @@ export default defineConfig({
       // minifies, removes comments from .html files only
       minify: true,
     }),
+    // removes unused css
+    pluginPurgeCSS(),
   ],
 
   resolve: {
