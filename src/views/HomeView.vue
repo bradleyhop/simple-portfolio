@@ -15,7 +15,7 @@ export default {
 
 <template>
   <header>
-    <nav class="home-nav">
+    <nav class="device-widths home-nav">
       <!-- no mobile menu on homepage -->
       <MenuList />
     </nav>
@@ -63,7 +63,17 @@ export default {
           </figure>
 
           <div class="tagline">
-            <p>I am a front end web developer.</p>
+            <h2>I am a front end web developer.</h2>
+
+            <!--
+            <p>
+              I build websites and web applications with HTML, CSS, and
+              JavaScript. I prefer building with Vue.js. I also have experience
+              in React. I have experience in Node.js. Lorem ipsum dolor sit
+              amet.
+            </p>
+            -->
+
             <RouterLink to="/portfolio" title="See samples of my work">
               <button class="port-button-link">View My Portfolio</button>
             </RouterLink>
@@ -165,27 +175,47 @@ $shift-content-left: 5vw;
 }
 
 .tagline {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
   line-height: 1.5;
   min-height: 25vh;
   min-height: 25dvh;
-  // positioning
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   @include desktop-breakpoint {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     max-width: 30vw;
     min-height: 100%;
     padding-left: 0;
     min-width: 40rem;
   }
 
-  & p {
-    text-align: center;
+  & > h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin: 1.5rem 0;
+    text-align: left;
+    margin-left: $shift-content-left;
+
+    @include desktop-breakpoint {
+      margin-left: 0;
+      text-align: center;
+      margin: 0 0 1rem 0;
+      text-align: center;
+    }
+  }
+
+  & > p {
+    letter-spacing: 0.25px;
     margin-bottom: 1rem;
+    text-align: left;
+    font-size: 1.25rem;
+    padding: $shift-content-left;
+
+    @include desktop-breakpoint {
+      padding: 0 2.5rem;
+    }
   }
 }
 
@@ -197,10 +227,15 @@ $shift-content-left: 5vw;
   font-weight: bold;
   font-size: 1.3rem;
   padding: 0.75rem 1.5rem;
+  margin-left: $shift-content-left;
 
   &:hover {
     transition: box-shadow 200ms;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  @include desktop-breakpoint {
+    margin-left: 0;
   }
 }
 
