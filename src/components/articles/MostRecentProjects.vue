@@ -112,7 +112,6 @@ export default {
         background-color: $lightest-blue;
         color: $lightest-blue;
         height: 2px;
-        width: 106%; // stylishly extending to the right
       }
     }
   }

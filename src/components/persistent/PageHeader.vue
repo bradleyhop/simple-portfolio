@@ -24,7 +24,7 @@ export default {
 <template>
   <header class="port-header">
     <div class="port-nav device-widths">
-      <!-- tablet< navigation -->
+      <!-- tablet and larger viewports navigation -->
       <nav class="port-nav-container">
         <RouterLink
           to="/"
@@ -36,7 +36,7 @@ export default {
         <div class="menu-list-container">
           <MenuList class="port-nav-list" />
         </div>
-        <!-- mobile-only navigation -->
+        <!-- mobile only navigation -->
         <div class="mobile-nav">
           <MobileNav />
         </div>
@@ -102,6 +102,8 @@ $nav-border-line: 3px solid #fff;
 .port-header {
   background: $lightest-blue;
   margin-bottom: 2rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .port-nav-container {
