@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <section class="recents">
+  <section class="recents-section">
     <h2 class="recents-heading">Recent Projects</h2>
     <ul class="recents-list">
       <li
@@ -32,18 +32,20 @@ export default {
             class="linky"
             rel="noopener noreferrer"
             target="_blank"
-            :title="article.linkTitle"
+            :title="article.linkText"
           >
-            {{ article.linkText }}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              role="img"
-              alt="image indicating an outside link"
-              viewBox="0 0 24 24"
-              class="svg-icon"
-            >
-              <path :d="mdiOpenInNew"></path>
-            </svg>
+            <span class="recent-item-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                alt="image indicating an outside link"
+                viewBox="0 0 24 24"
+                class="svg-icon"
+              >
+                <path :d="mdiOpenInNew"></path>
+              </svg>
+              {{ article.linkText }}
+            </span>
           </a>
         </p>
         <hr class="divider" />
@@ -53,14 +55,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.recents {
-  margin-left: 5vw;
-  margin-right: 5%;
+.recents-section {
+  // margin-left: 5vw;
 
   .recents-heading {
     font-size: 2em;
     letter-spacing: 1.5px;
     margin-bottom: 2rem;
+    padding-right: 0.5rem;
   }
 
   .recents-list {
@@ -89,29 +91,28 @@ export default {
         margin-bottom: 1rem;
       }
 
-      .linky {
+      .recent-item-link {
+        display: inline-flex;
+        align-items: center;
+        line-height: 1.5;
         color: $green-900;
-        display: flex;
-        margin: 0.25rem 0;
 
         &:hover {
           text-decoration: underline;
         }
+      }
 
-        .svg-icon {
-          align-self: center;
-          fill: $green-900;
-          height: 1.1em;
-          margin-left: 0.2rem;
-          width: 1.1em;
-        }
+      .svg-icon {
+        fill: $green-900;
+        height: 1.1em;
+        margin-right: 0.2rem;
+        width: 1.1em;
       }
 
       .divider {
         border-width: 0;
         background-color: $lightest-blue;
-        color: $lightest-blue;
-        height: 2px;
+        height: 4px;
       }
     }
   }
