@@ -77,18 +77,18 @@ export default {
       .recent-item-heading {
         color: $green-900;
         letter-spacing: 1px;
-        line-height: 150%;
+        line-height: 1.5;
         min-width: 20rem;
         font-weight: bold;
         font-size: 1.5rem;
-        margin-bottom: 0.5rem;
+        margin: 0 0.5rem 0.5rem 0;
       }
 
       .recent-item-copy {
         letter-spacing: 0.5px;
-        line-height: 150%;
+        line-height: 1.5;
         max-width: 80ch;
-        margin-bottom: 1rem;
+        margin: 0 0.5rem 1rem 0;
       }
 
       .recent-item-link {
@@ -105,8 +105,8 @@ export default {
       .svg-icon {
         fill: $green-900;
         height: 1.1em;
-        margin-right: 0.2rem;
-        width: 1.1em;
+        margin-right: 0.25em;
+        min-width: 1.1em;
       }
 
       .divider {

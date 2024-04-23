@@ -161,7 +161,7 @@ $card-border-radius: 5px;
 
     .card-desc {
       font-size: 1rem;
-      line-height: 150%;
+      line-height: 1.5;
       padding: 0 1rem;
       margin-bottom: 1rem;
     }
