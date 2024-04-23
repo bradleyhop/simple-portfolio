@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from "node:url";
-
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import webfontDownload from "vite-plugin-webfont-dl";
@@ -35,6 +34,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        // main.scss imports all other scss
         additionalData: `
         @import "@/assets/style/main.scss";
         `,

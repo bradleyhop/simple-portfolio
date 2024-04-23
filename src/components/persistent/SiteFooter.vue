@@ -144,7 +144,7 @@ footer {
   margin: 3rem 0.5rem 1rem 0;
   font-size: 0.9rem;
   letter-spacing: 0.75px;
-  line-height: 150%;
+  line-height: 1.5;
 }
 
 .footer-link {

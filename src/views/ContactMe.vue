@@ -207,7 +207,7 @@ export default {
   .link-honeybook-form {
     font-size: 1.2rem;
     color: $green-900;
-    line-height: 150%;
+    line-height: 1.5;
 
     &:hover {
       text-decoration: underline;
