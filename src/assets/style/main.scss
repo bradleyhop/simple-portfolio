@@ -4,19 +4,19 @@
  * Device size breakpoints
  */
 @mixin tablet-breakpoint {
-  @media only screen and (min-width: 760px) {
+  @media only screen and (min-width: 48em) {
     @content;
   }
 }
 
 @mixin desktop-breakpoint {
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 75em) {
     @content;
   }
 }
 
 @mixin large-desktop-breakpoint {
-  @media only screen and (min-width: 1920px) {
+  @media only screen and (min-width: 120em) {
     @content;
   }
 }
@@ -39,15 +39,6 @@ html {
   background-color: $gray-50;
   color: $not-black;
   font-family: "Raleway", sans-serif;
-  font-size: 14px; // REM
-
-  @include tablet-breakpoint {
-    font-size: 14px;
-  }
-
-  @include desktop-breakpoint {
-    font-size: 16px;
-  }
 }
 
 main {
