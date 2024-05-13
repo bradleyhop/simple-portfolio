@@ -18,16 +18,6 @@ export default {
     // toggle mobile menu
     setMobileMenu: function () {
       this.toggleMenu = !this.toggleMenu;
-
-      // trigger global class (in main.scss since this component is style scoped)
-      // to hide page content when mobile menu is open
-      const el = document.getElementById("app");
-
-      if (this.toggleMenu) {
-        el.classList.add("hideMain");
-      } else {
-        el.classList.remove("hideMain");
-      }
     },
   },
 };
@@ -149,5 +139,6 @@ export default {
 
 .remove-menu {
   width: 0vw;
+  width: 0dvw;
 }
 </style>
