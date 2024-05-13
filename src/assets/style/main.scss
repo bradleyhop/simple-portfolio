@@ -107,13 +107,6 @@ button {
   text-decoration: none;
 }
 
-// hide web content when mobile menu is displayed; invoked by menu component
-.hideMain {
-  & main {
-    display: none;
-  }
-}
-
 // margin for last element of page to push give space to footer; only use when
 // content doesn't take up at least 100vh
 $footer-push: 7rem;

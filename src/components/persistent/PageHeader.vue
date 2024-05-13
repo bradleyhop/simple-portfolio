@@ -158,13 +158,10 @@ $nav-border-line: 3px solid #fff;
 }
 
 .title-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 5rem;
+  margin-top: 1.25rem;
 
   @include tablet-breakpoint {
-    min-height: 8rem;
+    margin-top: 1.5rem;
   }
 
   .port-title {
@@ -172,6 +169,7 @@ $nav-border-line: 3px solid #fff;
     font-weight: lighter;
     letter-spacing: -1px;
     padding-bottom: 1.5rem;
+    color: $green-900;
 
     @include tablet-breakpoint {
       font-size: 2.5rem;
@@ -180,15 +178,16 @@ $nav-border-line: 3px solid #fff;
 }
 
 .sub-nav-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.75rem;
   list-style: none;
   padding-bottom: 1.5rem;
   font-size: 0.85rem;
   width: 100%;
-  justify-content: space-evenly;
 
   @include tablet-breakpoint {
+    display: inline-flex;
     font-size: 0.95rem;
     width: initial;
     justify-content: flex-start;
