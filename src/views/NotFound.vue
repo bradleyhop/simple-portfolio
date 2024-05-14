@@ -49,7 +49,7 @@ export default {
   letter-spacing: 3.5px;
 
   &:hover {
-    border-top: 3px solid #fff;
+    border-top: 5px solid #fff;
   }
 }
 </style>

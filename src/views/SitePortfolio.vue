@@ -226,7 +226,6 @@ export default {
           </div>
         </article>
       </section>
-      <!-- .complete-portfolio -->
     </div>
   </main>
 
