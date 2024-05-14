@@ -200,18 +200,21 @@ export default {
     color: $green-900;
   }
 }
-
-.honeybook-form {
-  margin: 2rem 0;
-
-  .link-honeybook-form {
-    font-size: 1.2rem;
-    color: $green-900;
-    line-height: 1.5;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
+/*
+ * HoneyBook Form
+ *
+ * .honeybook-form {
+ *   margin: 2rem 0;
+ *
+ *   .link-honeybook-form {
+ *     font-size: 1.2rem;
+ *     color: $green-900;
+ *     line-height: 1.5;
+ *
+ *     &:hover {
+ *       text-decoration: underline;
+ *     }
+ *   }
+ * }
+ */
 </style>
