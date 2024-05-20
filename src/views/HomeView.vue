@@ -59,20 +59,22 @@ export default {
                 class="me-img"
               />
             </picture>
-            <figcaption class="caption-me">Web Development</figcaption>
           </figure>
 
           <div class="tagline">
-            <h2>I am a front end web developer.</h2>
+            <h2 class="heading-tagline">I am a front-end web developer.</h2>
 
-            <!--
-            <p>
-              I build websites and web applications with HTML, CSS, and
-              JavaScript. I prefer building with Vue.js. I also have experience
-              in React. I have experience in Node.js. Lorem ipsum dolor sit
-              amet.
+            <p class="about-me-copy">
+              Leveraging Vue.js and Sass, I seamlessly blend functionality with
+              aesthetic appeal, ensuring every aspect of the site adheres
+              meticulously to design layouts. My keen eye for detail guarantees
+              a responsive implementation, maintaining fidelity to the original
+              vision while optimizing for both desktop and mobile platforms.
+              With a knack for adaptability, I am proficient in integrating
+              various libraries to meet project demands, guaranteeing versatile
+              and robust web applications tailored to each client's unique
+              needs.
             </p>
-            -->
 
             <RouterLink to="/portfolio" title="See samples of my work">
               <button class="port-button-link">View My Portfolio</button>
@@ -118,11 +120,12 @@ $shift-content-left: 5vw;
   }
 
   .content-main-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 
     @include desktop-breakpoint {
-      flex-direction: row;
+      grid-template-columns: 1fr 2fr;
+      align-items: center;
+      // flex-direction: row;
       padding-bottom: 5rem;
     }
   }
@@ -130,28 +133,35 @@ $shift-content-left: 5vw;
 
 .main-info-container {
   margin-bottom: 5rem;
+  display: grid;
+  grid-template-columns: 1fr, 2fr;
+  align-items: center;
+
+  @include desktop-breakpoint {
+    grid-template-columns: 1fr;
+  }
 }
 
 .my-name {
   color: $green-900;
   font-size: 3rem;
   letter-spacing: 2px;
+  margin-bottom: 2rem;
   position: relative;
   padding-top: 2rem;
-  right: 2.5rem;
+  right: 3rem;
 
   @include tablet-breakpoint {
     font-size: 4rem;
     letter-spacing: 4px;
+    margin-bottom: 3rem;
     padding-top: 3rem;
     right: 10.5rem;
   }
 }
 
 .img-container {
-  display: flex;
   padding-left: $shift-content-left;
-  margin-top: 2.5rem;
 
   .me-img {
     // set to actual image dimensions for optimal Lighthouse rating ;)
@@ -163,21 +173,10 @@ $shift-content-left: 5vw;
       height: 596px;
     }
   }
-
-  .caption-me {
-    color: $green-900;
-    font-size: 1rem;
-    letter-spacing: -0.5px;
-    padding: 0.25rem 0 0 0.25rem;
-    transform-origin: top right;
-    writing-mode: vertical-rl;
-  }
 }
 
 .tagline {
   line-height: 1.5;
-  min-height: 25vh;
-  min-height: 25dvh;
 
   @include desktop-breakpoint {
     display: flex;
@@ -187,20 +186,19 @@ $shift-content-left: 5vw;
 
     max-width: 30vw;
     min-height: 100%;
-    padding-left: 0;
     min-width: 40rem;
+    padding-left: 0;
   }
 
   & > h2 {
     font-size: 1.5rem;
+    font-weight: bold;
     letter-spacing: 1px;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1.5rem $shift-content-left;
     text-align: left;
-    margin-left: $shift-content-left;
 
     @include desktop-breakpoint {
-      margin-left: 0;
-      text-align: center;
+      font-size: 1.75rem;
       margin: 0 0 1rem 0;
       text-align: center;
     }
@@ -214,6 +212,9 @@ $shift-content-left: 5vw;
     padding: $shift-content-left;
 
     @include desktop-breakpoint {
+      text-align: justify;
+      // not supported by all browsers
+      text-justify: inter-character;
       padding: 0 2.5rem;
     }
   }
@@ -228,6 +229,7 @@ $shift-content-left: 5vw;
   font-size: 1.3rem;
   padding: 0.75rem 1.5rem;
   margin-left: $shift-content-left;
+  margin-bottom: 3rem;
 
   &:hover {
     transition: box-shadow 200ms;
@@ -235,6 +237,7 @@ $shift-content-left: 5vw;
   }
 
   @include desktop-breakpoint {
+    margin-bottom: 0;
     margin-left: 0;
   }
 }
