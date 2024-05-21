@@ -1,12 +1,6 @@
 <script>
-import { RouterLink } from "vue-router";
-
 export default {
   name: "NotFound",
-
-  components: {
-    RouterLink,
-  },
 };
 </script>
 

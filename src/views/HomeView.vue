@@ -125,7 +125,6 @@ $shift-content-left: 5vw;
     @include desktop-breakpoint {
       grid-template-columns: 1fr 2fr;
       align-items: center;
-      // flex-direction: row;
       padding-bottom: 5rem;
     }
   }
