@@ -201,33 +201,4 @@ export default {
     }
   }
 }
-
-.link-button {
-  border: none;
-  background-color: $lightest-blue;
-  border-radius: 100px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin-right: 1rem;
-
-  &:hover {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    transition-duration: 200ms;
-  }
-
-  .project-link {
-    display: flex;
-    padding: 0.5rem 0.5rem;
-  }
-
-  .button-text {
-    align-self: center;
-  }
-
-  .svg-icon {
-    fill: $not-black;
-    height: 1.5em;
-    width: 1.5em;
-  }
-}
 </style>

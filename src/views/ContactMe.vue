@@ -182,11 +182,11 @@ export default {
   margin-top: 1.5rem;
   padding: 0.75rem 0;
   width: 8rem;
+  transition: 200ms ease-in;
 
   &:hover {
     background-color: $lightest-blue;
     color: $not-black;
-    transition: 200ms ease;
   }
 }
 
