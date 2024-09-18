@@ -138,12 +138,11 @@ $card-border-radius: 5px;
         height: auto;
         margin: 0.5rem;
         width: 12rem;
+        transition: 150ms ease-in;
 
         &:hover {
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
             0 3px 6px rgba(0, 0, 0, 0.23);
-          transition: ease-in;
-          transition-duration: 100ms;
         }
       }
     }

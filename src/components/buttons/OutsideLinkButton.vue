@@ -42,22 +42,19 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-button {
+.link-button {
+  cursor: pointer;
   display: flex;
   border: none;
   background-color: $green-900;
   border-radius: 100px;
   font-size: 0.9em;
   padding: 0.5rem 1rem;
+  transition: box-shadow 200ms ease-in;
 
   &:hover {
-    transition: box-shadow 200ms;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
-}
-
-.link-button {
-  cursor: pointer;
 
   .button-text {
     align-self: center;

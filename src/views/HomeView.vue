@@ -229,9 +229,9 @@ $shift-content-left: 5vw;
   padding: 0.75rem 1.5rem;
   margin-left: $shift-content-left;
   margin-bottom: 3rem;
+  transition: box-shadow 200ms ease-in;
 
   &:hover {
-    transition: box-shadow 200ms;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
