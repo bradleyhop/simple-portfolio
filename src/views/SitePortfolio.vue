@@ -131,8 +131,7 @@ export default {
               rel="noreferrer noopener"
               class="figma-link"
               >Figma</a
-            >
-            . I can then solicit feedback and evaluate my peers' work.
+            >. I can then solicit feedback and evaluate my peers' work.
           </p>
           <div class="port-link-container">
             <a
@@ -189,7 +188,7 @@ export default {
           </p>
           <div class="port-link-container">
             <a
-              href="https://frontendmentor.io/profile/bradleyhop"
+              href="https://freecodecamp.org/bradleyhop"
               target="_blank"
               rel="noreferrer noopener"
               class="fcc-port-link"
