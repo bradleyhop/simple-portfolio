@@ -47,7 +47,7 @@ export default {
     // add vue-collapsed property to prop array; no default open
     portList() {
       return reactive(
-        this.dataList.map((obj) => ({ ...obj, isExpanded: false }))
+        this.dataList.map((obj) => ({ ...obj, isExpanded: false })),
       );
     },
   },
@@ -70,6 +70,7 @@ export default {
           viewBox="0 0 24 24"
           class="svg-icon chevron"
         >
+          <title>expand collapseable element</title>
           <path :d="mdiChevronDown"></path>
         </svg>
       </span>
@@ -121,6 +122,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/main" as *;
+@use "@/assets/style/color" as *;
+
 .collapse {
   // npm vue-collapsed component-provided styling
   transition: height var(--vc-auto-duration) cubic-bezier(0.3, 0, 0.6, 1);
@@ -150,7 +154,9 @@ export default {
 }
 
 .project-img {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
   width: 8rem;
   margin-right: 1rem;
   object-fit: cover;

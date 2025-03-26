@@ -91,7 +91,10 @@ export default {
 </template>
 
 <style lang="scss">
-$nav-border-line: 3px solid #fff;
+@use "@/assets/style/main" as *;
+@use "@/assets/style/color" as *;
+
+$nav-border-line: 3px solid #fafafa;
 
 [id] {
   scroll-margin-top: 1rem;

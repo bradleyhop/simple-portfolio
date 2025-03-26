@@ -95,6 +95,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use "@/assets/style/main" as *;
+@use "@/assets/style/color" as *;
+
 $shift-left: 25vw;
 $shift-left-mobile: 15vw;
 $shift-content-left: 5vw;
@@ -232,7 +235,9 @@ $shift-content-left: 5vw;
   transition: box-shadow 200ms ease-in;
 
   &:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   @include desktop-breakpoint {
