@@ -98,13 +98,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/main" as *;
+
 $card-border-radius: 5px;
 
 .port-card-container {
   border-radius: $card-border-radius;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
   margin: auto;
   margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
   width: 90%;
 
   @include tablet-breakpoint {
@@ -132,7 +137,9 @@ $card-border-radius: 5px;
       object-fit: cover;
 
       @include tablet-breakpoint {
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        box-shadow:
+          0 1px 3px rgba(0, 0, 0, 0.12),
+          0 1px 2px rgba(0, 0, 0, 0.24);
         border-top-left-radius: initial;
         border-top-right-radius: initial;
         height: auto;
@@ -141,7 +148,8 @@ $card-border-radius: 5px;
         transition: 150ms ease-in;
 
         &:hover {
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+          box-shadow:
+            0 3px 6px rgba(0, 0, 0, 0.16),
             0 3px 6px rgba(0, 0, 0, 0.23);
         }
       }

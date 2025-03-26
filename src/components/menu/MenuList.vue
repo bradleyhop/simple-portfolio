@@ -28,6 +28,9 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/main" as *;
+@use "@/assets/style/color" as *;
+
 .menu-list {
   display: flex;
   align-items: center;

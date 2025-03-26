@@ -4,10 +4,15 @@ import vue from "@vitejs/plugin-vue";
 import webfontDownload from "vite-plugin-webfont-dl";
 import { VitePluginRadar } from "vite-plugin-radar";
 import { createHtmlPlugin } from "vite-plugin-html";
-import pluginPurgeCSS from "@mojojoejo/vite-plugin-purgecss";
+// import pluginPurgeCSS from "@mojojoejo/vite-plugin-purgecss";
+import pluginPurgeCss from "vite-plugin-purgecss-updated-v5";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  define: {
+    __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: "false",
+  },
+
   plugins: [
     vue(),
     webfontDownload(),
@@ -22,7 +27,7 @@ export default defineConfig({
       minify: true,
     }),
     // removes unused css
-    pluginPurgeCSS(),
+    pluginPurgeCss(),
   ],
 
   resolve: {
@@ -34,8 +39,10 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // main.scss imports all other scss
-        additionalData: `@import "@/assets/style/main.scss";`,
+        // supposed to fix legacy-js issue, but no
+        api: "modern-compiler",
+        // migration from @import to @use
+        additionsalData: `@use "src/assets/style/main" as *;`,
       },
     },
   },

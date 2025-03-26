@@ -64,6 +64,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/color" as *;
+
 .mobile-menu-container {
   display: flex;
 }

@@ -35,6 +35,7 @@ export default {
         viewBox="0 0 24 24"
         class="svg-icon"
       >
+        <title>opens link in new window</title>
         <path :d="svgPath"></path>
       </svg>
     </button>
@@ -42,6 +43,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/color" as *;
+
 .link-button {
   cursor: pointer;
   display: flex;
@@ -53,7 +56,9 @@ export default {
   transition: box-shadow 200ms ease-in;
 
   &:hover {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow:
+      0 3px 6px rgba(0, 0, 0, 0.16),
+      0 3px 6px rgba(0, 0, 0, 0.23);
   }
 
   .button-text {

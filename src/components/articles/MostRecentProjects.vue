@@ -42,6 +42,7 @@ export default {
                 viewBox="0 0 24 24"
                 class="svg-icon"
               >
+                <title>open link in a new window</title>
                 <path :d="mdiOpenInNew"></path>
               </svg>
               {{ article.linkText }}
@@ -55,6 +56,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/color" as *;
+
 .recents-section {
   // margin-left: 5vw;
 

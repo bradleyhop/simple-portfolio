@@ -149,6 +149,7 @@ export default {
                 viewBox="0 0 24 24"
                 class="svg-icon"
               >
+                <title>open frontend mentor profile in a new window</title>
                 <path :d="mdiOpenInNew"></path>
               </svg>
             </a>
@@ -171,6 +172,7 @@ export default {
               viewBox="0 0 24 24"
               class="fcc-icon"
             >
+              <title>freecodecamp icon</title>
               <path :d="mdiFire"></path>
             </svg>
             &rpar;&nbsp;freeCodeCamp
@@ -200,6 +202,7 @@ export default {
                 viewBox="0 0 24 24"
                 class="svg-icon"
               >
+                <title>open mhy free code camp profile in a new window</title>
                 <path :d="mdiOpenInNew"></path>
               </svg>
             </a>
@@ -233,11 +236,14 @@ export default {
 </template>
 
 <style lang="scss">
+@use "@/assets/style/main" as *;
+@use "@/assets/style/color" as *;
+
 $nav-border-line: 3px solid #fff;
 
 .border-b-section {
-  border-bottom: 2px solid $lightest-blue;
-  padding: 1.25rem 0;
+  border-bottom: 4px solid $lightest-blue;
+  padding: 1.5rem 0;
 }
 
 .featured-text {
@@ -387,7 +393,9 @@ $nav-border-line: 3px solid #fff;
 }
 
 .port-collapse-container {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
 
   @include tablet-breakpoint {
     margin: auto;

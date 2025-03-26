@@ -17,6 +17,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "@/assets/style/color" as *;
+
 .not-found-container {
   background-color: $lightest-blue;
   display: flex;
