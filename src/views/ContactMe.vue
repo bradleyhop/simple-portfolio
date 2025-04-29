@@ -131,7 +131,7 @@ export default {
     -->
   </main>
 
-  <SiteFooter class="device-widths" />
+  <SiteFooter />
 </template>
 
 <style lang="scss">

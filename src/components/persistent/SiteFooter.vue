@@ -108,8 +108,9 @@ export default {
           </ul>
         </div>
       </div>
+
       <p class="footer-copyright">
-        Copyright &copy; {{ year }} &mdash;
+        Copyright &copy; {{ year }} &mdash;&nbsp;
         <a
           href="https://github.com/bradleyhop/simple-portfolio"
           class="my-name-footer clear-link-dec"

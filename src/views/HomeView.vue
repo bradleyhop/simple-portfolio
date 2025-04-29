@@ -252,6 +252,13 @@ $shift-content-left: 5vw;
   @include tablet-breakpoint {
     padding-left: $shift-left !important;
   }
+
+  @include desktop-breakpoint {
+    /* fix footer position on home */
+    & > div {
+      margin: 0 !important;
+    }
+  }
 }
 
 .project-container {
