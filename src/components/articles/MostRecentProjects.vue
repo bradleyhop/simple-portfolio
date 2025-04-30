@@ -59,8 +59,6 @@ export default {
 @use "@/assets/style/color" as *;
 
 .recents-section {
-  // margin-left: 5vw;
-
   .recents-heading {
     font-size: 2em;
     letter-spacing: 1.5px;
@@ -73,17 +71,16 @@ export default {
     padding-bottom: 4rem;
 
     .recent-item {
-      font-size: 1.25rem;
       flex-direction: column;
+      font-size: 1.25rem;
       margin-bottom: 2rem;
 
       .recent-item-heading {
         color: $green-900;
-        letter-spacing: 1px;
-        line-height: 1.5;
-        min-width: 20rem;
         font-weight: bold;
         font-size: 1.5rem;
+        letter-spacing: 1px;
+        line-height: 1.5;
         margin-bottom: 0.75rem;
       }
 
@@ -95,10 +92,10 @@ export default {
       }
 
       .recent-item-link {
+        color: $green-900;
         display: inline-flex;
         align-items: center;
         line-height: 1.5;
-        color: $green-900;
 
         &:hover {
           text-decoration: underline;
@@ -113,8 +110,8 @@ export default {
       }
 
       .divider {
-        border-width: 0;
         background-color: $lightest-blue;
+        border-width: 0;
         height: 4px;
       }
     }
