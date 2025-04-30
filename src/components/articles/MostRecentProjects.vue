@@ -84,14 +84,14 @@ export default {
         min-width: 20rem;
         font-weight: bold;
         font-size: 1.5rem;
-        margin: 0 0.5rem 0.5rem 0;
+        margin-bottom: 0.75rem;
       }
 
       .recent-item-copy {
         letter-spacing: 0.5px;
         line-height: 1.5;
         max-width: 80ch;
-        margin: 0 0.5rem 1rem 0;
+        margin-bottom: 1rem;
       }
 
       .recent-item-link {

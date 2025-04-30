@@ -247,6 +247,13 @@ $shift-content-left: 5vw;
 }
 
 .home-footer {
+  & > div {
+    /*
+     * reset width to default; override overflow caused by .device-widths in child
+     */
+    width: 100% !important;
+  }
+
   padding-left: $shift-left-mobile !important;
 
   @include tablet-breakpoint {
