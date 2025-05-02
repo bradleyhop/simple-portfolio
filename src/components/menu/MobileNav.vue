@@ -1,20 +1,12 @@
-<script>
-export default {
-  name: "MobileNav",
+<script setup>
+import { ref } from "vue";
 
-  data() {
-    return {
-      toggleMenu: false, // state of pop-over menu for mobile devices
-    };
-  },
+const toggleMenu = ref(false);
 
-  methods: {
-    // toggle mobile menu
-    setMobileMenu: function () {
-      this.toggleMenu = !this.toggleMenu;
-    },
-  },
-};
+// toggle for mobile menu
+function setMobileMenu() {
+  this.toggleMenu = !this.toggleMenu;
+}
 </script>
 
 <template>

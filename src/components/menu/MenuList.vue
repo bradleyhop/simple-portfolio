@@ -1,7 +1,4 @@
-<script>
-export default {
-  name: "MenuList",
-};
+<script setup>
 </script>
 
 <template>
