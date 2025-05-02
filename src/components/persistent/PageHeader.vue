@@ -1,22 +1,13 @@
-<script>
+<script setup>
 import MenuList from "@/components/menu/MenuList.vue";
 import MobileNav from "@/components/menu/MobileNav.vue";
 
-export default {
-  name: "PageHeader",
-
-  components: {
-    MenuList,
-    MobileNav,
+const props = defineProps({
+  pageTitle: {
+    type: String,
+    default: "",
   },
-
-  props: {
-    pageTitle: {
-      type: String,
-      default: "",
-    },
-  },
-};
+});
 </script>
 
 <template>

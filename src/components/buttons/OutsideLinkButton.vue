@@ -1,8 +1,5 @@
-<script>
-export default {
-  name: "OutsideLinkButton",
-
-  props: {
+<script setup>
+const  props = defineProps( {
     outsideLink: {
       type: String,
       required: true,
@@ -15,8 +12,7 @@ export default {
       type: String,
       required: true,
     },
-  },
-};
+  });
 </script>
 
 <template>

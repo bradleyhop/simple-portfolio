@@ -1,76 +1,63 @@
-<script>
+<script setup>
+import { ref, reactive } from "vue";
+import { useRouter } from "vue-router";
 import PageHeader from "@/components/persistent/PageHeader.vue";
 import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
-export default {
-  name: "ContactMe",
+const router = useRouter();
 
-  components: {
-    PageHeader,
-    SiteFooter,
+const props = defineProps({
+  pageTitle: {
+    type: String,
+    default: "",
   },
+});
 
-  props: {
-    pageTitle: {
-      type: String,
-      default: "",
-    },
-  },
+const DEFAULT_FORM = reactive({
+  email: "",
+  message: "",
+});
 
-  data: () => {
-    const DEFAULT_FORM = Object.freeze({
-      email: "",
-      message: "",
+// user-input into form
+const userForm = ref(Object.assign({}, DEFAULT_FORM));
+// using this as a truthy value to show success message
+const successMessage = ref("");
+
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
+}
+
+// NOTE: Need to test live to see if it's submitting anything.
+function handleSubmit() {
+  // we're using Netlify to handle form submission; here's their article on doing so with Vue:
+  // https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({
+      "form-name": "contact-me",
+      ...userForm,
+    }),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error();
+      } else {
+        successMessage = "Form submitted. Thank you!";
+      }
+    })
+    .catch(() => {
+      // redirect to error page
+      router.push("404");
+    })
+    .finally(() => {
+      // reset form
+      userForm.message = "";
+      userForm.email = "";
     });
-
-    return {
-      DEFAULT_FORM, // form object
-      userForm: Object.assign({}, DEFAULT_FORM), // user-input into form
-      successMessage: "", // show user that form submission workded
-    };
-  },
-
-  methods: {
-    // encode form data into uri; called by handleSubmit
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) =>
-            `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`,
-        )
-        .join("&");
-    },
-
-    handleSubmit() {
-      // we're using Netlify to handle form submission; here's their article on doing so with Vue:
-      // https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: this.encode({
-          "form-name": "contact-me",
-          ...this.userForm,
-        }),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error();
-          } else {
-            this.successMessage = "Form submitted. Thank you!";
-          }
-        })
-        .catch(() => {
-          // redirect to error page
-          this.$router.push("404");
-        })
-        .finally(() => {
-          // reset form
-          this.userForm.message = "";
-          this.userForm.email = "";
-        });
-    },
-  },
-};
+}
 </script>
 
 <template>
@@ -84,7 +71,6 @@ export default {
         class="contact-form"
         name="contact-me"
         method="POST"
-        ref="userForm"
         @submit.prevent="handleSubmit"
       >
         <label class="contact-label" for="email">Email</label>

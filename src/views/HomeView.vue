@@ -1,16 +1,9 @@
-<script>
+<script setup>
 import MenuList from "@/components/menu/MenuList.vue";
 // RouterLink is already imported from MenuList
 import MostRecentProjects from "@/components/articles/MostRecentProjects.vue";
 import SiteFooter from "@/components/persistent/SiteFooter.vue";
-
-export default {
-  components: {
-    MenuList,
-    SiteFooter,
-    MostRecentProjects,
-  },
-};
+;
 </script>
 
 <template>

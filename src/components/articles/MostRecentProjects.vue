@@ -1,17 +1,6 @@
-<script>
+<script setup>
 import recents from "@/assets/data/recentProjects.js";
 import { mdiOpenInNew } from "@mdi/js";
-
-export default {
-  name: "MostRecentProjects",
-
-  data() {
-    return {
-      mdiOpenInNew,
-      projectArticles: Object.freeze(recents),
-    };
-  },
-};
 </script>
 
 <template>
@@ -20,7 +9,7 @@ export default {
     <ul class="recents-list">
       <li
         class="recent-item"
-        v-for="article in projectArticles"
+        v-for="article in recents"
         :key="article.id"
       >
         <h3 class="recent-item-heading">{{ article.title }}</h3>

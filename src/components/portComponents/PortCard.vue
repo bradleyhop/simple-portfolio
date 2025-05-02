@@ -1,63 +1,47 @@
-<script>
+<script setup>
 // load buttons
 import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
 
 // load icons
 import { mdiGithub, mdiOpenInNew } from "@mdi/js";
 
-export default {
-  name: "PortCard",
-
-  data() {
-    return {
-      // mdi icon paths
-      mdiGithub,
-      mdiOpenInNew,
-    };
+const props = defineProps({
+  imgSrc: {
+    type: String,
+    default: "",
+    required: true,
   },
-
-  components: {
-    OutsideLinkButton,
+  imgWebp: {
+    type: String,
+    default: "",
+    required: true,
   },
-
-  props: {
-    imgSrc: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    imgWebp: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    imgAlt: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    cardTitle: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    cardDesc: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    liveLink: {
-      type: String,
-      default: "",
-      required: true,
-    },
-    gitLink: {
-      type: String,
-      default: "",
-      required: true,
-    },
+  imgAlt: {
+    type: String,
+    default: "",
+    required: true,
   },
-};
+  cardTitle: {
+    type: String,
+    default: "",
+    required: true,
+  },
+  cardDesc: {
+    type: String,
+    default: "",
+    required: true,
+  },
+  liveLink: {
+    type: String,
+    default: "",
+    required: true,
+  },
+  gitLink: {
+    type: String,
+    default: "",
+    required: true,
+  },
+});
 </script>
 
 <template>

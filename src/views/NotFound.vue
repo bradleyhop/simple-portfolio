@@ -1,8 +1,4 @@
-<script>
-export default {
-  name: "NotFound",
-};
-</script>
+<script setup></script>
 
 <template>
   <main class="not-found-container">

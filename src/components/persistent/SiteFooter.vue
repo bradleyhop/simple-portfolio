@@ -1,13 +1,5 @@
-<script>
-export default {
-  name: "SiteFooter",
-
-  data() {
-    return {
-      year: Object.freeze(new Date().getFullYear()),
-    };
-  },
-};
+<script setup>
+const year = new Date().getFullYear();
 </script>
 
 <template>

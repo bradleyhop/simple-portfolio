@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import PageHeader from "@/components/persistent/PageHeader.vue";
 import PortCard from "@/components/portComponents/PortCard.vue";
 import PortCollapse from "@/components/portComponents/PortCollapse.vue";
@@ -11,27 +11,7 @@ import extra from "@/assets/data/extra-data.js";
 // mdi icons
 import { mdiFire, mdiOpenInNew } from "@mdi/js";
 
-export default {
-  name: "SitePortfolio",
-
-  components: {
-    PageHeader,
-    PortCard,
-    PortCollapse,
-    SiteFooter,
-  },
-
-  data() {
-    return {
-      freecodecampData: fCC, // freecodecamp data
-      extraData: extra, // extracurricular data
-
-      // mdi icons
-      mdiFire,
-      mdiOpenInNew,
-
-      // four top projects to showcase
-      featuredProjects: Object.freeze([
+const featuredProjects = [
         {
           // Coffeeroaster Subscription Site
           title: "Coffeeroaster Subscription Site",
@@ -74,10 +54,7 @@ export default {
          */
         fCC[0].projects[2], // heat map
         extra[0].projects[0], // color match
-      ]),
-    };
-  },
-};
+      ];
 </script>
 
 <template>
@@ -211,7 +188,7 @@ export default {
         <section class="port-copy">
           <h3 class="cert-title">Certificates Earned</h3>
           <div class="port-collapse-container">
-            <PortCollapse :dataList="freecodecampData" />
+            <PortCollapse :dataList="fCC" />
           </div>
         </section>
       </section>
@@ -224,7 +201,7 @@ export default {
             to test and expand my skills.
           </p>
           <div class="port-collapse-container">
-            <PortCollapse :dataList="extraData" />
+            <PortCollapse :dataList="extra" />
           </div>
         </article>
       </section>

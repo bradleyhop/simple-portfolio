@@ -1,6 +1,6 @@
-<script>
+<script setup>
 import { Collapse } from "vue-collapsed";
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
 
 //load local link button components
 import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
@@ -8,50 +8,26 @@ import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
 // load icons
 import { mdiChevronDown, mdiGithub, mdiOpenInNew } from "@mdi/js";
 
-export default {
-  name: "PortCollapse",
-
-  components: {
-    Collapse,
-    OutsideLinkButton,
+const props = defineProps({
+  dataList: {
+    type: Array,
+    default: () => [],
+    required: true,
   },
+});
 
-  data() {
-    return {
-      // mdi icon paths
-      mdiGithub,
-      mdiOpenInNew,
-      mdiChevronDown,
-    };
-  },
+// add vue-collapsed property to prop array; no default open
+const portList = computed(() => {
+  return reactive(props.dataList.map((obj) => ({ ...obj, isExpanded: false })));
+});
 
-  props: {
-    dataList: {
-      type: Array,
-      default: () => [],
-      required: true,
-    },
-  },
-
-  methods: {
-    // expand new panel, closing the non-active panel
-    handleAccordion: function (selectedIndex) {
-      this.portList.forEach((_, index) => {
-        this.portList[index].isExpanded =
-          index === selectedIndex ? !this.portList[index].isExpanded : false;
-      });
-    },
-  },
-
-  computed: {
-    // add vue-collapsed property to prop array; no default open
-    portList() {
-      return reactive(
-        this.dataList.map((obj) => ({ ...obj, isExpanded: false })),
-      );
-    },
-  },
-};
+// expand new panel, closing the non-active panel
+function handleAccordion(selectedIndex) {
+  this.portList.forEach((_, index) => {
+    this.portList[index].isExpanded =
+      index === selectedIndex ? !this.portList[index].isExpanded : false;
+  });
+}
 </script>
 
 <template>
