@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <main class="not-found-container">
     <h1 class="four-oh-four">404</h1>

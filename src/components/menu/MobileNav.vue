@@ -5,7 +5,7 @@ const toggleMenu = ref(false);
 
 // toggle for mobile menu
 function setMobileMenu() {
-  this.toggleMenu = !this.toggleMenu;
+  toggleMenu.value = !toggleMenu.value;
 }
 </script>
 

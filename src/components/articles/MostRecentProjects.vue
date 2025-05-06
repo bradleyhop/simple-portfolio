@@ -7,11 +7,7 @@ import { mdiOpenInNew } from "@mdi/js";
   <section class="recents-section">
     <h2 class="recents-heading">Recent Projects</h2>
     <ul class="recents-list">
-      <li
-        class="recent-item"
-        v-for="article in recents"
-        :key="article.id"
-      >
+      <li class="recent-item" v-for="article in recents" :key="article.id">
         <h3 class="recent-item-heading">{{ article.title }}</h3>
         <p class="recent-item-copy">
           <span class="recent-item-body" v-html="article.body"></span>
