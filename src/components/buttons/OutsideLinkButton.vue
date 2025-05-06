@@ -1,18 +1,18 @@
 <script setup>
-const  props = defineProps( {
-    outsideLink: {
-      type: String,
-      required: true,
-    },
-    svgPath: {
-      type: String,
-      required: true,
-    },
-    buttonTitle: {
-      type: String,
-      required: true,
-    },
-  });
+const props = defineProps({
+  outsideLink: {
+    type: String,
+    required: true,
+  },
+  svgPath: {
+    type: String,
+    required: true,
+  },
+  buttonTitle: {
+    type: String,
+    required: true,
+  },
+});
 </script>
 
 <template>

@@ -29,7 +29,6 @@ function encode(data) {
     .join("&");
 }
 
-// NOTE: Need to test live to see if it's submitting anything.
 function handleSubmit() {
   // we're using Netlify to handle form submission; here's their article on doing so with Vue:
   // https://www.netlify.com/blog/2018/09/07/how-to-integrate-netlify-forms-in-a-vue-app/
@@ -45,7 +44,7 @@ function handleSubmit() {
       if (!response.ok) {
         throw new Error();
       } else {
-        successMessage = "Form submitted. Thank you!";
+        successMessage.value = "Form submitted. Thank you!";
       }
     })
     .catch(() => {
@@ -54,8 +53,8 @@ function handleSubmit() {
     })
     .finally(() => {
       // reset form
-      userForm.message = "";
-      userForm.email = "";
+      userForm.message.value = "";
+      userForm.email.value = "";
     });
 }
 </script>

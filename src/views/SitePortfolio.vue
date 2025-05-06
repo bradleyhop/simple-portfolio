@@ -12,49 +12,48 @@ import extra from "@/assets/data/extra-data.js";
 import { mdiFire, mdiOpenInNew } from "@mdi/js";
 
 const featuredProjects = [
-        {
-          // Coffeeroaster Subscription Site
-          title: "Coffeeroaster Subscription Site",
-          link: "https://bradleyhop.github.io/frontend-mentor-coffeeroasters-sub/#/",
-          github:
-            "https://github.com/bradleyhop/frontend-mentor-coffeeroasters-sub",
-          img: {
-            src: "coffeeroasters.jpg",
-            webp: "coffeeroasters.webp",
-            alt: "screenshot of coffee roasters subscription site",
-          },
-          desc: "A Frontend Mentor Project, this is a three-page subscription site. Available ordering options change depending on user choices. User choices are saved in a global state. Built from a professionally designed Figma file using Vue.js, Vite, Pinia, and Sass.",
-        },
-        {
-          // GitHub User Search app object
-          title: "GitHub User Search App",
-          link: "https://bradleyhop.github.io/frontend-mentor-github-user-search-app/",
-          github:
-            "https://github.com/bradleyhop/frontend-mentor-github-user-search-app",
-          img: {
-            src: "ghApp.png",
-            webp: "ghApp.webp",
-            alt: "screenshot of GitHub user search app",
-          },
-          desc: "This Frontend Mentor project retrieves and displays GitHub user profile information. The design is based on a professionally design via a Figma file. Vue.js 3, Vite, GitHub Ocktokit API, and Sass were used to create this page. On load, the light or dark theme is displayed dependent on the user's preference; this can be modified manually.",
-        },
-        /*
-         * {
-         *   title: "Planet Facts Site",
-         *   link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
-         *   github:
-         *     "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
-         *   img: {
-         *     src: "desktopPlanet.png",
-         *     webp: "desktopPlanet.webp",
-         *     alt: "screenshot of planet facts website",
-         *   },
-         *   desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, and Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
-         * },
-         */
-        fCC[0].projects[2], // heat map
-        extra[0].projects[0], // color match
-      ];
+  {
+    // Coffeeroaster Subscription Site
+    title: "Coffeeroaster Subscription Site",
+    link: "https://bradleyhop.github.io/frontend-mentor-coffeeroasters-sub/#/",
+    github: "https://github.com/bradleyhop/frontend-mentor-coffeeroasters-sub",
+    img: {
+      src: "coffeeroasters.jpg",
+      webp: "coffeeroasters.webp",
+      alt: "screenshot of coffee roasters subscription site",
+    },
+    desc: "A Frontend Mentor Project, this is a three-page subscription site. Available ordering options change depending on user choices. User choices are saved in a global state. Built from a professionally designed Figma file using Vue.js, Vite, Pinia, and Sass.",
+  },
+  {
+    // GitHub User Search app object
+    title: "GitHub User Search App",
+    link: "https://bradleyhop.github.io/frontend-mentor-github-user-search-app/",
+    github:
+      "https://github.com/bradleyhop/frontend-mentor-github-user-search-app",
+    img: {
+      src: "ghApp.png",
+      webp: "ghApp.webp",
+      alt: "screenshot of GitHub user search app",
+    },
+    desc: "This Frontend Mentor project retrieves and displays GitHub user profile information. The design is based on a professionally design via a Figma file. Vue.js 3, Vite, GitHub Ocktokit API, and Sass were used to create this page. On load, the light or dark theme is displayed dependent on the user's preference; this can be modified manually.",
+  },
+  /*
+   * {
+   *   title: "Planet Facts Site",
+   *   link: "https://bradleyhop.github.io/frontend-mentor-planet-facts-site/",
+   *   github:
+   *     "https://github.com/bradleyhop/frontend-mentor-planet-facts-site",
+   *   img: {
+   *     src: "desktopPlanet.png",
+   *     webp: "desktopPlanet.webp",
+   *     alt: "screenshot of planet facts website",
+   *   },
+   *   desc: "This Frontend Mentor project is an eight page planet fact site built using Vue.js, Vue Router, Vite, and Sass. Desktop, mobile, and tablet responsive design from provided Figma design file.",
+   * },
+   */
+  fCC[0].projects[2], // heat map
+  extra[0].projects[0], // color match
+];
 </script>
 
 <template>
