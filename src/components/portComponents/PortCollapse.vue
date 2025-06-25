@@ -52,47 +52,49 @@ function handleAccordion(selectedIndex) {
       </span>
     </button>
     <Collapse :when="portList[index].isExpanded" class="collapse">
-      <p class="topic-copy">
-        {{ topic.copy }}
-      </p>
-      <ul class="topic-list">
-        <li
-          v-for="project in portList[index].projects"
-          :key="project.title"
-          class="project-item"
-        >
-          <picture class="project-img">
-            <source
-              type="image/webp"
-              :srcset="`./screenshots/${project.img.webp}`"
-            />
-            <source
-              type="image/jpg"
-              :srcset="`./screenshots/${project.img.src}`"
-            />
-            <img
-              :src="`./screenshots/${project.img.src}`"
-              :alt="project.img.alt"
-            />
-          </picture>
-          <div class="links-container">
-            <h4 class="project-title">{{ project.title }}</h4>
-            <div class="button-container">
-              <OutsideLinkButton
-                buttonTitle="Live Site"
-                :outsideLink="project.link"
-                :svgPath="mdiOpenInNew"
+      <div class="collapse-content">
+        <p class="topic-copy">
+          {{ topic.copy }}
+        </p>
+        <ul class="topic-list">
+          <li
+            v-for="project in portList[index].projects"
+            :key="project.title"
+            class="project-item"
+          >
+            <picture class="project-img">
+              <source
+                type="image/webp"
+                :srcset="`./screenshots/${project.img.webp}`"
               />
-              <OutsideLinkButton
-                v-if="project.github"
-                buttonTitle="GitHub Repo"
-                :outsideLink="project.github"
-                :svgPath="mdiGithub"
+              <source
+                type="image/jpg"
+                :srcset="`./screenshots/${project.img.src}`"
               />
+              <img
+                :src="`./screenshots/${project.img.src}`"
+                :alt="project.img.alt"
+              />
+            </picture>
+            <div class="links-container">
+              <h4 class="project-title">{{ project.title }}</h4>
+              <div class="button-container">
+                <OutsideLinkButton
+                  buttonTitle="Live Site"
+                  :outsideLink="project.link"
+                  :svgPath="mdiOpenInNew"
+                />
+                <OutsideLinkButton
+                  v-if="project.github"
+                  buttonTitle="GitHub Repo"
+                  :outsideLink="project.github"
+                  :svgPath="mdiGithub"
+                />
+              </div>
             </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </Collapse>
   </div>
 </template>
@@ -107,7 +109,6 @@ function handleAccordion(selectedIndex) {
 }
 
 .collapse-container {
-  padding: 1rem;
   border-bottom: 2px solid $gray-300;
 
   &:last-child {
@@ -121,12 +122,17 @@ function handleAccordion(selectedIndex) {
   font-size: 0.9rem;
   letter-spacing: 0.5px;
   min-width: 100%;
+  padding: 1rem;
   text-align: left;
 
   .chevron {
     fill: $green-900;
     float: right;
   }
+}
+
+.collapse-content {
+  padding: 0 1rem 1rem 1rem;
 }
 
 .project-img {

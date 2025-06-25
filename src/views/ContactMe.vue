@@ -20,6 +20,7 @@ const DEFAULT_FORM = reactive({
 
 // user-input into form
 const userForm = ref(Object.assign({}, DEFAULT_FORM));
+
 // using this as a truthy value to show success message
 const successMessage = ref("");
 
