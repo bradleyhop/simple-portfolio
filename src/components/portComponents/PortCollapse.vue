@@ -18,7 +18,7 @@ const props = defineProps({
 
 // add vue-collapsed property to prop array; no container default open
 const portList = reactive(
-  props.dataList.map((obj) => ({ ...obj, isExpanded: true })),
+  props.dataList.map((obj) => ({ ...obj, isExpanded: false })),
 );
 
 // expand new panel, closing the non-active panel
