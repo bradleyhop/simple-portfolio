@@ -1,5 +1,5 @@
 <script setup>
-const props = defineProps({
+defineProps({
   outsideLink: {
     type: String,
     required: true,
@@ -20,21 +20,20 @@ const props = defineProps({
     :href="outsideLink"
     target="_blank"
     rel="noopener noreferrer"
-    title="live demo"
+    :title="`Opens ${buttonTitle} In a New Window`"
   >
-    <button class="link-button">
+    <div class="link-button">
       <span class="button-text">{{ buttonTitle }}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        role="img"
+        role="presentation"
         alt="opens link in new window"
         viewBox="0 0 24 24"
         class="svg-icon"
       >
-        <title>opens link in new window</title>
         <path :d="svgPath"></path>
       </svg>
-    </button>
+    </div>
   </a>
 </template>
 
@@ -50,6 +49,7 @@ const props = defineProps({
   font-size: 0.9em;
   padding: 0.5rem 1rem;
   transition: box-shadow 200ms ease-in;
+  min-height: 24px;
 
   &:hover {
     box-shadow:

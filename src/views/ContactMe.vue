@@ -6,7 +6,7 @@ import SiteFooter from "@/components/persistent/SiteFooter.vue";
 
 const router = useRouter();
 
-const props = defineProps({
+defineProps({
   pageTitle: {
     type: String,
     default: "",

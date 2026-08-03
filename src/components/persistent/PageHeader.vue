@@ -2,7 +2,7 @@
 import MenuList from "@/components/menu/MenuList.vue";
 import MobileNav from "@/components/menu/MobileNav.vue";
 
-const props = defineProps({
+defineProps({
   pageTitle: {
     type: String,
     default: "",
@@ -14,7 +14,7 @@ const props = defineProps({
   <header class="port-header">
     <div class="port-nav device-widths">
       <!-- tablet and larger viewports navigation -->
-      <nav class="port-nav-container">
+      <nav class="port-nav-container" aria-label="Home">
         <RouterLink
           to="/"
           class="home-link clear-link-dec"
@@ -35,7 +35,11 @@ const props = defineProps({
         <h1 class="port-title">{{ pageTitle }}</h1>
 
         <!-- portfolio sub-navigation -->
-        <nav v-if="pageTitle === 'Portfolio'" class="port-subnav">
+        <nav
+          v-if="pageTitle === 'Portfolio'"
+          class="port-subnav"
+          aria-label="Portfolio"
+        >
           <ul class="port-nav-list sub-nav-list">
             <li>
               <a
@@ -124,7 +128,7 @@ $nav-border-line: 3px solid #fafafa;
 
 .port-nav-list {
   // override MenuList component styling
-  & > li > a:hover {
+  li a:hover {
     border-top: $nav-border-line !important;
   }
 }
@@ -184,7 +188,7 @@ $nav-border-line: 3px solid #fafafa;
     width: initial;
     justify-content: flex-start;
 
-    & > li {
+    li {
       padding-right: 1.5rem;
     }
   }

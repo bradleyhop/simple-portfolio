@@ -68,9 +68,13 @@ import SiteFooter from "@/components/persistent/SiteFooter.vue";
               needs.
             </p>
 
-            <RouterLink to="/portfolio" title="See samples of my work">
-              <button class="port-button-link">View My Portfolio</button>
-            </RouterLink>
+            <button
+              class="port-button-link"
+              title="See samples of my work"
+              @click="$router.push('portfolio')"
+            >
+              View My Portfolio
+            </button>
           </div>
         </div>
       </article>
@@ -184,7 +188,7 @@ $shift-content-left: 5vw;
     padding-left: 0;
   }
 
-  & > h2 {
+  h2 {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 1px;
@@ -198,7 +202,7 @@ $shift-content-left: 5vw;
     }
   }
 
-  & > p {
+  p {
     letter-spacing: 0.25px;
     margin-bottom: 1rem;
     text-align: left;
@@ -239,11 +243,11 @@ $shift-content-left: 5vw;
 }
 
 .home-footer {
-  & > div {
+  div {
     /*
      * reset width to default; override overflow caused by .device-widths in child
      */
-    width: 100% !important;
+    max-width: 100% !important;
   }
 
   padding-left: $shift-left-mobile !important;

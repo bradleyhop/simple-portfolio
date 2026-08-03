@@ -10,7 +10,7 @@ function setMobileMenu() {
 </script>
 
 <template>
-  <nav class="mobile-menu-container">
+  <nav class="mobile-menu-container" aria-label="Mobile Menu">
     <button class="mobile-menu-button" @click="setMobileMenu">
       <span class="menu-button-text">menu</span>
     </button>

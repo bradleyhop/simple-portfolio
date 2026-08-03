@@ -294,6 +294,7 @@ $nav-border-line: 3px solid #fff;
 
   .figma-link {
     color: $figma-purple;
+    text-decoration: underline;
   }
 
   .fm-profile-link {
@@ -360,11 +361,12 @@ $nav-border-line: 3px solid #fff;
 }
 
 .cert-title {
-  //color: $fcc-green;
-  font-size: 0.9rem;
+  font-size: 1.75rem;
   font-weight: bold;
   letter-spacing: 0.5px;
   margin: 1.5rem auto 0.5rem 0;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .port-collapse-container {

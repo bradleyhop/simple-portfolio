@@ -163,7 +163,7 @@ footer {
   width: 15rem;
   opacity: 0.8;
 
-  > li {
+  li {
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     margin-bottom: 0.9rem;

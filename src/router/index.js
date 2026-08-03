@@ -5,7 +5,7 @@ import HomeView from "@/views/HomeView.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
 
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
     if (to.hash) {
       // always scroll to hash links
       return { el: to.hash };

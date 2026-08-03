@@ -1,6 +1,6 @@
 <script setup>
 import { Collapse } from "vue-collapsed";
-import { reactive, computed } from "vue";
+import { reactive } from "vue";
 
 //load local link button components
 import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
@@ -16,16 +16,16 @@ const props = defineProps({
   },
 });
 
-// add vue-collapsed property to prop array; no default open
-const portList = computed(() => {
-  return reactive(props.dataList.map((obj) => ({ ...obj, isExpanded: false })));
-});
+// add vue-collapsed property to prop array; no container default open
+const portList = reactive(
+  props.dataList.map((obj) => ({ ...obj, isExpanded: true })),
+);
 
 // expand new panel, closing the non-active panel
 function handleAccordion(selectedIndex) {
-  this.portList.forEach((_, index) => {
-    this.portList[index].isExpanded =
-      index === selectedIndex ? !this.portList[index].isExpanded : false;
+  portList.forEach((_, index) => {
+    portList[index].isExpanded =
+      index === selectedIndex ? !portList[index].isExpanded : false;
   });
 }
 </script>
@@ -36,7 +36,7 @@ function handleAccordion(selectedIndex) {
     :key="topic.title"
     class="collapse-container"
   >
-    <button @click="() => handleAccordion(index)" class="topic-collapse">
+    <button @click="handleAccordion(index)" class="topic-collapse">
       {{ topic.title }}
       <span class="chevron-icon">
         <svg
@@ -53,6 +53,7 @@ function handleAccordion(selectedIndex) {
     </button>
     <Collapse :when="portList[index].isExpanded" class="collapse">
       <div class="collapse-content">
+        <hr class="col-hr" />
         <p class="topic-copy">
           {{ topic.copy }}
         </p>
@@ -79,17 +80,22 @@ function handleAccordion(selectedIndex) {
             <div class="links-container">
               <h4 class="project-title">{{ project.title }}</h4>
               <div class="button-container">
-                <OutsideLinkButton
-                  buttonTitle="Live Site"
-                  :outsideLink="project.link"
-                  :svgPath="mdiOpenInNew"
-                />
-                <OutsideLinkButton
-                  v-if="project.github"
-                  buttonTitle="GitHub Repo"
-                  :outsideLink="project.github"
-                  :svgPath="mdiGithub"
-                />
+                <div class="olb-button">
+                  <OutsideLinkButton
+                    buttonTitle="Live Site"
+                    :outsideLink="project.link"
+                    :svgPath="mdiOpenInNew"
+                  />
+                </div>
+                <div class="olb-button">
+                  <OutsideLinkButton
+                    v-if="project.github"
+                    buttonTitle="GitHub Repo"
+                    :outsideLink="project.github"
+                    :svgPath="mdiGithub"
+                    class="olb-button"
+                  />
+                </div>
               </div>
             </div>
           </li>
@@ -119,11 +125,12 @@ function handleAccordion(selectedIndex) {
 .topic-collapse {
   color: $not-black;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.5px;
   min-width: 100%;
   padding: 1rem;
   text-align: left;
+  font-weight: bold;
 
   .chevron {
     fill: $green-900;
@@ -133,6 +140,14 @@ function handleAccordion(selectedIndex) {
 
 .collapse-content {
   padding: 0 1rem 1rem 1rem;
+}
+
+.hr-wrapper {
+  margin: 1.5rem;
+}
+
+.col-hr {
+  color: $fcc-green;
 }
 
 .project-img {
@@ -187,6 +202,14 @@ function handleAccordion(selectedIndex) {
     @include tablet-breakpoint {
       margin-bottom: 0;
     }
+  }
+}
+
+.olb-button {
+  margin: 12px 0;
+
+  @include desktop-breakpoint {
+    margin: initial;
   }
 }
 </style>

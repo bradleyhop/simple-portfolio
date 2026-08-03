@@ -5,7 +5,7 @@ import OutsideLinkButton from "@/components/buttons/OutsideLinkButton.vue";
 // load icons
 import { mdiGithub, mdiOpenInNew } from "@mdi/js";
 
-const props = defineProps({
+defineProps({
   imgSrc: {
     type: String,
     default: "",
@@ -47,18 +47,17 @@ const props = defineProps({
 <template>
   <div class="port-card-container">
     <div class="img-container">
-      <picture class="card-img">
-        <a
-          :href="liveLink"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="live site"
-        >
-          <source type="image/webp" :srcset="imgWebp" />
+      <a
+        :href="liveLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="live site"
+      >
+        <picture class="card-img">
           <source type="image/jpg" :srcset="imgSrc" />
-          <img :src="imgSrc" :alt="imgAlt" />
-        </a>
-      </picture>
+          <img fetchpriority="high" :src="imgWebp" :alt="imgAlt" />
+        </picture>
+      </a>
     </div>
     <section class="bottom-card-container">
       <h2 class="card-title">{{ cardTitle }}</h2>
@@ -119,11 +118,13 @@ $card-border-radius: 5px;
       border-top-left-radius: $card-border-radius;
       border-top-right-radius: $card-border-radius;
       object-fit: cover;
+      width: 100%;
+      height: auto;
+      box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.12),
+        0 1px 2px rgba(0, 0, 0, 0.24);
 
       @include tablet-breakpoint {
-        box-shadow:
-          0 1px 3px rgba(0, 0, 0, 0.12),
-          0 1px 2px rgba(0, 0, 0, 0.24);
         border-top-left-radius: initial;
         border-top-right-radius: initial;
         height: auto;
