@@ -36,5 +36,9 @@
     "vite-plugin-radar": "^0.10.1",
     "vite-plugin-vue-devtools": "^7.7.9",
     "vite-plugin-webfont-dl": "^3.11.1"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "esbuild@0.25.12": true
   }
 }
