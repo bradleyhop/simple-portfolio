@@ -165,14 +165,20 @@ $card-border-radius: 5px;
     .link-container {
       display: flex;
       justify-content: space-evenly;
+      flex-wrap: wrap;
       min-height: 3rem;
       padding-bottom: 1rem;
+
+      a {
+        margin: 0.5rem;
+      }
 
       @include tablet-breakpoint {
         justify-content: initial;
 
         & > * {
-          padding: 0 1rem 0.5rem 1rem;
+          // hacky
+          padding-left: 0.5rem;
         }
       }
     }

@@ -18,7 +18,10 @@ import SiteFooter from "@/components/persistent/SiteFooter.vue";
       <article class="main-info-container">
         <h1 class="my-name">Bradley Smith</h1>
         <div class="content-main-container">
-          <figure class="img-container">
+          <figure
+            class="img-container"
+            aria-label="profile picture of Bradley Smith"
+          >
             <picture>
               <!--
                 - Lighthouse wants a higher res picture for Best Practices
