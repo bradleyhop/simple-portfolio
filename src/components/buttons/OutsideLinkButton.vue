@@ -42,7 +42,6 @@ defineProps({
 
 .link-button {
   cursor: pointer;
-  display: flex;
   border: none;
   background-color: $green-900;
   border-radius: 100px;
@@ -50,24 +49,27 @@ defineProps({
   padding: 0.5rem 1rem;
   transition: box-shadow 200ms ease-in;
   min-height: 24px;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     box-shadow:
       0 3px 6px rgba(0, 0, 0, 0.16),
       0 3px 6px rgba(0, 0, 0, 0.23);
   }
+}
 
-  .button-text {
-    align-self: center;
-    color: $not-white;
-    font-weight: bold;
-    padding-right: 4px;
-  }
+.button-text {
+  color: $not-white;
+  font-weight: bold;
+  padding-right: 4px;
+}
 
-  .svg-icon {
-    fill: $not-white;
-    height: 1.4em;
-    width: 1.4em;
-  }
+.svg-icon {
+  fill: $not-white;
+  height: 1.4em;
+  width: 1.4em;
 }
 </style>

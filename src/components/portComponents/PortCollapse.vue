@@ -93,7 +93,6 @@ function handleAccordion(selectedIndex) {
                     buttonTitle="GitHub Repo"
                     :outsideLink="project.github"
                     :svgPath="mdiGithub"
-                    class="olb-button"
                   />
                 </div>
               </div>
@@ -190,17 +189,19 @@ function handleAccordion(selectedIndex) {
   margin-bottom: 0.75rem;
   display: flex;
   flex-direction: column;
+  text-align: center;
 
   @include tablet-breakpoint {
     flex-direction: row;
   }
 
   > *:first-child {
-    margin-right: 1rem;
+    margin-right: 0;
     margin-bottom: 0.5rem;
 
     @include tablet-breakpoint {
       margin-bottom: 0;
+      margin-right: 1rem;
     }
   }
 }
